@@ -1,0 +1,368 @@
+{
+  "id": "s006",
+  "title": "Shop migration for an outdoor gear retailer: go-live date moves twice, payments proposed and assumed but never confirmed",
+  "people": {
+    "agency": "Dana (agency lead)",
+    "client": "Ravi (shop owner)"
+  },
+  "review": {
+    "drafted_by": "an AI agent (Claude), 2026-11-25",
+    "reviewed_by_jordi": true,
+    "reviewed_on": "2026-11-25",
+    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+  },
+  "sessions": [
+    {
+      "n": 1,
+      "date": "2026-03-02",
+      "chat": [
+        "Dana: Kickoff with Ravi. He confirmed going live on 1 June, ahead of the hiking season.",
+        "Dana: The invoice for the last milestone went out.",
+        "Dana: Logged the open comments from Ravi's team."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "go_live",
+          "text": "Go live on 1 June",
+          "by": "Dana"
+        },
+        {
+          "op": "confirm",
+          "key": "go_live",
+          "by": "Ravi",
+          "reason": "Before the summer hiking season"
+        },
+        {
+          "op": "task_add",
+          "id": "t1",
+          "title": "Migrate the product catalogue"
+        },
+        {
+          "op": "task_add",
+          "id": "t2",
+          "title": "Redesign the product pages"
+        },
+        {
+          "op": "task_add",
+          "id": "t3",
+          "title": "Set up the shipping rules"
+        },
+        {
+          "op": "task_add",
+          "id": "t4",
+          "title": "Connect the payment gateway"
+        },
+        {
+          "op": "task_add",
+          "id": "t5",
+          "title": "Build the redirect map"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "date": "2026-03-09",
+      "chat": [
+        "Dana: Ravi confirmed free shipping above 80 euros, in line with competitors.",
+        "Ravi asked for the status deck to be shorter next time.",
+        "Ravi asked for the status deck to be shorter next time."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "shipping_rule",
+          "text": "Free shipping above 80 euros",
+          "by": "Dana"
+        },
+        {
+          "op": "confirm",
+          "key": "shipping_rule",
+          "by": "Ravi",
+          "reason": "Matches the competitor threshold"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "date": "2026-03-16",
+      "chat": [
+        "Dana: The product catalogue is migrated.",
+        "Dana: I suggest using the bank's card gateway. Ravi will think about it.",
+        "Dana: Logged the open comments from Ravi's team.",
+        "Dana: The invoice for the last milestone went out."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t1"
+        },
+        {
+          "op": "propose",
+          "key": "payment_gateway",
+          "text": "Use the bank's card gateway",
+          "by": "Dana"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "date": "2026-03-23",
+      "chat": [
+        "Dana: Product photos are late. Ravi confirmed a new go-live date of 22 June.",
+        "Dana: Standup moved to the afternoon this week.",
+        "Dana: Shared the staging link with Ravi."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "go_live",
+          "text": "Go live on 22 June",
+          "by": "Dana"
+        },
+        {
+          "op": "confirm",
+          "key": "go_live",
+          "by": "Ravi",
+          "reason": "Product photos arrive late"
+        },
+        {
+          "op": "task_add",
+          "id": "t6",
+          "title": "Train staff on the admin"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "date": "2026-03-30",
+      "chat": [
+        "Dana: The redesigned product pages are done.",
+        "Ravi: Let us look at payments after the next review.",
+        "Dana: Weekly check-in held. No blockers raised.",
+        "Dana: Quiet week, the team spent it on build work and bug fixes."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t2"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "date": "2026-04-06",
+      "chat": [
+        "Dana: Ravi checked margins on bulky items and confirmed free shipping above 100 euros instead of 80.",
+        "Ravi sent feedback on the last build, mostly small copy edits.",
+        "Ravi sent feedback on the last build, mostly small copy edits."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "shipping_rule",
+          "text": "Free shipping above 100 euros",
+          "by": "Dana"
+        },
+        {
+          "op": "confirm",
+          "key": "shipping_rule",
+          "by": "Ravi",
+          "reason": "Margins on bulky items are thinner than expected"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "date": "2026-04-13",
+      "chat": [
+        "Dana: Shipping rules are set up.",
+        "Dana: I told the developers to wire in the bank's gateway so we do not lose time. Ravi has not signed off on it.",
+        "Dana: Quiet week, the team spent it on build work and bug fixes.",
+        "Dana: Weekly check-in held. No blockers raised."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t3"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "date": "2026-04-20",
+      "chat": [
+        "Dana: The photos arrived early. Ravi confirmed moving go-live to 15 June.",
+        "Dana: Shared the staging link with Ravi.",
+        "Dana: Standup moved to the afternoon this week."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "go_live",
+          "text": "Go live on 15 June",
+          "by": "Dana"
+        },
+        {
+          "op": "confirm",
+          "key": "go_live",
+          "by": "Ravi",
+          "reason": "Photos arrived early and the season starts sooner"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "date": "2026-04-27",
+      "chat": [
+        "Dana: The redirect map is done and tested.",
+        "Dana: The invoice for the last milestone went out.",
+        "Dana: Logged the open comments from Ravi's team."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t5"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "date": "2026-05-04",
+      "chat": [
+        "Dana: Staging review went well. Payments are still waiting on a decision from Ravi.",
+        "Ravi asked for the status deck to be shorter next time.",
+        "Ravi asked for the status deck to be shorter next time."
+      ],
+      "ops": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "current_decision",
+      "key": "go_live",
+      "prompt": "What is the current go-live date?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 June",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "22 June",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "15 June",
+          "status": "current"
+        },
+        {
+          "id": "d",
+          "text": "30 June",
+          "status": "distractor"
+        },
+        {
+          "id": "e",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "was_confirmed",
+      "key": "payment_gateway",
+      "prompt": "Has Ravi confirmed the bank's card gateway for payments?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, confirmed",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "No, it was proposed and the developers were told to prepare it, but Ravi never confirmed",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "next_task",
+      "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Migrate the product catalogue",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Redesign the product pages",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Set up the shipping rules",
+          "status": "replaced"
+        },
+        {
+          "id": "d",
+          "text": "Build the redirect map",
+          "status": "replaced"
+        },
+        {
+          "id": "e",
+          "text": "Connect the payment gateway",
+          "status": "current"
+        },
+        {
+          "id": "f",
+          "text": "Train staff on the admin",
+          "status": "distractor"
+        },
+        {
+          "id": "g",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "who_decided",
+      "key": "shipping_rule",
+      "prompt": "Who confirmed the current free shipping rule, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ravi, because margins on bulky items are thinner than expected",
+          "status": "current"
+        },
+        {
+          "id": "b",
+          "text": "Ravi, because it matches the competitor threshold",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Dana, because the carrier changed its rates",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,596 @@
+{
+  "id": "s010",
+  "title": "Film festival site over 30 sessions: launch date moves twice, ticketing replaced, sponsor logo previewed but never approved",
+  "people": {
+    "agency": "Priya (agency lead)",
+    "client": "Tomasz (festival director)"
+  },
+  "review": {
+    "drafted_by": "an AI agent (Claude), 2026-11-25",
+    "reviewed_by_jordi": true,
+    "reviewed_on": "2026-11-25",
+    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+  },
+  "sessions": [
+    {
+      "n": 1,
+      "date": "2026-02-02",
+      "chat": [
+        "Priya: Kickoff with Tomasz for the festival site.",
+        "Priya: The invoice for the last milestone went out.",
+        "Priya: Logged the open comments from Tomasz's team."
+      ],
+      "ops": [
+        {
+          "op": "task_add",
+          "id": "t1",
+          "title": "Gather the film stills"
+        },
+        {
+          "op": "task_add",
+          "id": "t2",
+          "title": "Write the programme copy"
+        },
+        {
+          "op": "task_add",
+          "id": "t3",
+          "title": "Build the schedule page"
+        },
+        {
+          "op": "task_add",
+          "id": "t4",
+          "title": "Build the ticket flow"
+        },
+        {
+          "op": "task_add",
+          "id": "t5",
+          "title": "Add captions to the trailers"
+        },
+        {
+          "op": "task_add",
+          "id": "t6",
+          "title": "Write the press page"
+        },
+        {
+          "op": "task_add",
+          "id": "t7",
+          "title": "Run the accessibility checks"
+        },
+        {
+          "op": "task_add",
+          "id": "t8",
+          "title": "Prepare the launch announcement"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "date": "2026-02-09",
+      "chat": [
+        "Priya: Tomasz confirmed launching the site on 12 September, two weeks before the festival.",
+        "Tomasz asked for the status deck to be shorter next time.",
+        "Tomasz asked for the status deck to be shorter next time."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "launch",
+          "text": "Launch on 12 September",
+          "by": "Priya"
+        },
+        {
+          "op": "confirm",
+          "key": "launch",
+          "by": "Tomasz",
+          "reason": "Two weeks before the festival"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "date": "2026-02-16",
+      "chat": [
+        "Priya: Tomasz confirmed selling tickets through the festival's own box office page, so the festival keeps the audience data.",
+        "Priya: Logged the open comments from Tomasz's team.",
+        "Priya: The invoice for the last milestone went out."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "ticketing",
+          "text": "Sell tickets through the festival's own box office page",
+          "by": "Priya"
+        },
+        {
+          "op": "confirm",
+          "key": "ticketing",
+          "by": "Tomasz",
+          "reason": "Keeps the audience data"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "date": "2026-02-23",
+      "chat": [
+        "Priya: The film stills are gathered.",
+        "Priya: Standup moved to the afternoon this week.",
+        "Priya: Shared the staging link with Tomasz."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t1"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "date": "2026-03-02",
+      "chat": [
+        "Priya: Weekly check-in held. No blockers raised.",
+        "Priya: Quiet week, the team spent it on build work and bug fixes."
+      ],
+      "ops": []
+    },
+    {
+      "n": 6,
+      "date": "2026-03-09",
+      "chat": [
+        "Priya: Tomasz confirmed captions on every trailer. The arts council grant requires it.",
+        "Tomasz sent feedback on the last build, mostly small copy edits.",
+        "Tomasz sent feedback on the last build, mostly small copy edits."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "captions",
+          "text": "Add captions to every trailer",
+          "by": "Priya"
+        },
+        {
+          "op": "confirm",
+          "key": "captions",
+          "by": "Tomasz",
+          "reason": "Required by the arts council grant"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "date": "2026-03-16",
+      "chat": [
+        "Priya: Quiet week, the team spent it on build work and bug fixes.",
+        "Priya: Weekly check-in held. No blockers raised."
+      ],
+      "ops": []
+    },
+    {
+      "n": 8,
+      "date": "2026-03-23",
+      "chat": [
+        "Priya: The programme copy is written.",
+        "Priya: Shared the staging link with Tomasz.",
+        "Priya: Standup moved to the afternoon this week."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t2"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "date": "2026-03-30",
+      "chat": [
+        "Priya: The invoice for the last milestone went out.",
+        "Priya: Logged the open comments from Tomasz's team."
+      ],
+      "ops": []
+    },
+    {
+      "n": 10,
+      "date": "2026-04-06",
+      "chat": [
+        "Priya: The trailer edit slipped by a week. Tomasz confirmed launching on 19 September.",
+        "Tomasz asked for the status deck to be shorter next time.",
+        "Tomasz asked for the status deck to be shorter next time."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "launch",
+          "text": "Launch on 19 September",
+          "by": "Priya"
+        },
+        {
+          "op": "confirm",
+          "key": "launch",
+          "by": "Tomasz",
+          "reason": "Trailer edit slipped one week"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "date": "2026-04-13",
+      "chat": [
+        "Priya: Logged the open comments from Tomasz's team.",
+        "Priya: The invoice for the last milestone went out."
+      ],
+      "ops": []
+    },
+    {
+      "n": 12,
+      "date": "2026-04-20",
+      "chat": [
+        "Priya: The box office page failed the load test. Tomasz confirmed moving to an external ticket platform.",
+        "Priya: Standup moved to the afternoon this week.",
+        "Priya: Shared the staging link with Tomasz."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "ticketing",
+          "text": "Sell tickets through an external ticket platform",
+          "by": "Priya"
+        },
+        {
+          "op": "confirm",
+          "key": "ticketing",
+          "by": "Tomasz",
+          "reason": "Box office page failed the load test"
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "date": "2026-04-27",
+      "chat": [
+        "Priya: The schedule page is built.",
+        "Priya: Weekly check-in held. No blockers raised.",
+        "Priya: Quiet week, the team spent it on build work and bug fixes."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t3"
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "date": "2026-05-04",
+      "chat": [
+        "Tomasz sent feedback on the last build, mostly small copy edits.",
+        "Tomasz sent feedback on the last build, mostly small copy edits."
+      ],
+      "ops": []
+    },
+    {
+      "n": 15,
+      "date": "2026-05-11",
+      "chat": [
+        "Priya: I suggest putting the main sponsor logo in the site header. Tomasz says the sponsor contract is not signed yet.",
+        "Priya: Quiet week, the team spent it on build work and bug fixes.",
+        "Priya: Weekly check-in held. No blockers raised."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "sponsor_logo",
+          "text": "Put the main sponsor logo in the site header",
+          "by": "Priya"
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "date": "2026-05-18",
+      "chat": [
+        "Priya: Shared the staging link with Tomasz.",
+        "Priya: Standup moved to the afternoon this week."
+      ],
+      "ops": []
+    },
+    {
+      "n": 17,
+      "date": "2026-05-25",
+      "chat": [
+        "Priya: The invoice for the last milestone went out.",
+        "Priya: Logged the open comments from Tomasz's team."
+      ],
+      "ops": []
+    },
+    {
+      "n": 18,
+      "date": "2026-06-01",
+      "chat": [
+        "Tomasz asked for the status deck to be shorter next time.",
+        "Tomasz asked for the status deck to be shorter next time."
+      ],
+      "ops": []
+    },
+    {
+      "n": 19,
+      "date": "2026-06-08",
+      "chat": [
+        "Priya: The festival moved its opening a week earlier. Tomasz confirmed launching the site on 5 September.",
+        "Priya: Logged the open comments from Tomasz's team.",
+        "Priya: The invoice for the last milestone went out."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "launch",
+          "text": "Launch on 5 September",
+          "by": "Priya"
+        },
+        {
+          "op": "confirm",
+          "key": "launch",
+          "by": "Tomasz",
+          "reason": "Festival moved its opening a week earlier"
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "date": "2026-06-15",
+      "chat": [
+        "Priya: Standup moved to the afternoon this week.",
+        "Priya: Shared the staging link with Tomasz."
+      ],
+      "ops": []
+    },
+    {
+      "n": 21,
+      "date": "2026-06-22",
+      "chat": [
+        "Priya: The ticket flow is built against the external platform.",
+        "Priya: Weekly check-in held. No blockers raised.",
+        "Priya: Quiet week, the team spent it on build work and bug fixes."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t4"
+        }
+      ]
+    },
+    {
+      "n": 22,
+      "date": "2026-06-29",
+      "chat": [
+        "Tomasz sent feedback on the last build, mostly small copy edits.",
+        "Tomasz sent feedback on the last build, mostly small copy edits."
+      ],
+      "ops": []
+    },
+    {
+      "n": 23,
+      "date": "2026-07-06",
+      "chat": [
+        "Priya: Captions are on all trailers.",
+        "Priya: Quiet week, the team spent it on build work and bug fixes.",
+        "Priya: Weekly check-in held. No blockers raised."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t5"
+        }
+      ]
+    },
+    {
+      "n": 24,
+      "date": "2026-07-13",
+      "chat": [
+        "Priya: I put the sponsor logo in the staging header to show how it looks. That is a preview only, nothing is approved.",
+        "Priya: Shared the staging link with Tomasz.",
+        "Priya: Standup moved to the afternoon this week."
+      ],
+      "ops": []
+    },
+    {
+      "n": 25,
+      "date": "2026-07-20",
+      "chat": [
+        "Priya: The invoice for the last milestone went out.",
+        "Priya: Logged the open comments from Tomasz's team."
+      ],
+      "ops": []
+    },
+    {
+      "n": 26,
+      "date": "2026-07-27",
+      "chat": [
+        "Tomasz asked for the status deck to be shorter next time.",
+        "Tomasz asked for the status deck to be shorter next time."
+      ],
+      "ops": []
+    },
+    {
+      "n": 27,
+      "date": "2026-08-03",
+      "chat": [
+        "Priya: The press page is written.",
+        "Priya: Logged the open comments from Tomasz's team.",
+        "Priya: The invoice for the last milestone went out."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t6"
+        }
+      ]
+    },
+    {
+      "n": 28,
+      "date": "2026-08-10",
+      "chat": [
+        "Priya: Standup moved to the afternoon this week.",
+        "Priya: Shared the staging link with Tomasz."
+      ],
+      "ops": []
+    },
+    {
+      "n": 29,
+      "date": "2026-08-17",
+      "chat": [
+        "Priya: Still waiting for the sponsor contract, so the header stays open.",
+        "Priya: Weekly check-in held. No blockers raised.",
+        "Priya: Quiet week, the team spent it on build work and bug fixes."
+      ],
+      "ops": []
+    },
+    {
+      "n": 30,
+      "date": "2026-08-24",
+      "chat": [
+        "Tomasz sent feedback on the last build, mostly small copy edits.",
+        "Tomasz sent feedback on the last build, mostly small copy edits."
+      ],
+      "ops": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "current_decision",
+      "key": "launch",
+      "prompt": "What is the current launch date for the site?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12 September",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "19 September",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "5 September",
+          "status": "current"
+        },
+        {
+          "id": "d",
+          "text": "26 September",
+          "status": "distractor"
+        },
+        {
+          "id": "e",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "was_confirmed",
+      "key": "sponsor_logo",
+      "prompt": "Has Tomasz approved the main sponsor logo in the site header?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, confirmed",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "No, it was proposed and previewed on staging, but never approved",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "next_task",
+      "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Gather the film stills",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Write the programme copy",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Build the schedule page",
+          "status": "replaced"
+        },
+        {
+          "id": "d",
+          "text": "Build the ticket flow",
+          "status": "replaced"
+        },
+        {
+          "id": "e",
+          "text": "Add captions to the trailers",
+          "status": "replaced"
+        },
+        {
+          "id": "f",
+          "text": "Write the press page",
+          "status": "replaced"
+        },
+        {
+          "id": "g",
+          "text": "Run the accessibility checks",
+          "status": "current"
+        },
+        {
+          "id": "h",
+          "text": "Prepare the launch announcement",
+          "status": "distractor"
+        },
+        {
+          "id": "i",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "who_decided",
+      "key": "ticketing",
+      "prompt": "Who confirmed the current ticketing approach, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tomasz, because the box office page failed the load test",
+          "status": "current"
+        },
+        {
+          "id": "b",
+          "text": "Tomasz, because it keeps the audience data",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Priya, because the external platform is cheaper",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    }
+  ]
+}

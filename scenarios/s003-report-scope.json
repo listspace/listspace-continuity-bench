@@ -1,0 +1,88 @@
+{
+  "id": "s003",
+  "title": "Annual report for a foundation: scope cut, design direction confirmed late, a decision re-replaced",
+  "people": { "agency": "Lucia (account lead)", "client": "Pablo (foundation director)" },
+  "sessions": [
+    {
+      "n": 1, "date": "2026-03-03",
+      "chat": [
+        "Lucia: Pablo confirmed a 48-page report, print and PDF.",
+        "Lucia: I would like an illustrated style. Proposed, not yet answered."
+      ],
+      "ops": [
+        { "op": "propose", "key": "scope", "text": "48 pages, print and PDF", "by": "Lucia" },
+        { "op": "confirm", "key": "scope", "by": "Pablo", "reason": "Matches last year's format" },
+        { "op": "propose", "key": "style", "text": "Illustrated style", "by": "Lucia" },
+        { "op": "task_add", "id": "t1", "title": "Collect the annual figures" },
+        { "op": "task_add", "id": "t2", "title": "Draft the layout" },
+        { "op": "task_add", "id": "t3", "title": "Print quote" }
+      ]
+    },
+    {
+      "n": 2, "date": "2026-03-17",
+      "chat": [
+        "Lucia: Figures collected.",
+        "Lucia: Budget cut. Pablo confirmed 32 pages, PDF only, no print.",
+        "Lucia: Pablo also confirmed the illustrated style."
+      ],
+      "ops": [
+        { "op": "task_done", "id": "t1" },
+        { "op": "propose", "key": "scope", "text": "32 pages, PDF only", "by": "Lucia" },
+        { "op": "confirm", "key": "scope", "by": "Pablo", "reason": "Budget cut by the board" },
+        { "op": "confirm", "key": "style", "by": "Pablo", "reason": "Warmer than last year's photo style" }
+      ]
+    },
+    {
+      "n": 3, "date": "2026-04-07",
+      "chat": [
+        "Lucia: The board found money again. Pablo confirmed 40 pages, PDF plus a small print run.",
+        "Lucia: The print quote is no longer needed for 48 pages, but we need a new one for the small run."
+      ],
+      "ops": [
+        { "op": "propose", "key": "scope", "text": "40 pages, PDF plus small print run", "by": "Lucia" },
+        { "op": "confirm", "key": "scope", "by": "Pablo", "reason": "Board restored part of the budget" }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1", "type": "current_decision", "key": "scope",
+      "prompt": "What is the current scope of the report?",
+      "options": [
+        { "id": "a", "text": "48 pages, print and PDF", "status": "replaced" },
+        { "id": "b", "text": "32 pages, PDF only", "status": "replaced" },
+        { "id": "c", "text": "40 pages, PDF plus small print run", "status": "current" },
+        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+      ]
+    },
+    {
+      "id": "q2", "type": "was_confirmed", "key": "style",
+      "prompt": "Has Pablo confirmed the illustrated style?",
+      "options": [
+        { "id": "a", "text": "Yes, confirmed", "status": "current" },
+        { "id": "b", "text": "No, only proposed", "status": "unconfirmed" },
+        { "id": "c", "text": "Cannot tell from the memory provided", "status": "unknown" }
+      ]
+    },
+    {
+      "id": "q3", "type": "next_task",
+      "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
+      "options": [
+        { "id": "a", "text": "Collect the annual figures", "status": "replaced" },
+        { "id": "b", "text": "Draft the layout", "status": "current" },
+        { "id": "c", "text": "Print quote", "status": "distractor" },
+        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+      ]
+    },
+    {
+      "id": "q4", "type": "who_decided", "key": "scope",
+      "prompt": "Who confirmed the current scope, and why?",
+      "options": [
+        { "id": "a", "text": "Pablo, because the board restored part of the budget", "status": "current" },
+        { "id": "b", "text": "Pablo, because the board cut the budget", "status": "replaced" },
+        { "id": "c", "text": "Lucia, because printing is cheaper than expected", "status": "distractor" },
+        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+      ]
+    }
+  ]
+}

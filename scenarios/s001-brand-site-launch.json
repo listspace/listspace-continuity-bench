@@ -1,0 +1,86 @@
+{
+  "id": "s001",
+  "title": "Brand site for a bakery chain: launch date moves, hosting proposed but never confirmed",
+  "people": { "agency": "Marta (producer)", "client": "Tom (client owner)" },
+  "sessions": [
+    {
+      "n": 1, "date": "2026-01-12",
+      "chat": [
+        "Marta: Kickoff done. Tom wants the site live on 14 March.",
+        "Marta: Tom confirmed 14 March as the launch date on the call.",
+        "Marta: I suggest we host on Netlify. Nobody has agreed yet."
+      ],
+      "ops": [
+        { "op": "propose", "key": "launch_date", "text": "Launch on 14 March", "by": "Marta" },
+        { "op": "confirm", "key": "launch_date", "by": "Tom", "reason": "Matches the spring menu campaign" },
+        { "op": "propose", "key": "hosting", "text": "Host on Netlify", "by": "Marta" },
+        { "op": "task_add", "id": "t1", "title": "Write page copy" },
+        { "op": "task_add", "id": "t2", "title": "Design the home page" },
+        { "op": "task_add", "id": "t3", "title": "Build the store locator" }
+      ]
+    },
+    {
+      "n": 2, "date": "2026-01-26",
+      "chat": [
+        "Marta: Page copy is finished and approved.",
+        "Marta: Tom says the 14 March date is too early because the photo shoot slipped. New date: 4 April. He confirmed by email."
+      ],
+      "ops": [
+        { "op": "task_done", "id": "t1" },
+        { "op": "propose", "key": "launch_date", "text": "Launch on 4 April", "by": "Marta" },
+        { "op": "confirm", "key": "launch_date", "by": "Tom", "reason": "Photo shoot slipped two weeks" }
+      ]
+    },
+    {
+      "n": 3, "date": "2026-02-09",
+      "chat": [
+        "Marta: Home page design is done.",
+        "Marta: Still no answer from Tom on hosting. I will keep working as if Netlify is fine, but it is not decided."
+      ],
+      "ops": [
+        { "op": "task_done", "id": "t2" }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1", "type": "current_decision", "key": "launch_date",
+      "prompt": "What is the current launch date for this project?",
+      "options": [
+        { "id": "a", "text": "14 March", "status": "replaced" },
+        { "id": "b", "text": "4 April", "status": "current" },
+        { "id": "c", "text": "No date has been set", "status": "distractor" },
+        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+      ]
+    },
+    {
+      "id": "q2", "type": "was_confirmed", "key": "hosting",
+      "prompt": "Has the hosting choice (Netlify) been confirmed by the client?",
+      "options": [
+        { "id": "a", "text": "Yes, confirmed", "status": "unconfirmed" },
+        { "id": "b", "text": "No, it was proposed but never confirmed", "status": "current" },
+        { "id": "c", "text": "Cannot tell from the memory provided", "status": "unknown" }
+      ]
+    },
+    {
+      "id": "q3", "type": "next_task",
+      "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
+      "options": [
+        { "id": "a", "text": "Write page copy", "status": "replaced" },
+        { "id": "b", "text": "Design the home page", "status": "replaced" },
+        { "id": "c", "text": "Build the store locator", "status": "current" },
+        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+      ]
+    },
+    {
+      "id": "q4", "type": "who_decided", "key": "launch_date",
+      "prompt": "Who confirmed the current launch date, and why?",
+      "options": [
+        { "id": "a", "text": "Tom, because the photo shoot slipped two weeks", "status": "current" },
+        { "id": "b", "text": "Tom, because it matches the spring menu campaign", "status": "replaced" },
+        { "id": "c", "text": "Marta, because the build is ahead of schedule", "status": "distractor" },
+        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+      ]
+    }
+  ]
+}

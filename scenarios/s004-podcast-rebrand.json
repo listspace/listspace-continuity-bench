@@ -1,0 +1,211 @@
+{
+  "id": "s004",
+  "title": "Podcast network rebrand: logo direction replaced, launch venue floated but never confirmed",
+  "people": {
+    "agency": "Ines (agency lead)",
+    "client": "Pavel (network owner)"
+  },
+  "review": {
+    "drafted_by": "an AI agent (Claude), 2026-11-25",
+    "reviewed_by_jordi": true,
+    "reviewed_on": "2026-11-25",
+    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+  },
+  "sessions": [
+    {
+      "n": 1,
+      "date": "2026-02-02",
+      "chat": [
+        "Ines: Kickoff done with Pavel. Direction one is a retro microphone mark.",
+        "Ines: Pavel approved the microphone mark on the call.",
+        "Ines: I would like the launch event at Harbor Hall. I have not raised it with Pavel yet.",
+        "Ines: The invoice for the last milestone went out."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "logo_direction",
+          "text": "Retro microphone mark",
+          "by": "Ines"
+        },
+        {
+          "op": "confirm",
+          "key": "logo_direction",
+          "by": "Pavel",
+          "reason": "Fits the show's analog sound"
+        },
+        {
+          "op": "propose",
+          "key": "launch_venue",
+          "text": "Launch event at Harbor Hall",
+          "by": "Ines"
+        },
+        {
+          "op": "task_add",
+          "id": "t1",
+          "title": "Draft logo concepts"
+        },
+        {
+          "op": "task_add",
+          "id": "t2",
+          "title": "Write the brand voice guide"
+        },
+        {
+          "op": "task_add",
+          "id": "t3",
+          "title": "Design cover art templates"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "date": "2026-02-16",
+      "chat": [
+        "Ines: Logo concepts are finished.",
+        "Ines: Pavel's co-host found the microphone too dated. Pavel now wants a rounded wordmark and confirmed it in the shared chat.",
+        "Pavel asked for the status deck to be shorter next time."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t1"
+        },
+        {
+          "op": "propose",
+          "key": "logo_direction",
+          "text": "Rounded wordmark",
+          "by": "Ines"
+        },
+        {
+          "op": "confirm",
+          "key": "logo_direction",
+          "by": "Pavel",
+          "reason": "Co-host found the microphone too dated"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "date": "2026-03-02",
+      "chat": [
+        "Ines: The brand voice guide is done.",
+        "Ines: Pavel said Harbor Hall looks good and that he will check the budget and tell us. That is not a yes yet.",
+        "Ines: Logged the open comments from Pavel's team."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t2"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "current_decision",
+      "key": "logo_direction",
+      "prompt": "What is the current logo direction?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Retro microphone mark",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Rounded wordmark",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "A monogram badge",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "was_confirmed",
+      "key": "launch_venue",
+      "prompt": "Has Pavel confirmed Harbor Hall as the launch venue?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, confirmed",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "No, it was proposed but never confirmed",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "next_task",
+      "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Draft logo concepts",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Write the brand voice guide",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Design cover art templates",
+          "status": "current"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "who_decided",
+      "key": "logo_direction",
+      "prompt": "Who confirmed the current logo direction, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pavel, because the co-host found the microphone too dated",
+          "status": "current"
+        },
+        {
+          "id": "b",
+          "text": "Pavel, because it fits the show's analog sound",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Ines, because the wordmark is cheaper to produce",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    }
+  ]
+}

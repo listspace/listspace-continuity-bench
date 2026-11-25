@@ -1,0 +1,42 @@
+{
+  "status": "DRAFT. Not frozen. Written by an AI agent on 2026-11-25 for the Tier A pilot. To freeze: Jordi reviews it, adds scenario_sha256 (node bench.mjs hashes), and commits it as protocol.lock.json before the first answer.",
+  "drafted": "2026-11-25",
+  "tier": "A",
+  "temperature": "provider_default",
+  "conditions": ["A", "B", "C"],
+  "models": {
+    "claude-sonnet-5-5": {
+      "send_temperature": false,
+      "effort": "low",
+      "note": "Mid-tier Claude. Anthropic's docs say this model returns a 400 for any non-default temperature, so temperature cannot be sent. The run records that sampling was the provider default. Thinking is left on its default (adaptive); effort is pinned to low."
+    },
+    "claude-opus-5-5": {
+      "send_temperature": false,
+      "effort": "low",
+      "note": "Candidate upper-tier Claude. Temperature is removed on this model (400 if sent), so it is not sent."
+    },
+    "gpt-6.2-sol": {
+      "send_temperature": false,
+      "effort": "low",
+      "note": "Mid-tier GPT, same list price as claude-sonnet-5-5. Whether the GPT-6 family accepts temperature is not stated in the docs read on 2026-11-25, so it is not sent. Set send_temperature to true only after one test call shows it is accepted. Reasoning effort is pinned to low (the API rejects none)."
+    },
+    "gpt-6.2-astra": {
+      "send_temperature": false,
+      "effort": "low",
+      "note": "Candidate flagship GPT. Same temperature caveat as gpt-6.2-sol."
+    }
+  },
+  "max_output_tokens": { "answer": 4096, "keeper": 4096 },
+  "estimate_assumptions": {
+    "note": "Used by --dry-run only. Replace with measured numbers after the pilot.",
+    "chars_per_token": { "anthropic": 3.1, "openai": 4 },
+    "answer_output_tokens": 250,
+    "keeper_output_tokens": 700,
+    "notes_tokens_per_session": 250,
+    "notes_tokens_cap": 1500
+  },
+  "prompts": {
+    "answer_system": "You answer one closed question about an agency project. The project memory in the message is all you know about the project. A decision counts as settled only once a person confirmed it. A proposal that nobody has confirmed is not settled, and a decision that was replaced is no longer current. If the memory does not let you tell, choose the cannot-tell option. Reply with JSON only.",
+    "keeper_system": "You keep the project notes for an agency project. You receive the current notes file and the transcript of one new session. Return the complete updated notes file in markdown and nothing else. Record every decision with who confirmed it and why. A decision counts as confirmed only when a person confirmed it. Record a proposal that nobody confirmed as a proposal, not as a decision. Record a replaced decision as replaced, with what replaced it. Keep a task list in plan order with done marks. Keep the file under about 800 words."
+  }
+}

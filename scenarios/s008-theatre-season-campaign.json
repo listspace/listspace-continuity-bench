@@ -1,0 +1,334 @@
+{
+  "id": "s008",
+  "title": "Season campaign for a regional theatre: announcement date slips, budget mix changes, poster printer settled only inside the agency",
+  "people": {
+    "agency": "Wei (agency strategist)",
+    "client": "Sofia (marketing manager)"
+  },
+  "review": {
+    "drafted_by": "an AI agent (Claude), 2026-11-25",
+    "reviewed_by_jordi": true,
+    "reviewed_on": "2026-11-25",
+    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+  },
+  "sessions": [
+    {
+      "n": 1,
+      "date": "2026-05-04",
+      "chat": [
+        "Wei: Kickoff with Sofia. She confirmed announcing the season on 9 September, in line with the subscriber renewal letter.",
+        "Wei: The invoice for the last milestone went out.",
+        "Wei: Logged the open comments from Sofia's team."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "announce_date",
+          "text": "Announce the season on 9 September",
+          "by": "Wei"
+        },
+        {
+          "op": "confirm",
+          "key": "announce_date",
+          "by": "Sofia",
+          "reason": "Aligns with the subscriber renewal letter"
+        },
+        {
+          "op": "task_add",
+          "id": "t1",
+          "title": "Write the season announcement copy"
+        },
+        {
+          "op": "task_add",
+          "id": "t2",
+          "title": "Shoot the trailer"
+        },
+        {
+          "op": "task_add",
+          "id": "t3",
+          "title": "Order the posters"
+        },
+        {
+          "op": "task_add",
+          "id": "t4",
+          "title": "Set up the ad accounts"
+        },
+        {
+          "op": "task_add",
+          "id": "t5",
+          "title": "Brief the box office team"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "date": "2026-05-11",
+      "chat": [
+        "Wei: Sofia confirmed putting most of the budget into social video, because the growth target is a younger audience.",
+        "Sofia asked for the status deck to be shorter next time.",
+        "Sofia asked for the status deck to be shorter next time."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "channel_mix",
+          "text": "Focus the budget on social video",
+          "by": "Wei"
+        },
+        {
+          "op": "confirm",
+          "key": "channel_mix",
+          "by": "Sofia",
+          "reason": "Younger audience is the growth target"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "date": "2026-05-18",
+      "chat": [
+        "Wei: The season announcement copy is done.",
+        "Wei: Let's go with the Northside print shop for the posters. Sofia said she will collect quotes first.",
+        "Wei: Logged the open comments from Sofia's team.",
+        "Wei: The invoice for the last milestone went out."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t1"
+        },
+        {
+          "op": "propose",
+          "key": "poster_printer",
+          "text": "Print the posters with the Northside print shop",
+          "by": "Wei"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "date": "2026-05-25",
+      "chat": [
+        "Wei: Trailer shoot is scheduled.",
+        "Wei: Standup moved to the afternoon this week.",
+        "Wei: Shared the staging link with Sofia."
+      ],
+      "ops": []
+    },
+    {
+      "n": 5,
+      "date": "2026-06-01",
+      "chat": [
+        "Wei: The board approval slipped to mid-September. Sofia confirmed announcing on 23 September instead.",
+        "Wei: Weekly check-in held. No blockers raised.",
+        "Wei: Quiet week, the team spent it on build work and bug fixes."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "announce_date",
+          "text": "Announce the season on 23 September",
+          "by": "Wei"
+        },
+        {
+          "op": "confirm",
+          "key": "announce_date",
+          "by": "Sofia",
+          "reason": "Board approval slipped to mid-September"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "date": "2026-06-08",
+      "chat": [
+        "Wei: The trailer is shot.",
+        "Sofia sent feedback on the last build, mostly small copy edits.",
+        "Sofia sent feedback on the last build, mostly small copy edits."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t2"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "date": "2026-06-15",
+      "chat": [
+        "Wei: Subscriber data shows older subscribers still renew by post. Sofia confirmed splitting the budget between social video and print.",
+        "Wei: Quiet week, the team spent it on build work and bug fixes.",
+        "Wei: Weekly check-in held. No blockers raised."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "channel_mix",
+          "text": "Split the budget between social video and print",
+          "by": "Wei"
+        },
+        {
+          "op": "confirm",
+          "key": "channel_mix",
+          "by": "Sofia",
+          "reason": "Older subscribers still renew by post"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "date": "2026-06-22",
+      "chat": [
+        "Wei: I sent the files to the Northside print shop as we agreed inside the agency. Sofia has not signed off on the printer.",
+        "Wei: Shared the staging link with Sofia.",
+        "Wei: Standup moved to the afternoon this week."
+      ],
+      "ops": []
+    },
+    {
+      "n": 9,
+      "date": "2026-06-29",
+      "chat": [
+        "Wei: The ad accounts are set up.",
+        "Wei: The invoice for the last milestone went out.",
+        "Wei: Logged the open comments from Sofia's team."
+      ],
+      "ops": [
+        {
+          "op": "task_add",
+          "id": "t6",
+          "title": "Review the first ad results"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "date": "2026-07-06",
+      "chat": [
+        "Wei: Sofia is still collecting quotes for the posters.",
+        "Sofia asked for the status deck to be shorter next time.",
+        "Sofia asked for the status deck to be shorter next time."
+      ],
+      "ops": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "current_decision",
+      "key": "announce_date",
+      "prompt": "What is the current date for the season announcement?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9 September",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "23 September",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "1 October",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "was_confirmed",
+      "key": "poster_printer",
+      "prompt": "Has Sofia confirmed the Northside print shop for the posters?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, confirmed",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "No, the agency settled on it internally but Sofia never confirmed",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "next_task",
+      "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Write the season announcement copy",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Shoot the trailer",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Order the posters",
+          "status": "current"
+        },
+        {
+          "id": "d",
+          "text": "Brief the box office team",
+          "status": "distractor"
+        },
+        {
+          "id": "e",
+          "text": "Review the first ad results",
+          "status": "distractor"
+        },
+        {
+          "id": "f",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "who_decided",
+      "key": "channel_mix",
+      "prompt": "Who confirmed the current channel mix, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sofia, because older subscribers still renew by post",
+          "status": "current"
+        },
+        {
+          "id": "b",
+          "text": "Sofia, because the younger audience is the growth target",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Wei, because print is cheaper than video",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    }
+  ]
+}

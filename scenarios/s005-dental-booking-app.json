@@ -1,0 +1,210 @@
+{
+  "id": "s005",
+  "title": "Booking app for a dental clinic group: booking approach replaced, budget cap waiting on finance",
+  "people": {
+    "agency": "Lena (project manager)",
+    "client": "Marcus (operations director)"
+  },
+  "review": {
+    "drafted_by": "an AI agent (Claude), 2026-11-25",
+    "reviewed_by_jordi": true,
+    "reviewed_on": "2026-11-25",
+    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+  },
+  "sessions": [
+    {
+      "n": 1,
+      "date": "2026-03-09",
+      "chat": [
+        "Lena: Marcus confirmed we embed a hosted booking widget. It is the fastest way to ship before the spring promotion.",
+        "Lena: I suggest we cap the build at 40,000 euros. Marcus said he needs to ask finance.",
+        "Lena: The invoice for the last milestone went out."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "booking_approach",
+          "text": "Embed a hosted booking widget",
+          "by": "Lena"
+        },
+        {
+          "op": "confirm",
+          "key": "booking_approach",
+          "by": "Marcus",
+          "reason": "Fastest to ship before the spring promotion"
+        },
+        {
+          "op": "propose",
+          "key": "budget_cap",
+          "text": "Cap the build at 40,000 euros",
+          "by": "Lena"
+        },
+        {
+          "op": "task_add",
+          "id": "t1",
+          "title": "Map the booking flow"
+        },
+        {
+          "op": "task_add",
+          "id": "t2",
+          "title": "Design the onboarding screens"
+        },
+        {
+          "op": "task_add",
+          "id": "t3",
+          "title": "Set up push notifications"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "date": "2026-03-23",
+      "chat": [
+        "Lena: The booking flow map is finished.",
+        "Lena: Marcus reversed the booking approach. Clinics need patients to reschedule inside the app, so we build booking into the app on the clinics' own scheduling system. He confirmed by email.",
+        "Marcus asked for the status deck to be shorter next time."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t1"
+        },
+        {
+          "op": "propose",
+          "key": "booking_approach",
+          "text": "Build booking into the app on the clinics' own scheduling system",
+          "by": "Lena"
+        },
+        {
+          "op": "confirm",
+          "key": "booking_approach",
+          "by": "Marcus",
+          "reason": "Clinics need patients to reschedule inside the app"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "date": "2026-04-06",
+      "chat": [
+        "Lena: The onboarding screens are done.",
+        "Lena: Finance has not answered on the 40,000 euro cap. I am planning as if it holds, but it is not agreed.",
+        "Lena: Logged the open comments from Marcus's team."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t2"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "current_decision",
+      "key": "booking_approach",
+      "prompt": "What is the current approach for booking?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Embed a hosted booking widget",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Build booking into the app",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Send patients to a phone line",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "was_confirmed",
+      "key": "budget_cap",
+      "prompt": "Has Marcus confirmed the 40,000 euro budget cap?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, confirmed",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "No, it was proposed but finance has not answered",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "next_task",
+      "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Map the booking flow",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Design the onboarding screens",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Set up push notifications",
+          "status": "current"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "who_decided",
+      "key": "booking_approach",
+      "prompt": "Who confirmed the current booking approach, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Marcus, because clinics need patients to reschedule inside the app",
+          "status": "current"
+        },
+        {
+          "id": "b",
+          "text": "Marcus, because it is fastest to ship before the spring promotion",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Lena, because the widget vendor raised its price",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    }
+  ]
+}

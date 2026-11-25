@@ -1,0 +1,45 @@
+{
+  "note": "USD per million tokens, standard (non-batch, non-fast) rates, short context. A model with no entry here, or an entry missing a field, is refused by the runner. Re-check the source_url on run day and update verified_on.",
+  "models": {
+    "claude-sonnet-5-5": {
+      "provider": "anthropic",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cache_read_per_mtok": 0.1,
+      "cache_write_per_mtok": 2.5,
+      "max_prompt_tokens": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verified_on": "2026-11-25"
+    },
+    "claude-opus-5-5": {
+      "provider": "anthropic",
+      "input_per_mtok": 4,
+      "output_per_mtok": 20,
+      "cache_read_per_mtok": 0.2,
+      "cache_write_per_mtok": 5,
+      "max_prompt_tokens": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verified_on": "2026-11-25"
+    },
+    "gpt-6.2-sol": {
+      "provider": "openai",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cache_read_per_mtok": 0.1,
+      "cache_write_per_mtok": null,
+      "max_prompt_tokens": 272000,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "verified_on": "2026-11-25"
+    },
+    "gpt-6.2-astra": {
+      "provider": "openai",
+      "input_per_mtok": 8,
+      "output_per_mtok": 40,
+      "cache_read_per_mtok": 0.4,
+      "cache_write_per_mtok": null,
+      "max_prompt_tokens": 272000,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "verified_on": "2026-11-25"
+    }
+  }
+}

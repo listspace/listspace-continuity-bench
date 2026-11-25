@@ -1,0 +1,329 @@
+{
+  "id": "s007",
+  "title": "Annual report microsite for a housing nonprofit: languages grow, a new hero photo is floated but the garden photo stays",
+  "people": {
+    "agency": "Noor (agency producer)",
+    "client": "Greta (communications head)"
+  },
+  "review": {
+    "drafted_by": "an AI agent (Claude), 2026-11-25",
+    "reviewed_by_jordi": true,
+    "reviewed_on": "2026-11-25",
+    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+  },
+  "sessions": [
+    {
+      "n": 1,
+      "date": "2026-04-06",
+      "chat": [
+        "Noor: Kickoff with Greta. She confirmed English and Spanish, the two largest tenant groups.",
+        "Noor: The invoice for the last milestone went out.",
+        "Noor: Logged the open comments from Greta's team."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "languages",
+          "text": "Publish in English and Spanish",
+          "by": "Noor"
+        },
+        {
+          "op": "confirm",
+          "key": "languages",
+          "by": "Greta",
+          "reason": "The two largest tenant groups"
+        },
+        {
+          "op": "task_add",
+          "id": "t1",
+          "title": "Collect the report figures"
+        },
+        {
+          "op": "task_add",
+          "id": "t2",
+          "title": "Write the web summary"
+        },
+        {
+          "op": "task_add",
+          "id": "t3",
+          "title": "Build the page templates"
+        },
+        {
+          "op": "task_add",
+          "id": "t4",
+          "title": "Produce the translations"
+        },
+        {
+          "op": "task_add",
+          "id": "t5",
+          "title": "Run the accessibility check"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "date": "2026-04-13",
+      "chat": [
+        "Noor: Greta confirmed the community garden photo as the hero image. Residents in it gave consent.",
+        "Greta asked for the status deck to be shorter next time.",
+        "Greta asked for the status deck to be shorter next time."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "hero_image",
+          "text": "Use the community garden photo",
+          "by": "Noor"
+        },
+        {
+          "op": "confirm",
+          "key": "hero_image",
+          "by": "Greta",
+          "reason": "Residents in it gave consent"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "date": "2026-04-20",
+      "chat": [
+        "Noor: The report figures are collected.",
+        "Noor: I propose an interactive map of housing units. Greta likes the idea but needs to check the data first.",
+        "Noor: Logged the open comments from Greta's team.",
+        "Noor: The invoice for the last milestone went out."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t1"
+        },
+        {
+          "op": "propose",
+          "key": "interactive_map",
+          "text": "Add an interactive map of housing units",
+          "by": "Noor"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "date": "2026-04-27",
+      "chat": [
+        "Noor: The web summary is drafted.",
+        "Greta: The map depends on whether we can publish unit locations. I will ask the lawyer.",
+        "Noor: Standup moved to the afternoon this week.",
+        "Noor: Shared the staging link with Greta."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t2"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "date": "2026-05-04",
+      "chat": [
+        "Noor: A new funder asked for Polish. Greta confirmed adding it to the languages.",
+        "Noor: Weekly check-in held. No blockers raised.",
+        "Noor: Quiet week, the team spent it on build work and bug fixes."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "languages",
+          "text": "Publish in English, Spanish and Polish",
+          "by": "Noor"
+        },
+        {
+          "op": "confirm",
+          "key": "languages",
+          "by": "Greta",
+          "reason": "A new funder asked for Polish"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "date": "2026-05-11",
+      "chat": [
+        "Noor: I suggest swapping the hero for a photo of the new building. Greta wants the board to see both first.",
+        "Greta sent feedback on the last build, mostly small copy edits.",
+        "Greta sent feedback on the last build, mostly small copy edits."
+      ],
+      "ops": [
+        {
+          "op": "propose",
+          "key": "hero_image",
+          "text": "Use a photo of the new building",
+          "by": "Noor"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "date": "2026-05-18",
+      "chat": [
+        "Noor: Page templates are done.",
+        "Noor: Quiet week, the team spent it on build work and bug fixes.",
+        "Noor: Weekly check-in held. No blockers raised."
+      ],
+      "ops": [
+        {
+          "op": "task_done",
+          "id": "t3"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "date": "2026-05-25",
+      "chat": [
+        "Noor: The lawyer has not replied about unit locations. The map stays an open proposal.",
+        "Noor: The board meets next week and will pick the hero photo then.",
+        "Noor: Shared the staging link with Greta.",
+        "Noor: Standup moved to the afternoon this week."
+      ],
+      "ops": []
+    },
+    {
+      "n": 9,
+      "date": "2026-06-01",
+      "chat": [
+        "Noor: Polish translations are in progress.",
+        "Noor: The invoice for the last milestone went out.",
+        "Noor: Logged the open comments from Greta's team."
+      ],
+      "ops": []
+    },
+    {
+      "n": 10,
+      "date": "2026-06-08",
+      "chat": [
+        "Noor: Staging is ready for the board. Hero photo and map are still undecided.",
+        "Greta asked for the status deck to be shorter next time.",
+        "Greta asked for the status deck to be shorter next time."
+      ],
+      "ops": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "current_decision",
+      "key": "hero_image",
+      "prompt": "Which hero image is currently decided for the site?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Use a photo of the new building",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "Use the community garden photo",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Use a team photo",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "was_confirmed",
+      "key": "interactive_map",
+      "prompt": "Has Greta confirmed the interactive map of housing units?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Yes, confirmed",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "No, it was proposed and is waiting on a legal answer",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "next_task",
+      "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Collect the report figures",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Write the web summary",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Build the page templates",
+          "status": "replaced"
+        },
+        {
+          "id": "d",
+          "text": "Produce the translations",
+          "status": "current"
+        },
+        {
+          "id": "e",
+          "text": "Run the accessibility check",
+          "status": "distractor"
+        },
+        {
+          "id": "f",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "who_decided",
+      "key": "languages",
+      "prompt": "Who confirmed the current set of languages, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Greta, because a new funder asked for Polish",
+          "status": "current"
+        },
+        {
+          "id": "b",
+          "text": "Greta, because they are the two largest tenant groups",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Noor, because the translation vendor offered a discount",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
+      ]
+    }
+  ]
+}
