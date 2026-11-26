@@ -4,7 +4,7 @@ Does your AI work from the current plan?
 
 ## What this is for
 
-Projects change their mind. A launch date moves, a hosting choice is replaced, someone acts on a proposal nobody confirmed. A week later you open a fresh AI session and ask what was decided. This repository measures whether that session answers from the current, confirmed decision, or from one that was replaced or never confirmed, depending on where the project's memory lives.
+Plans change during a project. A launch date moves, a hosting choice is replaced, someone acts on a proposal nobody confirmed. A week later you open a fresh AI session and ask what was decided. This repository measures whether that session answers from the current, confirmed decision, or from one that was replaced or never confirmed, depending on where the project's memory lives.
 
 Most memory benchmarks ask whether an AI can recall an old fact. This one asks whether it knows which fact is still true and who confirmed it.
 
