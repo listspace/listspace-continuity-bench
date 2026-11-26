@@ -6,7 +6,7 @@ This file records reviews. The scenario files are not edited for it, so the hash
 |---|---|---|---|
 | 2026-11-25 | Jordi | s004 to s010 as drafted (v1), and the v1 prompts | "fine" |
 | 2026-11-26 | Jordi | `scenarios/CHANGES-v2.md`, the list of v2 changes to s001 to s010 | "fine". Jordi kept the B2 arm. |
-| 2026-11-26 | pending | `scenarios/CHANGES-v3.md`, 37 reworded or added lines so every confirmation is said directly by the decider | Waiting for Jordi |
+| 2026-11-26 | Jordi | `scenarios/CHANGES-v3.md`, 37 reworded or added lines so every confirmation is said directly by the decider | "fine". Given after the v3 run had finished, not before it. |
 
 Notes:
 
