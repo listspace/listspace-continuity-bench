@@ -1,0 +1,125 @@
+{
+  "started": "2026-11-26T13:47:14.575Z",
+  "models": [
+    "claude-sonnet-5-5",
+    "gpt-6.2-sol"
+  ],
+  "runs": 3,
+  "temp": "provider_default",
+  "budget": 12,
+  "scenarios": [
+    "s001",
+    "s002",
+    "s003",
+    "s004",
+    "s005",
+    "s006",
+    "s007",
+    "s008",
+    "s009",
+    "s010"
+  ],
+  "protocol": {
+    "status": "FROZEN v3, 2026-11-26, for the Tier A rerun. Written from protocol.draft.json after the v2 run (tag protocol-v2). protocol.lock.v1.json and protocol.lock.v2.json are kept for the record. Change nothing here after the first answer is generated.",
+    "version": 3,
+    "tier": "A",
+    "temperature": "provider_default",
+    "conditions": [
+      "A",
+      "B",
+      "B2",
+      "C"
+    ],
+    "models": {
+      "claude-sonnet-5-5": {
+        "send_temperature": false,
+        "effort": "low",
+        "note": "Mid-tier Claude. Anthropic's docs say this model returns a 400 for any non-default temperature, so none is sent. Sampling is the provider default. Thinking is left on its default (adaptive); effort is pinned to low."
+      },
+      "gpt-6.2-sol": {
+        "send_temperature": false,
+        "effort": "low",
+        "note": "Mid-tier GPT, same list price as claude-sonnet-5-5. No temperature is sent. Reasoning effort is pinned to low (the API rejects none)."
+      }
+    },
+    "max_output_tokens": {
+      "answer": 4096,
+      "keeper": 3000
+    },
+    "estimate_assumptions": {
+      "note": "Used by --dry-run only. Measured in the v2 run (2026-11-26): keeper output per call Claude 914 (B) and 304 (B2), GPT 337 and 175, so the figures below are the mean of the two arms; answer output 66 tokens (Claude, prose before the JSON in 40 percent of replies) and 9 (GPT); Claude tokenizer about 2.6 characters per token, GPT about 3.9. v3 changes no prompt, so these should hold.",
+      "chars_per_token": {
+        "anthropic": 2.6,
+        "openai": 3.9
+      },
+      "answer_output_tokens": {
+        "anthropic": 66,
+        "openai": 9
+      },
+      "keeper_output_tokens": {
+        "anthropic": 610,
+        "openai": 260
+      },
+      "notes_tokens_per_session": 50,
+      "notes_tokens_cap": 550
+    },
+    "prompts": {
+      "answer_system": "You answer one closed question about an agency project. The project memory in the message is all you know about the project. A decision counts as settled only once a person confirmed it. A proposal that nobody has confirmed is not settled, and a decision that was replaced is no longer current. If the memory does not let you tell, choose the cannot-tell option. Reply with exactly one line of JSON and nothing else.",
+      "keepers": {
+        "B": "You keep the project notes for an agency project. You receive the current notes file and the transcript of one new session. Return the complete updated notes file in markdown and nothing else. Record decisions with who confirmed them and why, and keep the plan of tasks in plan order with done marks. A decision counts as confirmed only when a person confirmed it. Record a proposal that nobody confirmed as a proposal. Record a replaced decision as replaced, with what replaced it. Leave out chatter and logistics. Hard limit: the whole file stays under 450 words, so shorten older entries to make room.",
+        "B2": "You keep the project notes for an agency project. You receive the current notes file and the transcript of one new session. Return the complete updated notes file in markdown and nothing else, in exactly this layout. Section one, Decisions: one line per decision, in one of three forms. CONFIRMED <what> (confirmed by <person>, because <reason>). REPLACED <what> (was confirmed by <person>, replaced by <what>). PROPOSED, NOT CONFIRMED <what> (proposed by <person>). A decision is CONFIRMED only when a person said yes to it. Someone acting on a proposal, repeating a decision, or hinting that a person will probably agree does not make it confirmed. When a new decision replaces an old one, mark the old line REPLACED. Section two, Plan: one line per task in plan order, marked [x] when done and [ ] when open. Take tasks only from the plan, added and done lines of the transcript. Leave out chatter, logistics and anything that is neither a decision nor a plan task. Each line at most 25 words, and the whole file under 450 words."
+      }
+    },
+    "frozen": "2026-11-26",
+    "scenario_sha256": {
+      "s001": "2f50618018d29c88b2dfb6baea7f8459f178274fa84c298f67718913fb802e0e",
+      "s002": "852ad10d4833d4dee17d19027964d7e718e644f98ec672c9489fe20a478ef3a2",
+      "s003": "2764506759c5ee49d34c633384df18f76bffcc9b97b1b53517902ead68282097",
+      "s004": "54768d646eaf6b80ad20ea5e0e1dcce3c6c667721cb9dc23c2262249df99984f",
+      "s005": "e156367a9e50360dff906cf1a6ca799ae98d8a91d75b0a136e803b6c2c04a145",
+      "s006": "78b83b8001fe81c70240a27edf11fd36f7aab9aee300cc8f904f110c648f0cfd",
+      "s007": "f6ac27c065e031168a26ff9fa797538c07e47963b4bbfc75c4ca3c8a67330222",
+      "s008": "f569d7c8cafbd2db42083798f728805e293a2dfed603841c1f55a8c798d4bcd3",
+      "s009": "8d7eb4c84b624bc21f220c96e6a846795fe105827182c932ba117847fc4ab468",
+      "s010": "8f9320fc8ba928e13ac59e454a2bd9da8ff2d1a8e18484962aa425bc06df8099"
+    }
+  },
+  "prices": {
+    "claude-sonnet-5-5": {
+      "provider": "anthropic",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cache_read_per_mtok": 0.1,
+      "cache_write_per_mtok": 2.5,
+      "max_prompt_tokens": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verified_on": "2026-11-25"
+    },
+    "gpt-6.2-sol": {
+      "provider": "openai",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cache_read_per_mtok": 0.1,
+      "cache_write_per_mtok": null,
+      "max_prompt_tokens": 272000,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "verified_on": "2026-11-25"
+    }
+  },
+  "resumes": [
+    {
+      "resumed_at": "2026-11-26T14:36:51.084Z",
+      "previous_status": "aborted_provider_error",
+      "previous_error": "openai call failed (HTTP 503): Our servers are currently overloaded. Please try again later.",
+      "rows_already": 1183,
+      "calls_missing": 197,
+      "spent_before_usd": 4.751866100000006,
+      "budget_usd": 12,
+      "finished_at": "2026-11-26T14:48:52.865Z",
+      "status": "completed",
+      "error": null,
+      "calls_added": 197,
+      "spent_after_usd": 5.838714100000003
+    }
+  ]
+}

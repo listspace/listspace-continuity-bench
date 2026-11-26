@@ -10,9 +10,13 @@ Most memory benchmarks ask whether an AI can recall an old fact. This one asks w
 
 It was built by Listspace, which makes a shared project board for people and their AIs. That is a conflict of interest, so everything is here to check: the scenarios, the answer keys, the prompts, the frozen protocol of every run, the raw answers and every miss. MIT licence.
 
+## Who wrote the scenarios
+
+Three scenarios (s001 to s003) were written by hand. The other seven (s004 to s010) were drafted with an AI and were not read in full by a person; they carry `review.reviewed_by_jordi: false`. Every answer key in all ten is checked by code against the events of its scenario (`node bench.mjs validate`), so a key cannot disagree with what happened, but nobody has judged by hand whether those seven chats read like real projects.
+
 ## Two parts
 
-1. **Our own scenarios** (the root of this repo). Ten synthetic agency projects of 3, 10 and 30 sessions, written for this test, with the traps real projects have. Four memory set-ups: the full chat (A), notes kept by an AI (B and B2), and the Listspace board (C). Multiple choice, scored by lookup, no AI judge.
+1. **Our own scenarios** (the root of this repo). Ten synthetic agency projects of 3, 10 and 30 sessions, made for this test, with the traps real projects have. Four memory set-ups: the full chat (A), notes kept by an AI (B and B2), and the Listspace board (C). Multiple choice, scored by lookup, no AI judge.
 2. **LongMemEval** (`longmemeval/`). Questions about facts that change over time from a public dataset we did not write (Wu et al., ICLR 2025), with histories of about 115,000 tokens. Here the AI keeps a real Listspace board itself through Listspace's tools, session by session, and answers from the board. Scored with the dataset's official judge.
 
 ## Results so far
@@ -25,7 +29,15 @@ Three runs of part 1, two models (Claude Sonnet 5.5, gpt-6.2-sol), three repetit
 
 What v3 does not show: the board in part 1 was filled from the true sequence of events, so it is the best case. Part 2 is where an AI keeps the board itself.
 
-Part 2 results: not run yet.
+One mini run of part 2 (`longmemeval/runs/mini-2026-11-27`): five knowledge-update questions, the same two models, the official gpt-4o judge.
+
+- All 20 answers were right: the full chat and the board kept by the AI, for both models.
+- To answer, the full chat meant reading 102,000 to 172,000 tokens; the board 15,000 to 25,000.
+- Keeping the board cost more than reading the chat once: about $1.80 per history against $0.21 to $0.34. The board pays off when a project is asked more than one question; this run asks one.
+- Left to themselves, both AIs kept the board as a long list of notes (Claude 288 items, GPT 798) and recorded few or no decisions.
+- Five questions show that the method works and what it costs. They are not a score.
+
+The run stopped twice and both stops are in the files: once on the judge's API key permission (`mini-2026-11-27-attempt1-judge401`, one answer made) and once on an Anthropic account spending limit, after which it was resumed (`run-config.json`, `resumes`). The resume finished every call and then crashed while writing its summary; `longmemeval/scripts/rebuild-summary.mjs` rebuilt the summary from the saved rows.
 
 ## Protocol history
 
@@ -83,7 +95,7 @@ A real `run` refuses to start unless `--budget`, `--models`, `--runs`, `--temp` 
 
 1. API keys for one Claude model and one GPT model, in the environment.
 2. A spend cap. The runner aborts before a call that could pass `--budget`.
-3. Reviewed scenarios. Three are hand written. Seven (s004 to s010) are drafted by an AI agent and carry `review.reviewed_by_jordi: false`. Every chat transcript and answer key is read by a person before the freeze.
+3. Checked scenarios. `node bench.mjs validate` must pass for every scenario before a freeze.
 4. A frozen `protocol.lock.json`: copy `protocol.draft.json`, add `scenario_sha256` from `node bench.mjs hashes`, review the prompts and the model pins, and commit it before the first answer.
 5. For the Tier B arm (the AI keeps the notes and the board), a test Listspace account.
 

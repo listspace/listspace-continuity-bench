@@ -1,0 +1,98 @@
+{
+  "started": "2026-11-26T04:28:50.472Z",
+  "models": [
+    "claude-sonnet-5-5",
+    "gpt-6.2-sol"
+  ],
+  "runs": 3,
+  "temp": "provider_default",
+  "budget": 8,
+  "scenarios": [
+    "s001",
+    "s002",
+    "s003",
+    "s004",
+    "s005",
+    "s006",
+    "s007",
+    "s008",
+    "s009",
+    "s010"
+  ],
+  "protocol": {
+    "status": "FROZEN 2026-11-25 for the Tier A pilot. Written from protocol.draft.json after Jordi reviewed scenarios s004 to s010 and the prompts. Change nothing here after the first answer is generated.",
+    "frozen": "2026-11-25",
+    "tier": "A",
+    "temperature": "provider_default",
+    "conditions": [
+      "A",
+      "B",
+      "C"
+    ],
+    "models": {
+      "claude-sonnet-5-5": {
+        "send_temperature": false,
+        "effort": "low",
+        "note": "Mid-tier Claude. Anthropic's docs say this model returns a 400 for any non-default temperature, so temperature cannot be sent. The run records that sampling was the provider default. Thinking is left on its default (adaptive); effort is pinned to low."
+      },
+      "gpt-6.2-sol": {
+        "send_temperature": false,
+        "effort": "low",
+        "note": "Mid-tier GPT, same list price as claude-sonnet-5-5. Whether the GPT-6 family accepts temperature is not stated in the docs read on 2026-11-25, so it is not sent. Set send_temperature to true only after one test call shows it is accepted. Reasoning effort is pinned to low (the API rejects none)."
+      }
+    },
+    "max_output_tokens": {
+      "answer": 4096,
+      "keeper": 4096
+    },
+    "estimate_assumptions": {
+      "note": "Used by --dry-run only. answer_output_tokens is measured from one real call per provider on 2026-11-25 (Claude 11 output tokens, OpenAI 9) and rounded to 10. keeper_output_tokens and the notes sizes are still assumptions until the pilot.",
+      "chars_per_token": {
+        "anthropic": 3.1,
+        "openai": 4
+      },
+      "answer_output_tokens": 10,
+      "keeper_output_tokens": 700,
+      "notes_tokens_per_session": 250,
+      "notes_tokens_cap": 1500
+    },
+    "prompts": {
+      "answer_system": "You answer one closed question about an agency project. The project memory in the message is all you know about the project. A decision counts as settled only once a person confirmed it. A proposal that nobody has confirmed is not settled, and a decision that was replaced is no longer current. If the memory does not let you tell, choose the cannot-tell option. Reply with JSON only.",
+      "keeper_system": "You keep the project notes for an agency project. You receive the current notes file and the transcript of one new session. Return the complete updated notes file in markdown and nothing else. Record every decision with who confirmed it and why. A decision counts as confirmed only when a person confirmed it. Record a proposal that nobody confirmed as a proposal, not as a decision. Record a replaced decision as replaced, with what replaced it. Keep a task list in plan order with done marks. Keep the file under about 800 words."
+    },
+    "scenario_sha256": {
+      "s001": "c0afb9c8df0de272866315fc576577db5c3be1f223cb2a3356b524df02b4159e",
+      "s002": "ad476262aa03c47f835f2eddc5df7a5a789d3e76c4dc8611e995f90e13cf345d",
+      "s003": "bb6ebbebb492f97bd489ba886ed20988382ae79cb5e0515d324814d9b936867e",
+      "s004": "04e1dc3ffc42a83fb26c2da9e698218e622af71ec86e45523ce44180aa4fbd44",
+      "s005": "9398039f3d9b4ab87244066545fb021aaf28764cd4979e720902efaf02ea615e",
+      "s006": "07cbe78da20594e1db937648f58fe89db7f1a92f194e742e909f45712a6e0966",
+      "s007": "603060d2a8e66b4e0871bcd0282b4b0e279ff3d0ee31d3c72618b585bbadb48a",
+      "s008": "56bb3c65c6b067d183a68bcdf9d09f3132a560d0ebe0555389b85f5ae2c3f689",
+      "s009": "b64a103f0f182a3d64051151affadb35f531750a6df11fbd66e3a8ef99aaa67a",
+      "s010": "181fd7eca11e942e6ce3b0fb7ba624c862d9ec743dce86b9e9f9d635db45fc27"
+    }
+  },
+  "prices": {
+    "claude-sonnet-5-5": {
+      "provider": "anthropic",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cache_read_per_mtok": 0.1,
+      "cache_write_per_mtok": 2.5,
+      "max_prompt_tokens": 1000000,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "verified_on": "2026-11-25"
+    },
+    "gpt-6.2-sol": {
+      "provider": "openai",
+      "input_per_mtok": 2,
+      "output_per_mtok": 10,
+      "cache_read_per_mtok": 0.1,
+      "cache_write_per_mtok": null,
+      "max_prompt_tokens": 272000,
+      "source_url": "https://developers.openai.com/api/docs/pricing",
+      "verified_on": "2026-11-25"
+    }
+  }
+}

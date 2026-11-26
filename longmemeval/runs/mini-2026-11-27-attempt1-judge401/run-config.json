@@ -1,0 +1,92 @@
+{
+  "runId": "20261126T1658",
+  "models": [
+    "claude-sonnet-5-5",
+    "gpt-6.2-sol"
+  ],
+  "conditions": [
+    "full",
+    "board"
+  ],
+  "budget": 25,
+  "judgeModel": "gpt-4o-2024-08-06",
+  "judge_is_official": true,
+  "apiBase": "https://staging-backend.listspace.app/functions/v1/api/v1",
+  "questions": [
+    "ed4ddc30",
+    "4d6b87c8",
+    "e493bb7c",
+    "8fb83627",
+    "eace081b"
+  ],
+  "dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+  "protocol": {
+    "status": "DRAFT for the 5-question mini run (Tier B). Not frozen. The mini run measures real token use and cost; the method is frozen after it, before phase 1.",
+    "dataset": {
+      "name": "LongMemEval-S (cleaned)",
+      "file": "data/longmemeval_s_cleaned.json",
+      "source": "https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned",
+      "paper": "https://arxiv.org/abs/2410.10813",
+      "code": "https://github.com/xiaowu0162/LongMemEval",
+      "license": "MIT (dataset card and code repo)",
+      "sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+    },
+    "selection": {
+      "type": "knowledge-update",
+      "n": 5,
+      "seed": "lme-mini-2026-11-27"
+    },
+    "conditions": [
+      "full",
+      "board"
+    ],
+    "models": {
+      "claude-sonnet-5-5": {
+        "effort": "low"
+      },
+      "gpt-6.2-sol": {
+        "effort": "low"
+      }
+    },
+    "temperature": "provider_default",
+    "caps": {
+      "max_tool_calls_per_session": 8,
+      "max_turns_per_session": 4,
+      "max_output_tokens": {
+        "keeper_turn": 1500,
+        "answer_full": 2000,
+        "answer_board": 1000
+      }
+    },
+    "estimate_assumptions": {
+      "note": "Used by --dry-run only. Guesses, to be replaced by the measured numbers of this mini run. Characters per token are the v1 pilot measurements in ../protocol.lock.json.",
+      "chars_per_token": {
+        "anthropic": 2.6,
+        "openai": 3.9
+      },
+      "keeper_turns_per_session": 1.5,
+      "keeper_output_tokens_per_turn": {
+        "anthropic": 500,
+        "openai": 400
+      },
+      "tool_result_tokens_per_extra_turn": 400,
+      "board_tokens_per_session": 50,
+      "board_tokens_cap": 3000,
+      "answer_output_tokens_full": {
+        "anthropic": 400,
+        "openai": 300
+      },
+      "answer_output_tokens_board": {
+        "anthropic": 100,
+        "openai": 60
+      }
+    },
+    "prompts": {
+      "full_system": "You are a helpful assistant.",
+      "keeper": "You keep a Listspace board current for a person. You read their past chats with an AI one session at a time, oldest first. The board is the only memory your AI will have: after the last session it answers questions about the person from the board alone and never sees the chats again. Questions can ask for a fact the person stated (a number, a name, a date, a place, a preference, a plan) and for what changed, so the board must show what is true now.\n\nHow to keep it. Use one item per fact or topic in the list About the user. The title names the topic. The description starts with the current value and the date it was stated, for example \"25 min 50 s (2023/06/25)\". When a fact changes, update the item that holds it: write the new value and its date first, then keep one short line with the earlier value and its date. Do not add a second item for the same topic. Plans and things the person means to do go in To do, finished ones in Done. Also keep what your AI told the person when the person may ask about it later. Skip small talk. Keep each description short. Use record_decision only for something the person decided.\n\nHow to reply. Reply with one JSON object and nothing else: {\"calls\": [{\"tool\": \"create_item\", \"args\": {...}}], \"done\": true}. The calls run in order. Set done to true when you are finished with this session, or to false when you want to see the tool results first (the ids of new items come back in the results). You have a limited number of tool calls per session, so put several facts in one item when they belong together. An empty calls list with done true is right when the session holds nothing worth keeping.",
+      "answer_board": "You answer one question about a person from their Listspace board. An AI kept the board while reading the person's past chats, and the board is all you know. Items hold what the person said, newest value first. A decision marked Proposed was recorded from what the person said and has not been confirmed in the app yet; treat it as what the person said. When a value was replaced by a newer one, answer with the current value. If the board does not hold the information, say that it is not mentioned. Answer the question directly and briefly."
+    }
+  },
+  "tool_defs_openapi_sha256": "16c6673250abe1f409252515d2dc9fa6fedb1bed7e1ee612d31f545a60ad9d8d",
+  "node": "v26.13.0"
+}

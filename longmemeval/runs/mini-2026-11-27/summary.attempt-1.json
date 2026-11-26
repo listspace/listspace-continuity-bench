@@ -1,0 +1,47 @@
+{
+  "status": "aborted_provider_error",
+  "error": "anthropic call failed (HTTP 400): You have reached your specified API usage limits. You will regain access on 2026-12-01 at 00:00 UTC.",
+  "spentUsd": 6.874316,
+  "budgetUsd": 25,
+  "calls": 168,
+  "boards": [
+    "537564c7-aafe-4d54-b496-dc86afba299a",
+    "05afd498-164e-490a-9e7c-d33ef4ca655b",
+    "76360482-810b-42bd-ae57-2e9369f4a962",
+    "d2359915-08d6-41fe-a527-de0e43d3fb8e"
+  ],
+  "judge_model": "gpt-4o-2024-08-06",
+  "judge_is_official": true,
+  "by_model_condition": {
+    "claude-sonnet-5-5 | full": {
+      "questions": 4,
+      "correct": 4,
+      "input_tokens": 669652,
+      "output_tokens": 1085,
+      "cost_usd": 1.3507415,
+      "keeper_turns": 0,
+      "tool_calls": 0,
+      "tool_calls_failed": 0,
+      "judge_models": [
+        "gpt-4o-2024-08-06 (official)"
+      ],
+      "accuracy": 1,
+      "cost_per_question_usd": 0.337685375
+    },
+    "claude-sonnet-5-5 | board": {
+      "questions": 3,
+      "correct": 3,
+      "input_tokens": 2438371,
+      "output_tokens": 64661,
+      "cost_usd": 5.5235745,
+      "keeper_turns": 154,
+      "tool_calls": 203,
+      "tool_calls_failed": 1,
+      "judge_models": [
+        "gpt-4o-2024-08-06 (official)"
+      ],
+      "accuracy": 1,
+      "cost_per_question_usd": 1.8411914999999999
+    }
+  }
+}

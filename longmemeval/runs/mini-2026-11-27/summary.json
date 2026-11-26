@@ -1,0 +1,77 @@
+{
+  "status": "completed",
+  "units_total": 20,
+  "units_judged": 20,
+  "units_missing": [],
+  "spentUsd": 20.666293499999984,
+  "budgetUsd": 25,
+  "resumed": true,
+  "resume_attempts": 1,
+  "rows_excluded_as_abandoned": 13,
+  "rebuilt_from_results": true,
+  "note": "Rebuilt from results.jsonl by scripts/rebuild-summary.mjs after the resume crashed while writing its outputs; every call had finished. spentUsd covers every attempt; by_model_condition leaves out abandoned rows of redone units.",
+  "judge_model": "gpt-4o-2024-08-06",
+  "judge_is_official": true,
+  "by_model_condition": {
+    "claude-sonnet-5-5 | full": {
+      "questions": 5,
+      "correct": 5,
+      "input_tokens": 842049,
+      "output_tokens": 1491,
+      "cost_usd": 1.6997715,
+      "keeper_turns": 0,
+      "tool_calls": 0,
+      "tool_calls_failed": 0,
+      "judge_models": [
+        "gpt-4o-2024-08-06 (official)"
+      ],
+      "accuracy": 1,
+      "cost_per_question_usd": 0.3399543
+    },
+    "claude-sonnet-5-5 | board": {
+      "questions": 5,
+      "correct": 5,
+      "input_tokens": 3824112,
+      "output_tokens": 99212,
+      "cost_usd": 8.6407125,
+      "keeper_turns": 240,
+      "tool_calls": 306,
+      "tool_calls_failed": 1,
+      "judge_models": [
+        "gpt-4o-2024-08-06 (official)"
+      ],
+      "accuracy": 1,
+      "cost_per_question_usd": 1.7281425
+    },
+    "gpt-6.2-sol | full": {
+      "questions": 5,
+      "correct": 5,
+      "input_tokens": 520980,
+      "output_tokens": 313,
+      "cost_usd": 1.0455045,
+      "keeper_turns": 0,
+      "tool_calls": 0,
+      "tool_calls_failed": 0,
+      "judge_models": [
+        "gpt-4o-2024-08-06 (official)"
+      ],
+      "accuracy": 1,
+      "cost_per_question_usd": 0.2091009
+    },
+    "gpt-6.2-sol | board": {
+      "questions": 5,
+      "correct": 5,
+      "input_tokens": 3906917,
+      "output_tokens": 135624,
+      "cost_usd": 9.170381,
+      "keeper_turns": 240,
+      "tool_calls": 829,
+      "tool_calls_failed": 9,
+      "judge_models": [
+        "gpt-4o-2024-08-06 (official)"
+      ],
+      "accuracy": 1,
+      "cost_per_question_usd": 1.8340762000000002
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # LongMemEval-S mini run (Tier B)
 
-Five knowledge-update questions from LongMemEval-S, to measure real token use and cost before phase 1. Status: draft harness, nothing here is a published result. Plan: Listspace Ops item 939d08b5.
+Five knowledge-update questions from LongMemEval-S, to measure real token use and cost before phase 1. Status: run on 26 Nov 2026, results in `runs/mini-2026-11-27` and in the main README. Five questions are a sample, not a score. Plan: Listspace Ops item 939d08b5.
 
 ## Conditions
 

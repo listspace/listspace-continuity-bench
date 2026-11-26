@@ -1,0 +1,25 @@
+{
+  "status": "aborted_provider_error",
+  "error": "openai call failed (HTTP 401): You have insufficient permissions for this operation. Missing scopes: model.request. Check that you have the correct role in your organization (Reader, Writer, Owner) and project (Member, Owner), and if you're using a restricted API key, that it has the necessary scopes.",
+  "spentUsd": 0.337532,
+  "budgetUsd": 25,
+  "calls": 1,
+  "boards": [],
+  "judge_model": "gpt-4o-2024-08-06",
+  "judge_is_official": true,
+  "by_model_condition": {
+    "claude-sonnet-5-5 | full": {
+      "questions": 1,
+      "correct": 0,
+      "input_tokens": 167686,
+      "output_tokens": 216,
+      "cost_usd": 0.337532,
+      "keeper_turns": 0,
+      "tool_calls": 0,
+      "tool_calls_failed": 0,
+      "judge_models": [],
+      "accuracy": 0,
+      "cost_per_question_usd": 0.337532
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{"board_id":"537564c7-aafe-4d54-b496-dc86afba299a","model":"claude-sonnet-5-5","question":"ed4ddc30","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1"}
+{"board_id":"05afd498-164e-490a-9e7c-d33ef4ca655b","model":"claude-sonnet-5-5","question":"4d6b87c8","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1"}
+{"board_id":"76360482-810b-42bd-ae57-2e9369f4a962","model":"claude-sonnet-5-5","question":"e493bb7c","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1"}
+{"board_id":"d2359915-08d6-41fe-a527-de0e43d3fb8e","model":"claude-sonnet-5-5","question":"8fb83627","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1"}
+{"board_id":"d2359915-08d6-41fe-a527-de0e43d3fb8e","model":"claude-sonnet-5-5","question":"8fb83627","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1","abandoned":true,"abandoned_at":"2026-11-26T17:47:05.632Z","abandoned_reason":"resume attempt 1: unit unfinished, redone on a new board"}
+{"board_id":"b2ec4308-2abf-41f8-b9c4-23d54c85570a","model":"claude-sonnet-5-5","question":"8fb83627","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1","attempt":1}
+{"board_id":"ff9215a3-a274-4638-a461-0369dab3dce0","model":"claude-sonnet-5-5","question":"eace081b","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1","attempt":1}
+{"board_id":"7901d5b2-843c-4d9c-a604-77966e0129dc","model":"gpt-6.2-sol","question":"ed4ddc30","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1","attempt":1}
+{"board_id":"2848c265-3bbc-47c5-a8a9-ed83452dbc8e","model":"gpt-6.2-sol","question":"4d6b87c8","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1","attempt":1}
+{"board_id":"99b8eb1a-ac72-4c37-a02e-d51225d7a7be","model":"gpt-6.2-sol","question":"e493bb7c","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1","attempt":1}
+{"board_id":"1fcb5c26-9db3-4d1a-8cc9-23535f6009e4","model":"gpt-6.2-sol","question":"8fb83627","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1","attempt":1}
+{"board_id":"075440f4-29da-4bd3-9b84-ccf17f3143e6","model":"gpt-6.2-sol","question":"eace081b","api_base":"https://staging-backend.listspace.app/functions/v1/api/v1","attempt":1}

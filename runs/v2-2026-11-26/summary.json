@@ -1,0 +1,448 @@
+{
+  "status": "completed",
+  "error": null,
+  "spentUsd": 5.976832799999991,
+  "budgetUsd": 14,
+  "calls": 1380,
+  "summary": {
+    "status_questions": {
+      "claude-sonnet-5-5 | A": {
+        "n": 90,
+        "correct_pct": 97.77777777777777,
+        "stale_belief_pct": 0,
+        "abstain_pct": 2.2222222222222223,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 5140.766666666666
+      },
+      "claude-sonnet-5-5 | B": {
+        "n": 90,
+        "correct_pct": 83.33333333333333,
+        "stale_belief_pct": 3.3333333333333335,
+        "abstain_pct": 13.333333333333334,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 1193.9666666666667
+      },
+      "claude-sonnet-5-5 | B2": {
+        "n": 90,
+        "correct_pct": 70,
+        "stale_belief_pct": 0,
+        "abstain_pct": 30,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 562.4666666666667
+      },
+      "claude-sonnet-5-5 | C": {
+        "n": 90,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 611.5666666666667
+      },
+      "gpt-6.2-sol | A": {
+        "n": 90,
+        "correct_pct": 95.55555555555556,
+        "stale_belief_pct": 0,
+        "abstain_pct": 4.444444444444445,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 3428.7
+      },
+      "gpt-6.2-sol | B": {
+        "n": 90,
+        "correct_pct": 86.66666666666667,
+        "stale_belief_pct": 2.2222222222222223,
+        "abstain_pct": 11.11111111111111,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 534.7
+      },
+      "gpt-6.2-sol | B2": {
+        "n": 90,
+        "correct_pct": 68.88888888888889,
+        "stale_belief_pct": 3.3333333333333335,
+        "abstain_pct": 27.77777777777778,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 346.8
+      },
+      "gpt-6.2-sol | C": {
+        "n": 90,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 404.9
+      }
+    },
+    "next_task": {
+      "claude-sonnet-5-5 | A": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 5158.4
+      },
+      "claude-sonnet-5-5 | B": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 1211.6
+      },
+      "claude-sonnet-5-5 | B2": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 580.1
+      },
+      "claude-sonnet-5-5 | C": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 629.2
+      },
+      "gpt-6.2-sol | A": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 3442.2
+      },
+      "gpt-6.2-sol | B": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 548.2
+      },
+      "gpt-6.2-sol | B2": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 360.3
+      },
+      "gpt-6.2-sol | C": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 418.4
+      }
+    },
+    "by_type": {
+      "claude-sonnet-5-5 | A | current_decision": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 5126.2
+      },
+      "claude-sonnet-5-5 | B | current_decision": {
+        "n": 30,
+        "correct_pct": 90,
+        "stale_belief_pct": 0,
+        "abstain_pct": 10,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 1179.4
+      },
+      "claude-sonnet-5-5 | B2 | current_decision": {
+        "n": 30,
+        "correct_pct": 80,
+        "stale_belief_pct": 0,
+        "abstain_pct": 20,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 547.9
+      },
+      "claude-sonnet-5-5 | C | current_decision": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 597
+      },
+      "claude-sonnet-5-5 | A | was_confirmed": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 5134.4
+      },
+      "claude-sonnet-5-5 | B | was_confirmed": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 1187.6
+      },
+      "claude-sonnet-5-5 | B2 | was_confirmed": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 556.1
+      },
+      "claude-sonnet-5-5 | C | was_confirmed": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 605.2
+      },
+      "claude-sonnet-5-5 | A | next_task": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 5158.4
+      },
+      "claude-sonnet-5-5 | B | next_task": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 1211.6
+      },
+      "claude-sonnet-5-5 | B2 | next_task": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 580.1
+      },
+      "claude-sonnet-5-5 | C | next_task": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 629.2
+      },
+      "claude-sonnet-5-5 | A | who_decided": {
+        "n": 30,
+        "correct_pct": 93.33333333333333,
+        "stale_belief_pct": 0,
+        "abstain_pct": 6.666666666666667,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 5161.7
+      },
+      "claude-sonnet-5-5 | B | who_decided": {
+        "n": 30,
+        "correct_pct": 60,
+        "stale_belief_pct": 10,
+        "abstain_pct": 30,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 1214.9
+      },
+      "claude-sonnet-5-5 | B2 | who_decided": {
+        "n": 30,
+        "correct_pct": 30,
+        "stale_belief_pct": 0,
+        "abstain_pct": 70,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 583.4
+      },
+      "claude-sonnet-5-5 | C | who_decided": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 632.5
+      },
+      "gpt-6.2-sol | A | current_decision": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 3423.7
+      },
+      "gpt-6.2-sol | B | current_decision": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 529.7
+      },
+      "gpt-6.2-sol | B2 | current_decision": {
+        "n": 30,
+        "correct_pct": 70,
+        "stale_belief_pct": 10,
+        "abstain_pct": 20,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 341.8
+      },
+      "gpt-6.2-sol | C | current_decision": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 399.9
+      },
+      "gpt-6.2-sol | A | was_confirmed": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 3420.3
+      },
+      "gpt-6.2-sol | B | was_confirmed": {
+        "n": 30,
+        "correct_pct": 90,
+        "stale_belief_pct": 0,
+        "abstain_pct": 10,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 526.3
+      },
+      "gpt-6.2-sol | B2 | was_confirmed": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 338.4
+      },
+      "gpt-6.2-sol | C | was_confirmed": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 396.5
+      },
+      "gpt-6.2-sol | A | next_task": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 3442.2
+      },
+      "gpt-6.2-sol | B | next_task": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 548.2
+      },
+      "gpt-6.2-sol | B2 | next_task": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 360.3
+      },
+      "gpt-6.2-sol | C | next_task": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 418.4
+      },
+      "gpt-6.2-sol | A | who_decided": {
+        "n": 30,
+        "correct_pct": 86.66666666666667,
+        "stale_belief_pct": 0,
+        "abstain_pct": 13.333333333333334,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 3442.1
+      },
+      "gpt-6.2-sol | B | who_decided": {
+        "n": 30,
+        "correct_pct": 70,
+        "stale_belief_pct": 6.666666666666667,
+        "abstain_pct": 23.333333333333332,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 548.1
+      },
+      "gpt-6.2-sol | B2 | who_decided": {
+        "n": 30,
+        "correct_pct": 36.666666666666664,
+        "stale_belief_pct": 0,
+        "abstain_pct": 63.333333333333336,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 360.2
+      },
+      "gpt-6.2-sol | C | who_decided": {
+        "n": 30,
+        "correct_pct": 100,
+        "stale_belief_pct": 0,
+        "abstain_pct": 0,
+        "unparseable_pct": 0,
+        "context_overflow_pct": 0,
+        "mean_input_tokens": 418.3
+      }
+    }
+  },
+  "finished": "2026-11-26T06:19:45.192Z"
+}
