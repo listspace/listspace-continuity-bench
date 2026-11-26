@@ -1,0 +1,1173 @@
+{
+ "resamples": 10000,
+ "scenarios": [
+  "s001",
+  "s002",
+  "s003",
+  "s004",
+  "s005",
+  "s006",
+  "s007",
+  "s008",
+  "s009",
+  "s010"
+ ],
+ "status_questions": {
+  "claude-sonnet-5-5 | A": {
+   "n_answers": 90,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 97.8,
+    "lo": 93.3,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 2.2,
+    "lo": 0,
+    "hi": 6.7
+   },
+   "mean_input_tokens": {
+    "mean": 5140.8,
+    "lo": 2441.8,
+    "hi": 8565.3
+   }
+  },
+  "claude-sonnet-5-5 | B": {
+   "n_answers": 90,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 83.3,
+    "lo": 70,
+    "hi": 96.7
+   },
+   "stale_belief_pct": {
+    "mean": 3.3,
+    "lo": 0,
+    "hi": 10
+   },
+   "abstain_pct": {
+    "mean": 13.3,
+    "lo": 0,
+    "hi": 26.7
+   },
+   "mean_input_tokens": {
+    "mean": 1194,
+    "lo": 909.4,
+    "hi": 1488.4
+   }
+  },
+  "claude-sonnet-5-5 | B2": {
+   "n_answers": 90,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 70,
+    "lo": 56.7,
+    "hi": 83.3
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 30,
+    "lo": 16.7,
+    "hi": 43.3
+   },
+   "mean_input_tokens": {
+    "mean": 562.5,
+    "lo": 499,
+    "hi": 634.1
+   }
+  },
+  "claude-sonnet-5-5 | C": {
+   "n_answers": 90,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 611.6,
+    "lo": 538.2,
+    "hi": 690.5
+   }
+  },
+  "gpt-6.2-sol | A": {
+   "n_answers": 90,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 95.6,
+    "lo": 87.8,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 4.4,
+    "lo": 0,
+    "hi": 11.1
+   },
+   "mean_input_tokens": {
+    "mean": 3428.7,
+    "lo": 1617.9,
+    "hi": 5715.7
+   }
+  },
+  "gpt-6.2-sol | B": {
+   "n_answers": 90,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 86.7,
+    "lo": 72.2,
+    "hi": 97.8
+   },
+   "stale_belief_pct": {
+    "mean": 2.2,
+    "lo": 0,
+    "hi": 6.7
+   },
+   "abstain_pct": {
+    "mean": 11.1,
+    "lo": 1.1,
+    "hi": 26.7
+   },
+   "mean_input_tokens": {
+    "mean": 534.7,
+    "lo": 427.2,
+    "hi": 645.1
+   }
+  },
+  "gpt-6.2-sol | B2": {
+   "n_answers": 90,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 68.9,
+    "lo": 52.2,
+    "hi": 85.6
+   },
+   "stale_belief_pct": {
+    "mean": 3.3,
+    "lo": 0,
+    "hi": 10
+   },
+   "abstain_pct": {
+    "mean": 27.8,
+    "lo": 13.3,
+    "hi": 43.3
+   },
+   "mean_input_tokens": {
+    "mean": 346.8,
+    "lo": 304.6,
+    "hi": 396.1
+   }
+  },
+  "gpt-6.2-sol | C": {
+   "n_answers": 90,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 404.9,
+    "lo": 353.8,
+    "hi": 460.3
+   }
+  }
+ },
+ "next_task": {
+  "claude-sonnet-5-5 | A": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 5158.4,
+    "lo": 2446.3,
+    "hi": 8600.6
+   }
+  },
+  "claude-sonnet-5-5 | B": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 1211.6,
+    "lo": 912.7,
+    "hi": 1521.9
+   }
+  },
+  "claude-sonnet-5-5 | B2": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 580.1,
+    "lo": 502.8,
+    "hi": 665.9
+   }
+  },
+  "claude-sonnet-5-5 | C": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 629.2,
+    "lo": 541.9,
+    "hi": 722.9
+   }
+  },
+  "gpt-6.2-sol | A": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 3442.2,
+    "lo": 1625.1,
+    "hi": 5741.6
+   }
+  },
+  "gpt-6.2-sol | B": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 548.2,
+    "lo": 432.1,
+    "hi": 667.7
+   }
+  },
+  "gpt-6.2-sol | B2": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 360.3,
+    "lo": 309.5,
+    "hi": 418.2
+   }
+  },
+  "gpt-6.2-sol | C": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 418.4,
+    "lo": 358.3,
+    "hi": 482.4
+   }
+  }
+ },
+ "by_type": {
+  "claude-sonnet-5-5 | A | current_decision": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 5126.2,
+    "lo": 2428.1,
+    "hi": 8549.8
+   }
+  },
+  "claude-sonnet-5-5 | A | was_confirmed": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 5134.4,
+    "lo": 2434.8,
+    "hi": 8560.1
+   }
+  },
+  "claude-sonnet-5-5 | A | next_task": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 5158.4,
+    "lo": 2446.3,
+    "hi": 8600.6
+   }
+  },
+  "claude-sonnet-5-5 | A | who_decided": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 93.3,
+    "lo": 80,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 6.7,
+    "lo": 0,
+    "hi": 20
+   },
+   "mean_input_tokens": {
+    "mean": 5161.7,
+    "lo": 2463.2,
+    "hi": 8585.9
+   }
+  },
+  "claude-sonnet-5-5 | B | current_decision": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 90,
+    "lo": 70,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 10,
+    "lo": 0,
+    "hi": 30
+   },
+   "mean_input_tokens": {
+    "mean": 1179.4,
+    "lo": 897.2,
+    "hi": 1472.1
+   }
+  },
+  "claude-sonnet-5-5 | B | was_confirmed": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 1187.6,
+    "lo": 903.3,
+    "hi": 1482.3
+   }
+  },
+  "claude-sonnet-5-5 | B | next_task": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 1211.6,
+    "lo": 912.7,
+    "hi": 1521.9
+   }
+  },
+  "claude-sonnet-5-5 | B | who_decided": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 60,
+    "lo": 30,
+    "hi": 90
+   },
+   "stale_belief_pct": {
+    "mean": 10,
+    "lo": 0,
+    "hi": 30
+   },
+   "abstain_pct": {
+    "mean": 30,
+    "lo": 0,
+    "hi": 60
+   },
+   "mean_input_tokens": {
+    "mean": 1214.9,
+    "lo": 928.7,
+    "hi": 1512.7
+   }
+  },
+  "claude-sonnet-5-5 | B2 | current_decision": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 80,
+    "lo": 50,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 20,
+    "lo": 0,
+    "hi": 50
+   },
+   "mean_input_tokens": {
+    "mean": 547.9,
+    "lo": 485.7,
+    "hi": 618
+   }
+  },
+  "claude-sonnet-5-5 | B2 | was_confirmed": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 556.1,
+    "lo": 493,
+    "hi": 627.2
+   }
+  },
+  "claude-sonnet-5-5 | B2 | next_task": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 580.1,
+    "lo": 502.8,
+    "hi": 665.9
+   }
+  },
+  "claude-sonnet-5-5 | B2 | who_decided": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 30,
+    "lo": 0,
+    "hi": 60
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 70,
+    "lo": 40,
+    "hi": 100
+   },
+   "mean_input_tokens": {
+    "mean": 583.4,
+    "lo": 518.6,
+    "hi": 658.1
+   }
+  },
+  "claude-sonnet-5-5 | C | current_decision": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 597,
+    "lo": 524,
+    "hi": 674.5
+   }
+  },
+  "claude-sonnet-5-5 | C | was_confirmed": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 605.2,
+    "lo": 532.2,
+    "hi": 683.5
+   }
+  },
+  "claude-sonnet-5-5 | C | next_task": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 629.2,
+    "lo": 541.9,
+    "hi": 722.9
+   }
+  },
+  "claude-sonnet-5-5 | C | who_decided": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 632.5,
+    "lo": 558,
+    "hi": 713.6
+   }
+  },
+  "gpt-6.2-sol | A | current_decision": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 3423.7,
+    "lo": 1612.9,
+    "hi": 5708.7
+   }
+  },
+  "gpt-6.2-sol | A | was_confirmed": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 3420.3,
+    "lo": 1609.7,
+    "hi": 5706.6
+   }
+  },
+  "gpt-6.2-sol | A | next_task": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 3442.2,
+    "lo": 1625.1,
+    "hi": 5741.6
+   }
+  },
+  "gpt-6.2-sol | A | who_decided": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 86.7,
+    "lo": 63.3,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 13.3,
+    "lo": 0,
+    "hi": 33.3
+   },
+   "mean_input_tokens": {
+    "mean": 3442.1,
+    "lo": 1630,
+    "hi": 5731.9
+   }
+  },
+  "gpt-6.2-sol | B | current_decision": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 529.7,
+    "lo": 422.9,
+    "hi": 639.5
+   }
+  },
+  "gpt-6.2-sol | B | was_confirmed": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 90,
+    "lo": 70,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 10,
+    "lo": 0,
+    "hi": 30
+   },
+   "mean_input_tokens": {
+    "mean": 526.3,
+    "lo": 419.3,
+    "hi": 636.1
+   }
+  },
+  "gpt-6.2-sol | B | next_task": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 548.2,
+    "lo": 432.1,
+    "hi": 667.7
+   }
+  },
+  "gpt-6.2-sol | B | who_decided": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 70,
+    "lo": 43.3,
+    "hi": 93.3
+   },
+   "stale_belief_pct": {
+    "mean": 6.7,
+    "lo": 0,
+    "hi": 20
+   },
+   "abstain_pct": {
+    "mean": 23.3,
+    "lo": 3.3,
+    "hi": 50
+   },
+   "mean_input_tokens": {
+    "mean": 548.1,
+    "lo": 440,
+    "hi": 659.4
+   }
+  },
+  "gpt-6.2-sol | B2 | current_decision": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 70,
+    "lo": 40,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 10,
+    "lo": 0,
+    "hi": 30
+   },
+   "abstain_pct": {
+    "mean": 20,
+    "lo": 0,
+    "hi": 50
+   },
+   "mean_input_tokens": {
+    "mean": 341.8,
+    "lo": 299.6,
+    "hi": 390.3
+   }
+  },
+  "gpt-6.2-sol | B2 | was_confirmed": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 338.4,
+    "lo": 296.8,
+    "hi": 386.9
+   }
+  },
+  "gpt-6.2-sol | B2 | next_task": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 360.3,
+    "lo": 309.5,
+    "hi": 418.2
+   }
+  },
+  "gpt-6.2-sol | B2 | who_decided": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 36.7,
+    "lo": 10,
+    "hi": 66.7
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 63.3,
+    "lo": 33.3,
+    "hi": 90
+   },
+   "mean_input_tokens": {
+    "mean": 360.2,
+    "lo": 317.1,
+    "hi": 410.8
+   }
+  },
+  "gpt-6.2-sol | C | current_decision": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 399.9,
+    "lo": 348.3,
+    "hi": 454.6
+   }
+  },
+  "gpt-6.2-sol | C | was_confirmed": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 396.5,
+    "lo": 345.8,
+    "hi": 451
+   }
+  },
+  "gpt-6.2-sol | C | next_task": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 418.4,
+    "lo": 358.3,
+    "hi": 482.4
+   }
+  },
+  "gpt-6.2-sol | C | who_decided": {
+   "n_answers": 30,
+   "n_scenarios": 10,
+   "correct_pct": {
+    "mean": 100,
+    "lo": 100,
+    "hi": 100
+   },
+   "stale_belief_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "abstain_pct": {
+    "mean": 0,
+    "lo": 0,
+    "hi": 0
+   },
+   "mean_input_tokens": {
+    "mean": 418.3,
+    "lo": 366.5,
+    "hi": 474.9
+   }
+  }
+ }
+}
