@@ -6,7 +6,7 @@ Does your AI work from the current plan?
 
 Plans change during a project. A launch date moves, a hosting choice is replaced, someone acts on a proposal nobody confirmed. A week later you open a fresh AI session and ask what was decided. This repository measures whether that session answers from the current, confirmed decision, or from one that was replaced or never confirmed, depending on where the project's memory lives.
 
-Most memory benchmarks ask whether an AI can recall an old fact. This one asks whether it knows which fact is still true and who confirmed it.
+Most memory benchmarks ask whether an AI can recall an old fact. This one asks whether it knows which fact is still true and who confirmed it: continuity, not recall. Why that difference matters is in [In April I Wrote Down Why AI Memory Fails](https://yellowhousedigital.com/writing/ai-memory-continuity).
 
 It was built by [Listspace](https://listspace.app), a shared project board for people and their AIs made by [Yellow House Digital](https://yellowhousedigital.com). That is a conflict of interest, so everything is here to check: the scenarios, the answer keys, the prompts, the frozen protocol of every run, the raw answers and every miss. MIT licence.
 
