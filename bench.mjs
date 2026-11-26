@@ -7,6 +7,9 @@
 //   node bench.mjs run --dry-run --models <ids> --runs <n> [--scenarios s001,s002] [--budget <USD>]
 //                                                 print call count, estimated tokens and cost; calls nothing
 //   node bench.mjs run --budget <USD> --models <ids> --runs <n> --temp <t> --out <dir> [--scenarios ...]
+//   node bench.mjs run --resume <dir> --budget <USD> --temp <t> [--dry-run]
+//                                                 continue a run that stopped on a provider error: same lock and
+//                                                 settings, only the calls with no row yet, recorded in run-config.json
 //
 // A real `run` refuses to start without --budget, --models, --runs, --temp and --out, without a
 // frozen protocol.lock.json, without a verified price for every model, and without the provider
@@ -23,7 +26,8 @@ import { shuffled } from './src/rng.mjs';
 import { loadPrices, priceFor } from './src/prices.mjs';
 import { Meter } from './src/meter.mjs';
 import { providerFactories, KEY_ENV } from './src/providers.mjs';
-import { estimate, execute } from './src/runner.mjs';
+import { estimate, execute, rowKey } from './src/runner.mjs';
+import { loadRun, checkResume, addResumeEntry, saveConfig } from './src/resume.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const die = (m) => { console.error(`bench refused to run:\n  ${m}`); process.exit(1); };
@@ -70,9 +74,18 @@ if (cmd === 'validate') {
   console.log(JSON.stringify(Object.fromEntries(files.map((x) => [x.scenario.id, x.sha256])), null, 2));
 } else if (cmd === 'run') {
   const dry = f['dry-run'] === true;
-  if (!f.models) die('--models is required (comma separated model ids)');
-  const models = f.models.split(',').map((m) => m.trim()).filter(Boolean);
-  const runs = Number(f.runs);
+  // --resume <dir> continues a run that stopped on a provider error: same lock, same settings, only the calls with no row yet.
+  let prior = null;
+  if (f.resume) {
+    try { prior = loadRun(join(ROOT, f.resume)); } catch (e) { die(e.message); }
+    if (f.models !== undefined && f.models !== prior.config.models.join(',')) die('--models differs from the first attempt');
+    if (f.runs !== undefined && Number(f.runs) !== prior.config.runs) die('--runs differs from the first attempt');
+    if (f.out !== undefined) die('--out cannot be combined with --resume, the run continues in its own directory');
+  }
+  const modelsArg = f.models ?? prior?.config.models.join(',');
+  if (!modelsArg) die('--models is required (comma separated model ids)');
+  const models = modelsArg.split(',').map((m) => m.trim()).filter(Boolean);
+  const runs = Number(f.runs ?? prior?.config.runs);
   if (!Number.isInteger(runs) || runs < 1) die('--runs is required and must be a positive integer');
   const budget = f.budget === undefined ? undefined : Number(f.budget);
   if (budget !== undefined && !(Number.isFinite(budget) && budget > 0)) die('--budget must be a positive number of USD');
@@ -92,12 +105,13 @@ if (cmd === 'validate') {
     try { priceFor(prices, m); } catch (e) { die(e.message); }
     if (!protocol.models[m]) die(`${m} is not pinned in the protocol`);
   }
+  if (prior) { try { checkResume({ config: prior.config, protocol, prices }); } catch (e) { die(e.message); } }
 
   let selected = files;
-  if (f.scenarios) {
-    const want = f.scenarios.split(',');
-    selected = files.filter((x) => want.includes(x.scenario.id));
-    const missing = want.filter((id) => !selected.some((x) => x.scenario.id === id));
+  const wanted = f.scenarios ? f.scenarios.split(',') : prior?.config.scenarios;
+  if (wanted) {
+    selected = files.filter((x) => wanted.includes(x.scenario.id));
+    const missing = wanted.filter((id) => !selected.some((x) => x.scenario.id === id));
     if (missing.length) die(`unknown scenarios: ${missing.join(', ')}`);
   }
   const scenarios = selected.map((x) => x.scenario);
@@ -108,13 +122,15 @@ if (cmd === 'validate') {
   } else if (!dry) die('the protocol has no scenario_sha256, so nothing is frozen');
 
   const conditions = protocol.conditions;
+  const done = new Set((prior?.rows ?? []).map(rowKey));
 
   if (dry) {
-    const est = estimate({ scenarios, protocol, models, runs, conditions, prices });
+    const est = estimate({ scenarios, protocol, models, runs, conditions, prices, done });
     const sessions = scenarios.reduce((n, s) => n + s.sessions.length, 0);
     console.log('DRY RUN. Nothing was called, no key was read.');
     console.log(`protocol: ${locked ? 'protocol.lock.json (frozen)' : 'protocol.draft.json (DRAFT, not frozen)'}`);
     console.log(`scenarios: ${scenarios.length} (${sessions} sessions, ${scenarios.reduce((n, s) => n + s.questions.length, 0)} questions)  conditions: ${conditions.join(', ')}  runs: ${runs}  models: ${models.join(', ')}`);
+    if (prior) console.log(`RESUME of ${f.resume}: ${prior.rows.length} rows already written, so only the calls with no row are counted below.`);
     for (const m of models) {
       const e = est.byModel[m];
       console.log(`\n${m}: ${e.calls} calls (${e.answerCalls} answers, ${e.keeperCalls} notes-keeper)  ~${int(e.inputTokens)} input tok  ~${int(e.outputTokens)} output tok  ~${money(e.costUsd)}`);
@@ -122,30 +138,54 @@ if (cmd === 'validate') {
     }
     const t = est.totals;
     console.log(`\nTOTAL: ${t.calls} calls (${t.answerCalls} answers, ${t.keeperCalls} keeper)  ~${int(t.inputTokens)} input tok  ~${int(t.outputTokens)} output tok  ~${money(t.costUsd)}`);
-    if (budget !== undefined) console.log(`budget ${money(budget)}: estimate is ${t.costUsd <= budget ? 'inside' : 'OVER'} the cap (${((100 * t.costUsd) / budget).toFixed(1)}% of it)`);
-    console.log(`\nAssumptions (protocol estimate_assumptions, to be replaced by pilot measurements): ${JSON.stringify(protocol.estimate_assumptions)}`);
+    if (budget !== undefined) {
+      const spent = prior ? prior.rows.reduce((n, r) => n + (r.cost_usd ?? 0), 0) : 0;
+      console.log(`budget ${money(budget)}: ${prior ? `already spent ${money(spent)}, estimate to finish ${money(t.costUsd)}, total ${money(spent + t.costUsd)}` : `estimate ${money(t.costUsd)}`}, ${spent + t.costUsd <= budget ? 'inside' : 'OVER'} the cap (${((100 * (spent + t.costUsd)) / budget).toFixed(1)}% of it)`);
+    }
+    console.log(`\nAssumptions (protocol estimate_assumptions, to be replaced by measurements): ${JSON.stringify(protocol.estimate_assumptions)}`);
     console.log(`Prices from config/prices.json: ${models.map((m) => `${m} ${prices.models[m].input_per_mtok}/${prices.models[m].output_per_mtok} USD per Mtok in/out, verified ${prices.models[m].verified_on}`).join('; ')}`);
   } else {
     if (budget === undefined) die('--budget <USD> is required');
-    for (const k of ['temp', 'out']) if (f[k] === undefined) die(`--${k} is required (nothing is defaulted, so the run is recorded exactly)`);
+    for (const k of prior ? ['temp'] : ['temp', 'out']) if (f[k] === undefined) die(`--${k} is required (nothing is defaulted, so the run is recorded exactly)`);
     for (const m of models) {
       const key = KEY_ENV[prices.models[m].provider];
       if (!process.env[key]) die(`${key} is not set (environment only)`);
     }
-    const outDir = join(ROOT, f.out);
-    if (existsSync(join(outDir, 'results.jsonl'))) die(`${f.out}/results.jsonl already exists. A re-run goes in a new directory and is reported as a re-run.`);
-    mkdirSync(outDir, { recursive: true });
-    writeFileSync(join(outDir, 'run-config.json'), JSON.stringify({ started: new Date().toISOString(), models, runs, temp: protocol.temperature, budget, scenarios: scenarios.map((s) => s.id), protocol, prices: Object.fromEntries(models.map((m) => [m, prices.models[m]])) }, null, 2));
+    const dirName = prior ? f.resume : f.out;
+    const outDir = join(ROOT, dirName);
+    const meter = new Meter(budget);
+    let config;
+    if (prior) {
+      const spent = prior.rows.reduce((n, r) => n + (r.cost_usd ?? 0), 0);
+      const total = estimate({ scenarios, protocol, models, runs, conditions, prices }).totals.calls;
+      const missing = total - prior.rows.length;
+      if (missing <= 0) die(`nothing to resume: all ${total} calls already have a row`);
+      if (spent >= budget) die(`--budget ${budget} is not above what is already spent (${money(spent)})`);
+      meter.restore(spent, prior.rows.length);
+      if (prior.summary) writeFileSync(join(outDir, `summary.attempt-${(prior.config.resumes?.length ?? 0) + 1}.json`), JSON.stringify(prior.summary, null, 2));
+      config = addResumeEntry(prior.config, { resumed_at: new Date().toISOString(), previous_status: prior.summary?.status ?? 'unknown', previous_error: prior.summary?.error ?? null, rows_already: prior.rows.length, calls_missing: missing, spent_before_usd: spent, budget_usd: budget });
+      saveConfig(outDir, config);
+    } else {
+      if (existsSync(join(outDir, 'results.jsonl'))) die(`${f.out}/results.jsonl already exists. A re-run goes in a new directory and is reported as a re-run, or continue this one with --resume.`);
+      mkdirSync(outDir, { recursive: true });
+      config = { started: new Date().toISOString(), models, runs, temp: protocol.temperature, budget, scenarios: scenarios.map((s) => s.id), protocol, prices: Object.fromEntries(models.map((m) => [m, prices.models[m]])) };
+      saveConfig(outDir, config);
+    }
     const providers = Object.fromEntries([...new Set(models.map((m) => prices.models[m].provider))].map((p) => [p, providerFactories[p]()]));
     const result = await execute({
-      scenarios, protocol, models, runs, conditions, prices, providers, meter: new Meter(budget),
+      scenarios, protocol, models, runs, conditions, prices, providers, meter, existing: prior?.rows ?? [],
       sink: (row) => appendFileSync(join(outDir, 'results.jsonl'), JSON.stringify(row) + '\n'),
     });
-    writeFileSync(join(outDir, 'summary.json'), JSON.stringify({ ...result, finished: new Date().toISOString() }, null, 2));
-    console.log(`${result.status}: ${result.calls} calls, spent ${money(result.spentUsd)} of ${money(budget)}. Rows and summary are in ${f.out}/`);
+    const finished = new Date().toISOString();
+    if (prior) {
+      const entry = { ...config.resumes.at(-1), finished_at: finished, status: result.status, error: result.error, calls_added: result.calls - prior.rows.length, spent_after_usd: result.spentUsd };
+      saveConfig(outDir, { ...config, resumes: [...config.resumes.slice(0, -1), entry] });
+    }
+    writeFileSync(join(outDir, 'summary.json'), JSON.stringify({ ...result, finished }, null, 2));
+    console.log(`${result.status}: ${result.calls} calls in all, spent ${money(result.spentUsd)} of ${money(budget)}. Rows and summary are in ${dirName}/`);
     if (result.error) console.error(result.error);
     if (result.status !== 'completed') process.exit(2);
   }
 } else {
-  die('usage: node bench.mjs validate | plan | hashes | run --dry-run ... | run --budget <USD> --models <ids> --runs <n> --temp <t> --out <dir>');
+  die('usage: node bench.mjs validate | plan | hashes | run --dry-run ... | run --budget <USD> --models <ids> --runs <n> --temp <t> --out <dir> | run --resume <dir> --budget <USD> --temp <t>');
 }

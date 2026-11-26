@@ -6,6 +6,11 @@ import { scoreReply, summarize } from './score.mjs';
 import { costOf, worstCaseCost, BudgetExceeded } from './meter.mjs';
 import { ProviderError } from './providers.mjs';
 
+/** One key per call. A resumed run skips every call whose key already has a row. */
+export const keeperKey = (model, condition, scenario, session) => `keeper|${model}|${condition}|${scenario}|${session}`;
+export const answerKey = (model, scenario, question, condition, run) => `answer|${model}|${scenario}|${question}|${condition}|${run}`;
+export const rowKey = (r) => (r.kind === 'keeper' ? keeperKey(r.model, r.condition, r.scenario, r.session) : answerKey(r.model, r.scenario, r.question, r.condition, r.run));
+
 /** Same seed for every model and condition, so conditions are paired on identical option orders. */
 export function orderFor(scenario, q, run) {
   return shuffled(q.options, seedFrom(`${scenario.id}/${q.id}/${run}`));
@@ -47,7 +52,7 @@ const CONSERVATIVE_CPT = 3;
  * Dry-run estimate. Makes no call. Notes are not known before the keeper runs, so their size and the
  * keeper's output are assumptions from the protocol, per provider.
  */
-export function estimate({ scenarios, protocol, models, runs, conditions, prices }) {
+export function estimate({ scenarios, protocol, models, runs, conditions, prices, done = new Set() }) {
   const as = protocol.estimate_assumptions;
   const keepers = keeperConditions(protocol, conditions);
   const out = { byModel: {}, totals: { calls: 0, keeperCalls: 0, answerCalls: 0, inputTokens: 0, outputTokens: 0, costUsd: 0 } };
@@ -55,7 +60,8 @@ export function estimate({ scenarios, protocol, models, runs, conditions, prices
     const price = prices.models[model];
     const cpt = as.chars_per_token[price.provider];
     const m = { calls: 0, keeperCalls: 0, answerCalls: 0, inputTokens: 0, outputTokens: 0, costUsd: 0, byCondition: {} };
-    const add = (kind, inTok, outTok, cond) => {
+    const add = (kind, inTok, outTok, cond, key) => {
+      if (done.has(key)) return;
       const cost = (inTok * price.input_per_mtok + outTok * price.output_per_mtok) / 1e6;
       m.calls++; m[kind === 'keeper' ? 'keeperCalls' : 'answerCalls']++;
       m.inputTokens += inTok; m.outputTokens += outTok; m.costUsd += cost;
@@ -68,7 +74,7 @@ export function estimate({ scenarios, protocol, models, runs, conditions, prices
         s.sessions.forEach((session, i) => {
           const notes = PLACEHOLDER(Math.min(as.notes_tokens_cap, as.notes_tokens_per_session * i), cpt);
           const r = keeperRequest(protocol, kc, notes, session, s);
-          add('keeper', estTokens(r.system + r.user, cpt), as.keeper_output_tokens[price.provider], `${kc}-keeper`);
+          add('keeper', estTokens(r.system + r.user, cpt), as.keeper_output_tokens[price.provider], `${kc}-keeper`, keeperKey(model, kc, s.id, session.n));
         });
       }
       for (const q of s.questions) {
@@ -76,7 +82,7 @@ export function estimate({ scenarios, protocol, models, runs, conditions, prices
           const order = orderFor(s, q, run);
           for (const cond of conditions) {
             const r = answerRequest(protocol, memoryText(cond, s, finalNotes), q, order);
-            add('answer', estTokens(r.system + r.user, cpt), as.answer_output_tokens[price.provider], cond);
+            add('answer', estTokens(r.system + r.user, cpt), as.answer_output_tokens[price.provider], cond, answerKey(model, s.id, q.id, cond, run));
           }
         }
       }
@@ -92,8 +98,19 @@ export function estimate({ scenarios, protocol, models, runs, conditions, prices
  * happens. Never retries. Returns { status, error?, spentUsd, calls, summary } and does not throw
  * for a budget abort or a provider error: the run stops cleanly and the rows so far stand.
  */
-export async function execute({ scenarios, protocol, models, runs, conditions, prices, providers, meter, sink }) {
-  const rows = [];
+export async function execute({ scenarios, protocol, models, runs, conditions, prices, providers, meter, sink, existing = [] }) {
+  // A resumed run: rows already written are kept as they are, never called again, and must form a prefix of the plan.
+  const have = new Map(existing.map((r) => [rowKey(r), r]));
+  let used = 0;
+  let gap = false;
+  const take = (key) => {
+    const r = have.get(key);
+    if (!r) { gap = true; return null; }
+    if (gap) throw new Error(`results are not a prefix of the plan: ${key} has a row after a call that has none`);
+    used++;
+    return r;
+  };
+  const rows = [...existing];
   const emit = (row) => { rows.push(row); sink(row); };
   const keepers = keeperConditions(protocol, conditions);
   let status = 'completed';
@@ -119,6 +136,8 @@ export async function execute({ scenarios, protocol, models, runs, conditions, p
         const notes = Object.fromEntries(keepers.map((kc) => [kc, '']));
         for (const kc of keepers) {
           for (const session of s.sessions) {
+            const kept = take(keeperKey(model, kc, s.id, session.n));
+            if (kept) { if (kept.notes !== undefined) notes[kc] = kept.notes; continue; }
             const r = await call(keeperRequest(protocol, kc, notes[kc], session, s), protocol.max_output_tokens.keeper);
             const base = { kind: 'keeper', condition: kc, model, scenario: s.id, session: session.n };
             if (r.overflow) { emit({ ...base, outcome: 'context_overflow', est_input_tokens: r.estInput }); continue; }
@@ -130,6 +149,7 @@ export async function execute({ scenarios, protocol, models, runs, conditions, p
           for (let run = 1; run <= runs; run++) {
             const order = orderFor(s, q, run);
             for (const condition of conditions) {
+              if (take(answerKey(model, s.id, q.id, condition, run))) continue;
               const req = answerRequest(protocol, memoryText(condition, s, notes[condition]), q, order);
               const base = { kind: 'answer', model, scenario: s.id, question: q.id, type: q.type, condition, run, order: order.map((o) => o.id) };
               const r = await call(req, protocol.max_output_tokens.answer);
@@ -147,6 +167,7 @@ export async function execute({ scenarios, protocol, models, runs, conditions, p
     else throw e;
     error = e.message;
   }
+  if (status === 'completed' && used !== have.size) throw new Error(`${have.size - used} existing rows are not part of this plan`);
   return { status, error, spentUsd: meter.spent, budgetUsd: meter.budget, calls: meter.calls, summary: summarizeRows(rows) };
 }
 

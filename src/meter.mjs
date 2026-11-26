@@ -35,6 +35,11 @@ export class Meter {
   assertRoom(worstCase) {
     if (this.spent + worstCase > this.budget) throw new BudgetExceeded(this.spent, worstCase, this.budget);
   }
+  /** A resumed run starts from what was already spent. */
+  restore(spent, calls) {
+    this.spent = spent;
+    this.calls = calls;
+  }
   record(cost) {
     this.spent += cost;
     this.calls += 1;

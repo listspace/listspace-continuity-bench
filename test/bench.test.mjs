@@ -297,3 +297,119 @@ test('the traps meant to stay unconfirmed carry no confirmation word from the pe
   assert.ok(sponsor.length >= 3);
   assert.ok(sponsor.every((l) => !l.startsWith('Tomasz:') || !CONFIRM_WORDS.test(l.toLowerCase())));
 });
+
+// ---- resume after a provider error ---------------------------------------------------------
+import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { loadRun, readRows, checkResume, addResumeEntry } from '../src/resume.mjs';
+import { rowKey } from '../src/runner.mjs';
+
+const frozenLock = JSON.parse(readFileSync(`${ROOT}protocol.lock.json`, 'utf8'));
+const resumeArgs = (over = {}) => ({ scenarios: scenarios.slice(0, 2), protocol: frozenLock, models: [MODEL], runs: 1, conditions: frozenLock.conditions, prices, ...over });
+
+/** Deterministic fake: the reply carries the prompt length, so two runs agree only if every prompt (notes included) was identical. */
+function echoProvider({ failAt = Infinity } = {}) {
+  const p = { calls: 0, async ask(req) {
+    p.calls++;
+    if (p.calls === failAt) throw new ProviderError('anthropic', 503, 'overloaded');
+    const isKeeper = Object.values(frozenLock.prompts.keepers).includes(req.system);
+    const text = isKeeper ? `NOTES(${req.user.length})` : `len=${req.user.length} {"answer":"A"}`;
+    return { text, stopReason: 'end_turn', usage: { input: 1000, cacheRead: 0, cacheWrite: 0, output: 50 } };
+  } };
+  return p;
+}
+
+test('resume: an abort midway, then a resume that runs exactly the missing calls and nothing twice', async () => {
+  const full = [];
+  await execute({ ...resumeArgs(), providers: { anthropic: echoProvider() }, meter: new Meter(1000), sink: (r) => full.push(r) });
+
+  const first = [];
+  const failing = echoProvider({ failAt: 40 });
+  const meter1 = new Meter(1000);
+  const r1 = await execute({ ...resumeArgs(), providers: { anthropic: failing }, meter: meter1, sink: (r) => first.push(r) });
+  assert.equal(r1.status, 'aborted_provider_error');
+  assert.equal(first.length, 39);
+
+  const second = [];
+  const again = echoProvider();
+  const meter2 = new Meter(1000);
+  meter2.restore(meter1.spent, meter1.calls);
+  const r2 = await execute({ ...resumeArgs(), providers: { anthropic: again }, meter: meter2, existing: first, sink: (r) => second.push(r) });
+  assert.equal(r2.status, 'completed');
+  assert.equal(again.calls, full.length - first.length); // exactly the missing calls
+  assert.equal(second.length, full.length - first.length);
+  const all = [...first, ...second];
+  assert.deepEqual(all.map(rowKey), full.map(rowKey)); // same keys, same order
+  assert.equal(new Set(all.map(rowKey)).size, all.length); // no call twice
+  assert.deepEqual(all.map((r) => r.reply ?? r.notes), full.map((r) => r.reply ?? r.notes)); // same prompts, so notes were reused
+  assert.deepEqual(all.map((r) => r.order), full.map((r) => r.order)); // same option orders
+  assert.ok(Math.abs(meter2.spent - full.reduce((n, r) => n + r.cost_usd, 0)) < 1e-9); // budget counted what was already spent
+  assert.equal(meter2.calls, full.length);
+});
+
+test('resume: the budget counts what was already spent', async () => {
+  const first = [];
+  const meter1 = new Meter(1000);
+  await execute({ ...resumeArgs(), providers: { anthropic: echoProvider({ failAt: 10 }) }, meter: meter1, sink: (r) => first.push(r) });
+  const meter2 = new Meter(meter1.spent + 0.001);
+  meter2.restore(meter1.spent, meter1.calls);
+  const provider = echoProvider();
+  const r = await execute({ ...resumeArgs(), providers: { anthropic: provider }, meter: meter2, existing: first, sink: () => {} });
+  assert.equal(r.status, 'aborted_budget');
+  assert.equal(provider.calls, 0);
+});
+
+test('resume: rows that are not a prefix of the plan, or not in it, are refused', async () => {
+  const rows = [];
+  await execute({ ...resumeArgs(), providers: { anthropic: echoProvider({ failAt: 30 }) }, meter: new Meter(1000), sink: (r) => rows.push(r) });
+  const gapped = [rows[0], ...rows.slice(2)];
+  await assert.rejects(execute({ ...resumeArgs(), providers: { anthropic: echoProvider() }, meter: new Meter(1000), existing: gapped, sink: () => {} }), /not a prefix/);
+  const foreign = [...rows, { ...rows[0], scenario: 'sXXX' }];
+  await assert.rejects(execute({ ...resumeArgs(), providers: { anthropic: echoProvider() }, meter: new Meter(1000), existing: foreign, sink: () => {} }), /not part of this plan/);
+});
+
+test('resume: refused when the lock, a price or the sampling setting changed', () => {
+  const config = { protocol: frozenLock, models: [MODEL], prices: { [MODEL]: prices.models[MODEL] }, temp: frozenLock.temperature };
+  assert.doesNotThrow(() => checkResume({ config, protocol: frozenLock, prices }));
+  const changedLock = { ...frozenLock, prompts: { ...frozenLock.prompts, answer_system: frozenLock.prompts.answer_system + ' Be brief.' } };
+  assert.throws(() => checkResume({ config, protocol: changedLock, prices }), /protocol\.lock\.json differs from the first attempt/);
+  const changedPrices = { models: { [MODEL]: { ...prices.models[MODEL], output_per_mtok: 11 } } };
+  assert.throws(() => checkResume({ config, protocol: frozenLock, prices: changedPrices }), /price entry for claude-sonnet-5-5 differs/);
+  assert.throws(() => checkResume({ config: { ...config, temp: 0 }, protocol: frozenLock, prices }), /sampling setting differs/);
+  assert.equal(addResumeEntry({ a: 1 }, { x: 1 }).resumes.length, 1);
+});
+
+test('resume CLI: a damaged results file, a changed lock and a dry run that counts only the missing calls', async () => {
+  const dir = `runs/test-resume-${process.pid}`;
+  const abs = `${ROOT}${dir}`;
+  mkdirSync(abs, { recursive: true });
+  try {
+    const rows = [];
+    await execute({ ...resumeArgs(), providers: { anthropic: echoProvider({ failAt: 25 }) }, meter: new Meter(1000), sink: (r) => rows.push(r) });
+    const config = { started: 'x', models: [MODEL], runs: 1, temp: frozenLock.temperature, budget: 5, scenarios: ['s001', 's002'], protocol: frozenLock, prices: { [MODEL]: prices.models[MODEL] } };
+    writeFileSync(`${abs}/run-config.json`, JSON.stringify(config));
+    writeFileSync(`${abs}/results.jsonl`, rows.map((r) => JSON.stringify(r)).join(String.fromCharCode(10)) + String.fromCharCode(10));
+    const env = { ...process.env, ANTHROPIC_API_KEY: 'sk-ant-test-not-real', OPENAI_API_KEY: 'sk-oa-test-not-real' };
+    const run = (args) => spawnSync(process.execPath, ['bench.mjs', 'run', ...args], { cwd: ROOT, env, encoding: 'utf8' });
+
+    const dry = run(['--resume', dir, '--dry-run', '--budget', '5']);
+    assert.equal(dry.status, 0, dry.stderr);
+    assert.match(dry.stdout, new RegExp(`RESUME of ${dir}: ${rows.length} rows already written`));
+    const missing = (/TOTAL: (\d+) calls/.exec(dry.stdout) ?? [])[1];
+    const expected = estimate(resumeArgs()).totals.calls - rows.length;
+    assert.equal(Number(missing), expected);
+
+    assert.match(run(['--resume', dir, '--budget', '5', '--out', 'runs/elsewhere', '--temp', 'default']).stderr, /--out cannot be combined with --resume/);
+    assert.match(run(['--resume', dir, '--budget', '5', '--runs', '2', '--temp', 'default']).stderr, /--runs differs from the first attempt/);
+
+    writeFileSync(`${abs}/run-config.json`, JSON.stringify({ ...config, protocol: { ...frozenLock, max_output_tokens: { answer: 1, keeper: 1 } } }));
+    assert.match(run(['--resume', dir, '--budget', '5', '--temp', 'default']).stderr, /refusing to resume: protocol\.lock\.json differs/);
+
+    writeFileSync(`${abs}/run-config.json`, JSON.stringify(config));
+    writeFileSync(`${abs}/results.jsonl`, JSON.stringify(rows[0]) + String.fromCharCode(10) + '{broken');
+    assert.match(run(['--resume', dir, '--budget', '5', '--temp', 'default']).stderr, /line 2 is not valid JSON/);
+    assert.throws(() => readRows(`${abs}/results.jsonl`), /not valid JSON/);
+    assert.throws(() => loadRun(`${ROOT}runs/does-not-exist`), /is missing/);
+  } finally {
+    rmSync(abs, { recursive: true, force: true });
+  }
+});
