@@ -8,7 +8,7 @@ Plans change during a project. A launch date moves, a hosting choice is replaced
 
 Most memory benchmarks ask whether an AI can recall an old fact. This one asks whether it knows which fact is still true and who confirmed it.
 
-It was built by Listspace, which makes a shared project board for people and their AIs. That is a conflict of interest, so everything is here to check: the scenarios, the answer keys, the prompts, the frozen protocol of every run, the raw answers and every miss. MIT licence.
+It was built by [Listspace](https://listspace.app), a shared project board for people and their AIs made by [Yellow House Digital](https://yellowhousedigital.com). That is a conflict of interest, so everything is here to check: the scenarios, the answer keys, the prompts, the frozen protocol of every run, the raw answers and every miss. MIT licence.
 
 ## Who wrote the scenarios
 
