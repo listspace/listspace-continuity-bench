@@ -172,11 +172,11 @@ const scored = liveRows([...(prior?.rows ?? []), ...rows.map((r) => ({ ...(attem
 const excluded = (prior?.rows.length ?? 0) + rows.length - scored.length;
 for (const model of models) for (const c of conditions) {
   const lines = scored.filter((r) => r.kind === 'answer' && r.model === model && r.condition === c).map((r) => JSON.stringify({ question_id: r.question, hypothesis: r.hypothesis }));
-  if (lines.length) writeFileSync(join(out, `hypotheses.${model}.${c}.jsonl`), lines.join('\n') + '\n');
+  if (lines.length) writeFileSync(join(dir, `hypotheses.${model}.${c}.jsonl`), lines.join('\n') + '\n');
 }
 const summary = { ...res, ...(prior ? { resumed: true, resume_attempts: attempt, rows_excluded_as_abandoned: excluded, note: 'Resumed run. spentUsd and calls include every attempt; by_model_condition leaves out abandoned rows of redone units.' } : {}), judge_model: judgeModel, judge_is_official: judgeModel === OFFICIAL_JUDGE_MODEL, by_model_condition: summarizeRows(scored) };
 if (prior) { config.resumes[config.resumes.length - 1].outcome = { status: res.status, error: res.error ?? null, spent_after_usd: res.spentUsd }; writeFileSync(join(dir, 'run-config.json'), JSON.stringify(config, null, 2)); }
-writeFileSync(join(out, 'summary.json'), JSON.stringify(summary, null, 2));
+writeFileSync(join(dir, 'summary.json'), JSON.stringify(summary, null, 2));
 console.log(`\nstatus ${res.status}${res.error ? `: ${res.error}` : ''}\nspent ${money(res.spentUsd)} of ${money(res.budgetUsd)} in ${res.calls} metered calls; boards made: ${res.boards.length}`);
 if (prior) console.log(`RESUMED run (attempt ${attempt}): ${excluded} rows of abandoned attempts are left out of the figures below; spend above covers all attempts.`);
 console.log(`JUDGE: ${judgeModel} ${judgeModel === OFFICIAL_JUDGE_MODEL ? '(official LongMemEval judge)' : '(SUBSTITUTE, numbers are not comparable to published ones)'}`);
