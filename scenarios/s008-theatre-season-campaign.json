@@ -1,24 +1,34 @@
 {
   "id": "s008",
-  "title": "Season campaign for a regional theatre: announcement date slips, budget mix changes, poster printer settled only inside the agency",
+  "title": "Season campaign for a regional theatre: announcement date slips, budget mix changes, poster printer acted on but never confirmed",
   "people": {
     "agency": "Wei (agency strategist)",
     "client": "Sofia (marketing manager)"
   },
   "review": {
-    "drafted_by": "an AI agent (Claude), 2026-11-25",
-    "reviewed_by_jordi": true,
-    "reviewed_on": "2026-11-25",
-    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+    "drafted_by": "an AI agent (Claude), 2026-11-25. Chats rewritten as v2 on 2026-11-26.",
+    "v1_reviewed_by_jordi_on": "2026-11-25",
+    "reviewed_by_jordi": false,
+    "hard_case": true,
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
   },
   "sessions": [
     {
       "n": 1,
       "date": "2026-05-04",
       "chat": [
-        "Wei: Kickoff with Sofia. She confirmed announcing the season on 9 September, in line with the subscriber renewal letter.",
-        "Wei: The invoice for the last milestone went out.",
-        "Wei: Logged the open comments from Sofia's team."
+        "Wei: The agency team had a quiet week with other client work crowding in. Nothing else came out of it.",
+        "Wei: There was a small misunderstanding about who was meant to reply to whom. It is mostly background for whoever reads this later.",
+        "Wei: Half the team was out sick this week, so replies were slower than usual. It took more of the hour than it should have.",
+        "Wei: A new person joined on the client side and needed the basics explained. I will not go into detail.",
+        "Sofia: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
+        "Wei: Kickoff with Sofia. She wants the season announced on 9 September, in line with the subscriber renewal letter.",
+        "Wei: Half the team was out sick this week, so replies were slower than usual. Nothing else came out of it.",
+        "Sofia: The video link changed twice before everyone got in. Not much to report beyond that.",
+        "Sofia: The call started late because the previous meeting overran. I will not go into detail.",
+        "Wei: The coffee machine broke so the meeting moved to the cafe next door. It took more of the hour than it should have.",
+        "Wei: Plan, in order: Write the season announcement copy, Shoot the trailer, Order the posters, Set up the ad accounts, Brief the box office team.",
+        "Sofia: We spent the first ten minutes on audio problems before anything useful happened. We laughed about it afterwards."
       ],
       "ops": [
         {
@@ -64,9 +74,19 @@
       "n": 2,
       "date": "2026-05-11",
       "chat": [
-        "Wei: Sofia confirmed putting most of the budget into social video, because the growth target is a younger audience.",
-        "Sofia asked for the status deck to be shorter next time.",
-        "Sofia asked for the status deck to be shorter next time."
+        "Wei: The shared folder structure confused two people again. Moving on.",
+        "Wei: The mood on the call was relaxed, mostly small talk. Someone should tidy that up eventually.",
+        "Sofia: Chat is hard to follow when three threads run at once. Nothing else came out of it.",
+        "Sofia: The review meeting ran long because everyone had opinions on small wording choices. It is the kind of thing that happens every project.",
+        "Wei: The weather made travelling to the meeting a hassle for the client team. Everyone left in a decent mood.",
+        "Sofia: Half the team was out sick this week, so replies were slower than usual. Everyone left in a decent mood.",
+        "Wei: The office move on the client side is distracting everyone. It is mostly background for whoever reads this later.",
+        "Wei: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
+        "Wei: The weather made travelling to the meeting a hassle for the client team. It had no effect on the plan.",
+        "Wei: A long email thread from last week went in circles and I stopped following it. No one seemed bothered.",
+        "Wei: A couple of people mentioned holiday plans without naming dates. We laughed about it afterwards.",
+        "Wei: Sofia wants most of the budget in social video, because the growth target is a younger audience.",
+        "Wei: We spent the first ten minutes on audio problems before anything useful happened. Nothing else came out of it."
       ],
       "ops": [
         {
@@ -87,10 +107,19 @@
       "n": 3,
       "date": "2026-05-18",
       "chat": [
-        "Wei: The season announcement copy is done.",
-        "Wei: Let's go with the Northside print shop for the posters. Sofia said she will collect quotes first.",
-        "Wei: Logged the open comments from Sofia's team.",
-        "Wei: The invoice for the last milestone went out."
+        "Wei: The coffee machine broke so the meeting moved to the cafe next door. It is the kind of thing that happens every project.",
+        "Wei: Feedback arrived as a long voice note, which took a while to digest. It is the kind of thing that happens every project.",
+        "Sofia: The weather made travelling to the meeting a hassle for the client team. I am only noting it for the record.",
+        "Wei: A long email thread from last week went in circles and I stopped following it. Not much to report beyond that.",
+        "Wei: The weather made travelling to the meeting a hassle for the client team. It is mostly background for whoever reads this later.",
+        "Wei: The review meeting ran long because everyone had opinions on small wording choices. Not much to report beyond that.",
+        "Wei: The notes from the last call were hard to read because of all the shorthand. I am only noting it for the record.",
+        "Wei: The review meeting ran long because everyone had opinions on small wording choices. No one seemed bothered.",
+        "Wei: The call started late because the previous meeting overran. Someone should tidy that up eventually.",
+        "Wei: Let's go with the Northside print shop for the posters. Sofia said she will collect quotes too.",
+        "Wei: Done: Write the season announcement copy.",
+        "Sofia: There was a small misunderstanding about who was meant to reply to whom. Someone should tidy that up eventually.",
+        "Wei: Feedback arrived as a long voice note, which took a while to digest. It had no effect on the plan."
       ],
       "ops": [
         {
@@ -109,9 +138,20 @@
       "n": 4,
       "date": "2026-05-25",
       "chat": [
+        "Sofia: The mood on the call was relaxed, mostly small talk. Not much to report beyond that.",
+        "Sofia: The notes from the last call were hard to read because of all the shorthand. Moving on.",
+        "Wei: Chat is hard to follow when three threads run at once. I mention it only because it ate time.",
+        "Wei: The agency team had a quiet week with other client work crowding in. It took more of the hour than it should have.",
+        "Wei: The agency team had a quiet week with other client work crowding in. It is mostly background for whoever reads this later.",
+        "Wei: The shared folder structure confused two people again. I mention it only because it ate time.",
+        "Wei: The office move on the client side is distracting everyone. I am only noting it for the record.",
+        "Wei: A couple of people mentioned holiday plans without naming dates. Someone should tidy that up eventually.",
+        "Wei: Feedback arrived as a long voice note, which took a while to digest. It took more of the hour than it should have.",
         "Wei: Trailer shoot is scheduled.",
-        "Wei: Standup moved to the afternoon this week.",
-        "Wei: Shared the staging link with Sofia."
+        "Wei: The agency team had a quiet week with other client work crowding in. No one seemed bothered.",
+        "Wei: The mood on the call was relaxed, mostly small talk. We laughed about it afterwards.",
+        "Wei: Someone asked for a recap of the previous meeting and it took longer than expected. It is mostly background for whoever reads this later.",
+        "Wei: We spent the first ten minutes on audio problems before anything useful happened. It had no effect on the plan."
       ],
       "ops": []
     },
@@ -119,9 +159,19 @@
       "n": 5,
       "date": "2026-06-01",
       "chat": [
-        "Wei: The board approval slipped to mid-September. Sofia confirmed announcing on 23 September instead.",
-        "Wei: Weekly check-in held. No blockers raised.",
-        "Wei: Quiet week, the team spent it on build work and bug fixes."
+        "Wei: The notes from the last call were hard to read because of all the shorthand. It had no effect on the plan.",
+        "Wei: The board approval slipped to mid-September. Sofia moved the announcement to 23 September.",
+        "Sofia: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
+        "Wei: The mood on the call was relaxed, mostly small talk. It had no effect on the plan.",
+        "Wei: The shared folder structure confused two people again. We laughed about it afterwards.",
+        "Wei: The shared folder structure confused two people again. Nothing else came out of it.",
+        "Sofia: Chat is hard to follow when three threads run at once. Someone should tidy that up eventually.",
+        "Wei: Someone asked for a recap of the previous meeting and it took longer than expected. We laughed about it afterwards.",
+        "Wei: A long email thread from last week went in circles and I stopped following it. I will not go into detail.",
+        "Wei: The review meeting ran long because everyone had opinions on small wording choices. Someone should tidy that up eventually.",
+        "Sofia: The review meeting ran long because everyone had opinions on small wording choices. We laughed about it afterwards.",
+        "Wei: Feedback arrived as a long voice note, which took a while to digest. I will not go into detail.",
+        "Wei: There was a small misunderstanding about who was meant to reply to whom. No one seemed bothered."
       ],
       "ops": [
         {
@@ -142,9 +192,21 @@
       "n": 6,
       "date": "2026-06-08",
       "chat": [
-        "Wei: The trailer is shot.",
-        "Sofia sent feedback on the last build, mostly small copy edits.",
-        "Sofia sent feedback on the last build, mostly small copy edits."
+        "Wei: Chat is hard to follow when three threads run at once. It had no effect on the plan.",
+        "Sofia: A long email thread from last week went in circles and I stopped following it. Everyone left in a decent mood.",
+        "Sofia: A couple of people mentioned holiday plans without naming dates. I will not go into detail.",
+        "Wei: The shared folder structure confused two people again. It is mostly background for whoever reads this later.",
+        "Wei: The trailer is in the can.",
+        "Wei: Someone raised an unrelated idea for next year and we parked it. Everyone left in a decent mood.",
+        "Jamal (box office lead): The subscriber letter is going out with the 9 September date, is that still right?",
+        "Wei: The shared folder structure confused two people again. I will not go into detail.",
+        "Wei: Done: Shoot the trailer.",
+        "Wei: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
+        "Wei: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
+        "Sofia: The weather made travelling to the meeting a hassle for the client team. No one seemed bothered.",
+        "Wei: Half the team was out sick this week, so replies were slower than usual. I will not go into detail.",
+        "Wei: The video link changed twice before everyone got in. We laughed about it afterwards.",
+        "Wei: Chat is hard to follow when three threads run at once. Not much to report beyond that."
       ],
       "ops": [
         {
@@ -157,9 +219,19 @@
       "n": 7,
       "date": "2026-06-15",
       "chat": [
-        "Wei: Subscriber data shows older subscribers still renew by post. Sofia confirmed splitting the budget between social video and print.",
-        "Wei: Quiet week, the team spent it on build work and bug fixes.",
-        "Wei: Weekly check-in held. No blockers raised."
+        "Wei: The review meeting ran long because everyone had opinions on small wording choices. It had no effect on the plan.",
+        "Sofia: Feedback arrived as a long voice note, which took a while to digest. Someone should tidy that up eventually.",
+        "Wei: Subscriber data shows older subscribers still renew by post. Sofia wants the budget split between social video and print.",
+        "Wei: Half the team was out sick this week, so replies were slower than usual. It is mostly background for whoever reads this later.",
+        "Wei: Jamal, I will check the letter text.",
+        "Wei: The shared folder structure confused two people again. I am only noting it for the record.",
+        "Wei: A new person joined on the client side and needed the basics explained. Not much to report beyond that.",
+        "Wei: The mood on the call was relaxed, mostly small talk. Everyone left in a decent mood.",
+        "Wei: There was a small misunderstanding about who was meant to reply to whom. It is the kind of thing that happens every project.",
+        "Sofia: There was a small misunderstanding about who was meant to reply to whom. Not much to report beyond that.",
+        "Wei: Someone asked for a recap of the previous meeting and it took longer than expected. I am only noting it for the record.",
+        "Wei: The call started late because the previous meeting overran. It took more of the hour than it should have.",
+        "Wei: The office move on the client side is distracting everyone. I will not go into detail."
       ],
       "ops": [
         {
@@ -180,9 +252,20 @@
       "n": 8,
       "date": "2026-06-22",
       "chat": [
-        "Wei: I sent the files to the Northside print shop as we agreed inside the agency. Sofia has not signed off on the printer.",
-        "Wei: Shared the staging link with Sofia.",
-        "Wei: Standup moved to the afternoon this week."
+        "Wei: The files went to the Northside print shop, as we agreed in the agency channel.",
+        "Sofia: A couple of people mentioned holiday plans without naming dates. It took more of the hour than it should have.",
+        "Wei: A long email thread from last week went in circles and I stopped following it. We laughed about it afterwards.",
+        "Wei: The notes from the last call were hard to read because of all the shorthand. Not much to report beyond that.",
+        "Sofia: The coffee machine broke so the meeting moved to the cafe next door. Everyone left in a decent mood.",
+        "Sofia: A couple of people mentioned holiday plans without naming dates. Not much to report beyond that.",
+        "Sofia: A new person joined on the client side and needed the basics explained. I mention it only because it ate time.",
+        "Wei: Feedback arrived as a long voice note, which took a while to digest. Moving on.",
+        "Sofia: A long email thread from last week went in circles and I stopped following it. It had no effect on the plan.",
+        "Wei: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project.",
+        "Wei: A new person joined on the client side and needed the basics explained. It is the kind of thing that happens every project.",
+        "Jamal: Still shifting my whole social calendar to video, as planned.",
+        "Wei: Someone raised an unrelated idea for next year and we parked it. Moving on.",
+        "Sofia: A couple of people mentioned holiday plans without naming dates. It had no effect on the plan."
       ],
       "ops": []
     },
@@ -190,11 +273,28 @@
       "n": 9,
       "date": "2026-06-29",
       "chat": [
-        "Wei: The ad accounts are set up.",
-        "Wei: The invoice for the last milestone went out.",
-        "Wei: Logged the open comments from Sofia's team."
+        "Wei: Someone asked for a recap of the previous meeting and it took longer than expected. Nothing else came out of it.",
+        "Wei: The ad accounts are ready.",
+        "Sofia: The weather made travelling to the meeting a hassle for the client team. It took more of the hour than it should have.",
+        "Sofia: Someone asked for a recap of the previous meeting and it took longer than expected. It had no effect on the plan.",
+        "Wei: The video link changed twice before everyone got in. It had no effect on the plan.",
+        "Wei: The agency team had a quiet week with other client work crowding in. Everyone left in a decent mood.",
+        "Jamal: The posters are with Northside, so I told the box office the pickup is the 20th.",
+        "Sofia: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Wei: Added to the plan: Review the first ad results.",
+        "Wei: The call started late because the previous meeting overran. I mention it only because it ate time.",
+        "Wei: Someone asked for a recap of the previous meeting and it took longer than expected. Everyone left in a decent mood.",
+        "Wei: There was a small misunderstanding about who was meant to reply to whom. Everyone left in a decent mood.",
+        "Sofia: The video link changed twice before everyone got in. I will not go into detail.",
+        "Wei: Done: Set up the ad accounts.",
+        "Wei: The video link changed twice before everyone got in. Everyone left in a decent mood.",
+        "Wei: Someone raised an unrelated idea for next year and we parked it. We laughed about it afterwards."
       ],
       "ops": [
+        {
+          "op": "task_done",
+          "id": "t4"
+        },
         {
           "op": "task_add",
           "id": "t6",
@@ -206,9 +306,20 @@
       "n": 10,
       "date": "2026-07-06",
       "chat": [
-        "Wei: Sofia is still collecting quotes for the posters.",
-        "Sofia asked for the status deck to be shorter next time.",
-        "Sofia asked for the status deck to be shorter next time."
+        "Sofia: The review meeting ran long because everyone had opinions on small wording choices. Moving on.",
+        "Wei: The mood on the call was relaxed, mostly small talk. No one seemed bothered.",
+        "Sofia: Quotes from two other print shops arrived. I am comparing them.",
+        "Wei: There was a small misunderstanding about who was meant to reply to whom. I mention it only because it ate time.",
+        "Wei: The office move on the client side is distracting everyone. It is the kind of thing that happens every project.",
+        "Sofia: The review meeting ran long because everyone had opinions on small wording choices. It took more of the hour than it should have.",
+        "Wei: We spent the first ten minutes on audio problems before anything useful happened. Not much to report beyond that.",
+        "Sofia: The video link changed twice before everyone got in. Moving on.",
+        "Wei: Half the team was out sick this week, so replies were slower than usual. I mention it only because it ate time.",
+        "Wei: The coffee machine broke so the meeting moved to the cafe next door. I mention it only because it ate time.",
+        "Wei: The agency team had a quiet week with other client work crowding in. I will not go into detail.",
+        "Sofia: The mood on the call was relaxed, mostly small talk. I will not go into detail.",
+        "Wei: The mood on the call was relaxed, mostly small talk. I am only noting it for the record.",
+        "Wei: The notes from the last call were hard to read because of all the shorthand. I will not go into detail."
       ],
       "ops": []
     }
@@ -255,7 +366,7 @@
         },
         {
           "id": "b",
-          "text": "No, the agency settled on it internally but Sofia never confirmed",
+          "text": "No, it was proposed but never confirmed",
           "status": "current"
         },
         {
@@ -282,21 +393,26 @@
         },
         {
           "id": "c",
+          "text": "Set up the ad accounts",
+          "status": "replaced"
+        },
+        {
+          "id": "d",
           "text": "Order the posters",
           "status": "current"
         },
         {
-          "id": "d",
+          "id": "e",
           "text": "Brief the box office team",
           "status": "distractor"
         },
         {
-          "id": "e",
+          "id": "f",
           "text": "Review the first ad results",
           "status": "distractor"
         },
         {
-          "id": "f",
+          "id": "g",
           "text": "Cannot tell from the memory provided",
           "status": "unknown"
         }

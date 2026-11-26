@@ -1,24 +1,34 @@
 {
   "id": "s009",
-  "title": "CRM rollout for a logistics firm over 30 sessions: migration approach replaced twice, go-live moves twice, training provider never confirmed",
+  "title": "CRM rollout for a logistics firm over 30 sessions: migration approach replaced twice, go-live moves twice, training plan never confirmed",
   "people": {
     "agency": "Mateo (agency lead)",
     "client": "Hilde (head of operations)"
   },
   "review": {
-    "drafted_by": "an AI agent (Claude), 2026-11-25",
-    "reviewed_by_jordi": true,
-    "reviewed_on": "2026-11-25",
-    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+    "drafted_by": "an AI agent (Claude), 2026-11-25. Chats rewritten as v2 on 2026-11-26.",
+    "v1_reviewed_by_jordi_on": "2026-11-25",
+    "reviewed_by_jordi": false,
+    "hard_case": false,
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
   },
   "sessions": [
     {
       "n": 1,
       "date": "2026-01-19",
       "chat": [
-        "Mateo: Kickoff with Hilde. She confirmed migrating all customer records in one cutover, as the simplest option.",
-        "Mateo: The invoice for the last milestone went out.",
-        "Mateo: Logged the open comments from Hilde's team."
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. Moving on.",
+        "Hilde: A new person joined on the client side and needed the basics explained. Moving on.",
+        "Mateo: Kickoff with Hilde. She wants all customer records moved in one cutover, as the simplest option.",
+        "Mateo: The call started late because the previous meeting overran. Everyone left in a decent mood.",
+        "Hilde: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
+        "Hilde: The shared folder structure confused two people again. Someone should tidy that up eventually.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. Not much to report beyond that.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. Moving on.",
+        "Mateo: Plan, in order: Audit the current customer data, Configure the account objects, Build the import scripts, Set up roles and permissions, Integrate the warehouse system, Configure the dispatch dashboards, Run the user acceptance test.",
+        "Hilde: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. It had no effect on the plan.",
+        "Mateo: Chat is hard to follow when three threads run at once. I will not go into detail."
       ],
       "ops": [
         {
@@ -74,9 +84,19 @@
       "n": 2,
       "date": "2026-01-26",
       "chat": [
-        "Mateo: Hilde confirmed go-live on 15 June, the end of the fiscal quarter.",
-        "Hilde asked for the status deck to be shorter next time.",
-        "Hilde asked for the status deck to be shorter next time."
+        "Hilde: The office move on the client side is distracting everyone. It had no effect on the plan.",
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. Someone should tidy that up eventually.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. Moving on.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. I mention it only because it ate time.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
+        "Mateo: The call started late because the previous meeting overran. Nothing else came out of it.",
+        "Mateo: A new person joined on the client side and needed the basics explained. Someone should tidy that up eventually.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. It took more of the hour than it should have.",
+        "Mateo: Hilde set go-live for 15 June, the end of the fiscal quarter.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. I will not go into detail.",
+        "Hilde: The shared folder structure confused two people again. It took more of the hour than it should have.",
+        "Hilde: We spent the first ten minutes on audio problems before anything useful happened. Nothing else came out of it.",
+        "Hilde: A couple of people mentioned holiday plans without naming dates. No one seemed bothered."
       ],
       "ops": [
         {
@@ -97,9 +117,21 @@
       "n": 3,
       "date": "2026-02-02",
       "chat": [
-        "Mateo: The customer data audit is done. Many duplicate records.",
-        "Mateo: Logged the open comments from Hilde's team.",
-        "Mateo: The invoice for the last milestone went out."
+        "Mateo: Chat is hard to follow when three threads run at once. Not much to report beyond that.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. It took more of the hour than it should have.",
+        "Mateo: The call started late because the previous meeting overran. Someone should tidy that up eventually.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. Moving on.",
+        "Mateo: The shared folder structure confused two people again. Nothing else came out of it.",
+        "Hilde: The video link changed twice before everyone got in. I will not go into detail.",
+        "Hilde: The agency team had a quiet week with other client work crowding in. I will not go into detail.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. Not much to report beyond that.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. Moving on.",
+        "Mateo: The shared folder structure confused two people again. I am only noting it for the record.",
+        "Mateo: The audit found many duplicate customer records.",
+        "Hilde: The office move on the client side is distracting everyone. It took more of the hour than it should have.",
+        "Hilde: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. Moving on.",
+        "Mateo: Done: Audit the current customer data."
       ],
       "ops": [
         {
@@ -112,8 +144,19 @@
       "n": 4,
       "date": "2026-02-09",
       "chat": [
-        "Mateo: Standup moved to the afternoon this week.",
-        "Mateo: Shared the staging link with Hilde."
+        "Mateo: The video link changed twice before everyone got in. It had no effect on the plan.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. I am only noting it for the record.",
+        "Mateo: The call started late because the previous meeting overran. It took more of the hour than it should have.",
+        "Mateo: The shared folder structure confused two people again. I mention it only because it ate time.",
+        "Mateo: The call started late because the previous meeting overran. I will not go into detail.",
+        "Hilde: We spent the first ten minutes on audio problems before anything useful happened. It is mostly background for whoever reads this later.",
+        "Mateo: The video link changed twice before everyone got in. We laughed about it afterwards.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. We laughed about it afterwards.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. It had no effect on the plan.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. It had no effect on the plan.",
+        "Hilde: The weather made travelling to the meeting a hassle for the client team. Nothing else came out of it.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. I mention it only because it ate time.",
+        "Hilde: The review meeting ran long because everyone had opinions on small wording choices. It had no effect on the plan."
       ],
       "ops": []
     },
@@ -121,9 +164,20 @@
       "n": 5,
       "date": "2026-02-16",
       "chat": [
-        "Mateo: Account objects are configured.",
-        "Mateo: Weekly check-in held. No blockers raised.",
-        "Mateo: Quiet week, the team spent it on build work and bug fixes."
+        "Hilde: A new person joined on the client side and needed the basics explained. Not much to report beyond that.",
+        "Hilde: The weather made travelling to the meeting a hassle for the client team. Everyone left in a decent mood.",
+        "Hilde: We spent the first ten minutes on audio problems before anything useful happened. Someone should tidy that up eventually.",
+        "Hilde: Chat is hard to follow when three threads run at once. Moving on.",
+        "Hilde: There was a small misunderstanding about who was meant to reply to whom. I am only noting it for the record.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. It is mostly background for whoever reads this later.",
+        "Mateo: The account objects are in place.",
+        "Hilde: The coffee machine broke so the meeting moved to the cafe next door. Everyone left in a decent mood.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. I am only noting it for the record.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. I will not go into detail.",
+        "Mateo: Done: Configure the account objects.",
+        "Mateo: The shared folder structure confused two people again. Moving on.",
+        "Hilde: A long email thread from last week went in circles and I stopped following it. It is the kind of thing that happens every project."
       ],
       "ops": [
         {
@@ -136,9 +190,19 @@
       "n": 6,
       "date": "2026-02-23",
       "chat": [
-        "Mateo: I suggest training the dispatch teams through the client internal academy. Hilde says HR has to agree.",
-        "Hilde sent feedback on the last build, mostly small copy edits.",
-        "Hilde sent feedback on the last build, mostly small copy edits."
+        "Mateo: A new person joined on the client side and needed the basics explained. Everyone left in a decent mood.",
+        "Mateo: The shared folder structure confused two people again. No one seemed bothered.",
+        "Hilde: A couple of people mentioned holiday plans without naming dates. It had no effect on the plan.",
+        "Mateo: Suggestion: run the training through the client's internal academy. Hilde wants to talk to HR.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. Nothing else came out of it.",
+        "Hilde: The mood on the call was relaxed, mostly small talk. No one seemed bothered.",
+        "Hilde: The review meeting ran long because everyone had opinions on small wording choices. Nothing else came out of it.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. It is the kind of thing that happens every project.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. No one seemed bothered.",
+        "Hilde: The review meeting ran long because everyone had opinions on small wording choices. I mention it only because it ate time.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. I am only noting it for the record.",
+        "Hilde: We spent the first ten minutes on audio problems before anything useful happened. Everyone left in a decent mood."
       ],
       "ops": [
         {
@@ -153,8 +217,19 @@
       "n": 7,
       "date": "2026-03-02",
       "chat": [
-        "Mateo: Quiet week, the team spent it on build work and bug fixes.",
-        "Mateo: Weekly check-in held. No blockers raised."
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. I will not go into detail.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. It is mostly background for whoever reads this later.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. Someone should tidy that up eventually.",
+        "Mateo: A new person joined on the client side and needed the basics explained. I will not go into detail.",
+        "Hilde: The video link changed twice before everyone got in. I am only noting it for the record.",
+        "Hilde: The office move on the client side is distracting everyone. We laughed about it afterwards.",
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. Not much to report beyond that.",
+        "Hilde: Someone raised an unrelated idea for next year and we parked it. Everyone left in a decent mood.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. Nothing else came out of it.",
+        "Mateo: The shared folder structure confused two people again. It is the kind of thing that happens every project.",
+        "Mateo: The video link changed twice before everyone got in. It is the kind of thing that happens every project.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. Moving on.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. It is mostly background for whoever reads this later."
       ],
       "ops": []
     },
@@ -162,9 +237,19 @@
       "n": 8,
       "date": "2026-03-09",
       "chat": [
-        "Mateo: The import scripts are done.",
-        "Mateo: Shared the staging link with Hilde.",
-        "Mateo: Standup moved to the afternoon this week."
+        "Mateo: The import scripts run clean on the test set.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. I mention it only because it ate time.",
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. It is mostly background for whoever reads this later.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. Someone should tidy that up eventually.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. No one seemed bothered.",
+        "Hilde: A new person joined on the client side and needed the basics explained. I mention it only because it ate time.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. It took more of the hour than it should have.",
+        "Hilde: The office move on the client side is distracting everyone. Nothing else came out of it.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. It is mostly background for whoever reads this later.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. No one seemed bothered.",
+        "Hilde: The notes from the last call were hard to read because of all the shorthand. It is mostly background for whoever reads this later.",
+        "Mateo: Done: Build the import scripts.",
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. Everyone left in a decent mood."
       ],
       "ops": [
         {
@@ -177,9 +262,19 @@
       "n": 9,
       "date": "2026-03-16",
       "chat": [
-        "Mateo: The duplicate review shows a one-shot migration is too risky. Hilde confirmed migrating in three regional waves.",
-        "Mateo: The invoice for the last milestone went out.",
-        "Mateo: Logged the open comments from Hilde's team."
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. I mention it only because it ate time.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. Nothing else came out of it.",
+        "Hilde: Half the team was out sick this week, so replies were slower than usual. It had no effect on the plan.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. We laughed about it afterwards.",
+        "Hilde: The notes from the last call were hard to read because of all the shorthand. It took more of the hour than it should have.",
+        "Hilde: The agency team had a quiet week with other client work crowding in. It had no effect on the plan.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. No one seemed bothered.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. I mention it only because it ate time.",
+        "Hilde: Someone raised an unrelated idea for next year and we parked it. It took more of the hour than it should have.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. Someone should tidy that up eventually.",
+        "Mateo: The duplicate review shows a one shot migration is too risky. Hilde moved to three regional waves.",
+        "Hilde: A new person joined on the client side and needed the basics explained. It had no effect on the plan.",
+        "Hilde: A couple of people mentioned holiday plans without naming dates. Nothing else came out of it."
       ],
       "ops": [
         {
@@ -200,8 +295,19 @@
       "n": 10,
       "date": "2026-03-23",
       "chat": [
-        "Hilde asked for the status deck to be shorter next time.",
-        "Hilde asked for the status deck to be shorter next time."
+        "Hilde: The agency team had a quiet week with other client work crowding in. It is the kind of thing that happens every project.",
+        "Hilde: The call started late because the previous meeting overran. Moving on.",
+        "Hilde: We spent the first ten minutes on audio problems before anything useful happened. It had no effect on the plan.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. I will not go into detail.",
+        "Hilde: The call started late because the previous meeting overran. I mention it only because it ate time.",
+        "Mateo: Chat is hard to follow when three threads run at once. Everyone left in a decent mood.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. Everyone left in a decent mood.",
+        "Mateo: Depot managers asked what the training will look like.",
+        "Karl (client IT): I told the depot managers the academy sessions start in July.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. It is mostly background for whoever reads this later.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. Not much to report beyond that.",
+        "Mateo: The office move on the client side is distracting everyone. I will not go into detail.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. I will not go into detail."
       ],
       "ops": []
     },
@@ -209,9 +315,19 @@
       "n": 11,
       "date": "2026-03-30",
       "chat": [
-        "Mateo: Hilde confirmed single sign-on in phase one. The security audit requires it.",
-        "Mateo: Logged the open comments from Hilde's team.",
-        "Mateo: The invoice for the last milestone went out."
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. It is the kind of thing that happens every project.",
+        "Mateo: A new person joined on the client side and needed the basics explained. No one seemed bothered.",
+        "Mateo: The call started late because the previous meeting overran. I am only noting it for the record.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
+        "Mateo: Hilde wants single sign-on in phase one. The security audit requires it.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. We laughed about it afterwards.",
+        "Hilde: Half the team was out sick this week, so replies were slower than usual. Everyone left in a decent mood.",
+        "Hilde: The video link changed twice before everyone got in. It took more of the hour than it should have.",
+        "Mateo: A new person joined on the client side and needed the basics explained. I am only noting it for the record.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. We laughed about it afterwards.",
+        "Hilde: The review meeting ran long because everyone had opinions on small wording choices. Not much to report beyond that.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. I mention it only because it ate time.",
+        "Hilde: The coffee machine broke so the meeting moved to the cafe next door. Moving on."
       ],
       "ops": [
         {
@@ -232,9 +348,20 @@
       "n": 12,
       "date": "2026-04-06",
       "chat": [
-        "Mateo: Roles and permissions are set up.",
-        "Mateo: Standup moved to the afternoon this week.",
-        "Mateo: Shared the staging link with Hilde."
+        "Mateo: The video link changed twice before everyone got in. I mention it only because it ate time.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. I am only noting it for the record.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. I mention it only because it ate time.",
+        "Mateo: A new person joined on the client side and needed the basics explained. Nothing else came out of it.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. It took more of the hour than it should have.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. We laughed about it afterwards.",
+        "Mateo: Roles and permissions are set.",
+        "Mateo: The video link changed twice before everyone got in. Everyone left in a decent mood.",
+        "Karl: I am still scripting the single cutover weekend, tell me if that changes.",
+        "Mateo: The shared folder structure confused two people again. We laughed about it afterwards.",
+        "Mateo: Done: Set up roles and permissions.",
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. It had no effect on the plan.",
+        "Mateo: The shared folder structure confused two people again. I will not go into detail.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. I am only noting it for the record."
       ],
       "ops": [
         {
@@ -247,8 +374,18 @@
       "n": 13,
       "date": "2026-04-13",
       "chat": [
-        "Mateo: Weekly check-in held. No blockers raised.",
-        "Mateo: Quiet week, the team spent it on build work and bug fixes."
+        "Mateo: A long email thread from last week went in circles and I stopped following it. I am only noting it for the record.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. It is the kind of thing that happens every project.",
+        "Hilde: Someone raised an unrelated idea for next year and we parked it. We laughed about it afterwards.",
+        "Hilde: Half the team was out sick this week, so replies were slower than usual. It took more of the hour than it should have.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. It is the kind of thing that happens every project.",
+        "Hilde: A couple of people mentioned holiday plans without naming dates. It took more of the hour than it should have.",
+        "Hilde: The notes from the last call were hard to read because of all the shorthand. Everyone left in a decent mood.",
+        "Mateo: A new person joined on the client side and needed the basics explained. It is the kind of thing that happens every project.",
+        "Mateo: Chat is hard to follow when three threads run at once. It is mostly background for whoever reads this later.",
+        "Hilde: The call started late because the previous meeting overran. Not much to report beyond that.",
+        "Hilde: Someone raised an unrelated idea for next year and we parked it. Nothing else came out of it.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. I will not go into detail."
       ],
       "ops": []
     },
@@ -256,9 +393,19 @@
       "n": 14,
       "date": "2026-04-20",
       "chat": [
-        "Mateo: Duplicate cleanup takes longer than planned. Hilde confirmed go-live on 13 July.",
-        "Hilde sent feedback on the last build, mostly small copy edits.",
-        "Hilde sent feedback on the last build, mostly small copy edits."
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. Moving on.",
+        "Mateo: The duplicate cleanup takes longer than planned. Hilde moved go-live to 13 July.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. I am only noting it for the record.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. Everyone left in a decent mood.",
+        "Hilde: There was a small misunderstanding about who was meant to reply to whom. No one seemed bothered.",
+        "Hilde: There was a small misunderstanding about who was meant to reply to whom. I mention it only because it ate time.",
+        "Hilde: Chat is hard to follow when three threads run at once. No one seemed bothered.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. It had no effect on the plan.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. It is mostly background for whoever reads this later.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. I am only noting it for the record.",
+        "Hilde: Chat is hard to follow when three threads run at once. Someone should tidy that up eventually.",
+        "Mateo: The shared folder structure confused two people again. Not much to report beyond that.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. Everyone left in a decent mood."
       ],
       "ops": [
         {
@@ -279,9 +426,20 @@
       "n": 15,
       "date": "2026-04-27",
       "chat": [
+        "Hilde: The shared folder structure confused two people again. Everyone left in a decent mood.",
+        "Hilde: The office move on the client side is distracting everyone. No one seemed bothered.",
         "Mateo: Adding a cutover runbook to the plan.",
-        "Mateo: Quiet week, the team spent it on build work and bug fixes.",
-        "Mateo: Weekly check-in held. No blockers raised."
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. No one seemed bothered.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. Not much to report beyond that.",
+        "Hilde: There was a small misunderstanding about who was meant to reply to whom. I will not go into detail.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. I will not go into detail.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. Someone should tidy that up eventually.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. I mention it only because it ate time.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. It had no effect on the plan.",
+        "Hilde: The notes from the last call were hard to read because of all the shorthand. It is the kind of thing that happens every project.",
+        "Mateo: Added to the plan: Write the cutover runbook.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. We laughed about it afterwards.",
+        "Hilde: The shared folder structure confused two people again. It had no effect on the plan."
       ],
       "ops": [
         {
@@ -295,8 +453,20 @@
       "n": 16,
       "date": "2026-05-04",
       "chat": [
-        "Mateo: Shared the staging link with Hilde.",
-        "Mateo: Standup moved to the afternoon this week."
+        "Mateo: Hilde has the board update next week.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. Someone should tidy that up eventually.",
+        "Mateo: The video link changed twice before everyone got in. Nothing else came out of it.",
+        "Hilde: The mood on the call was relaxed, mostly small talk. I will not go into detail.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. Someone should tidy that up eventually.",
+        "Mateo: A new person joined on the client side and needed the basics explained. We laughed about it afterwards.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. I mention it only because it ate time.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. Nothing else came out of it.",
+        "Hilde: The coffee machine broke so the meeting moved to the cafe next door. I mention it only because it ate time.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. Not much to report beyond that.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. Moving on.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. Nothing else came out of it.",
+        "Fenna (Hilde's assistant): The board slides say 15 June, is that correct?",
+        "Mateo: A new person joined on the client side and needed the basics explained. It took more of the hour than it should have."
       ],
       "ops": []
     },
@@ -304,8 +474,19 @@
       "n": 17,
       "date": "2026-05-11",
       "chat": [
-        "Mateo: The invoice for the last milestone went out.",
-        "Mateo: Logged the open comments from Hilde's team."
+        "Mateo: The call started late because the previous meeting overran. It is mostly background for whoever reads this later.",
+        "Mateo: Fenna, let me check and come back to you.",
+        "Hilde: There was a small misunderstanding about who was meant to reply to whom. It took more of the hour than it should have.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. No one seemed bothered.",
+        "Mateo: Wave one covers the northern region.",
+        "Hilde: A couple of people mentioned holiday plans without naming dates. Not much to report beyond that.",
+        "Mateo: Chat is hard to follow when three threads run at once. It is the kind of thing that happens every project.",
+        "Mateo: The call started late because the previous meeting overran. It is the kind of thing that happens every project.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. It took more of the hour than it should have.",
+        "Hilde: The video link changed twice before everyone got in. No one seemed bothered.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. It had no effect on the plan.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. It is mostly background for whoever reads this later.",
+        "Hilde: The shared folder structure confused two people again. It is mostly background for whoever reads this later."
       ],
       "ops": []
     },
@@ -313,9 +494,19 @@
       "n": 18,
       "date": "2026-05-18",
       "chat": [
-        "Mateo: I am planning the training budget around the internal academy. HR has still not agreed, so it is only my assumption.",
-        "Hilde asked for the status deck to be shorter next time.",
-        "Hilde asked for the status deck to be shorter next time."
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. It is the kind of thing that happens every project.",
+        "Hilde: The agency team had a quiet week with other client work crowding in. No one seemed bothered.",
+        "Hilde: A couple of people mentioned holiday plans without naming dates. It is mostly background for whoever reads this later.",
+        "Hilde: We spent the first ten minutes on audio problems before anything useful happened. Moving on.",
+        "Mateo: Chat is hard to follow when three threads run at once. I am only noting it for the record.",
+        "Hilde: Feedback arrived as a long voice note, which took a while to digest. Not much to report beyond that.",
+        "Hilde: The call started late because the previous meeting overran. We laughed about it afterwards.",
+        "Mateo: The office move on the client side is distracting everyone. Not much to report beyond that.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. Not much to report beyond that.",
+        "Mateo: I am planning the training budget around the academy.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. Nothing else came out of it.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. I am only noting it for the record."
       ],
       "ops": []
     },
@@ -323,8 +514,19 @@
       "n": 19,
       "date": "2026-05-25",
       "chat": [
-        "Mateo: Logged the open comments from Hilde's team.",
-        "Mateo: The invoice for the last milestone went out."
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. We laughed about it afterwards.",
+        "Hilde: The call started late because the previous meeting overran. It had no effect on the plan.",
+        "Hilde: The office move on the client side is distracting everyone. Moving on.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. I am only noting it for the record.",
+        "Mateo: The coffee machine broke so the meeting moved to the cafe next door. Someone should tidy that up eventually.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. Everyone left in a decent mood.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. Someone should tidy that up eventually.",
+        "Hilde: We spent the first ten minutes on audio problems before anything useful happened. No one seemed bothered.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. Everyone left in a decent mood.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. It is the kind of thing that happens every project.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. I will not go into detail.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. Moving on.",
+        "Mateo: The office move on the client side is distracting everyone. I mention it only because it ate time."
       ],
       "ops": []
     },
@@ -332,9 +534,20 @@
       "n": 20,
       "date": "2026-06-01",
       "chat": [
-        "Mateo: The warehouse integration is done.",
-        "Mateo: Standup moved to the afternoon this week.",
-        "Mateo: Shared the staging link with Hilde."
+        "Mateo: The video link changed twice before everyone got in. Someone should tidy that up eventually.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. I mention it only because it ate time.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. It took more of the hour than it should have.",
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. Moving on.",
+        "Hilde: The weather made travelling to the meeting a hassle for the client team. Not much to report beyond that.",
+        "Hilde: The office move on the client side is distracting everyone. It is mostly background for whoever reads this later.",
+        "Mateo: The video link changed twice before everyone got in. Not much to report beyond that.",
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. It is the kind of thing that happens every project.",
+        "Hilde: The video link changed twice before everyone got in. It is mostly background for whoever reads this later.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. Not much to report beyond that.",
+        "Mateo: The warehouse integration is live on the test system.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. No one seemed bothered.",
+        "Mateo: Done: Integrate the warehouse system.",
+        "Hilde: Feedback arrived as a long voice note, which took a while to digest. It had no effect on the plan."
       ],
       "ops": [
         {
@@ -347,8 +560,19 @@
       "n": 21,
       "date": "2026-06-08",
       "chat": [
-        "Mateo: Weekly check-in held. No blockers raised.",
-        "Mateo: Quiet week, the team spent it on build work and bug fixes."
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. I am only noting it for the record.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. Nothing else came out of it.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. Not much to report beyond that.",
+        "Mateo: Chat is hard to follow when three threads run at once. It took more of the hour than it should have.",
+        "Hilde: The coffee machine broke so the meeting moved to the cafe next door. I am only noting it for the record.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. I will not go into detail.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. It is the kind of thing that happens every project.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. We laughed about it afterwards.",
+        "Hilde: Half the team was out sick this week, so replies were slower than usual. We laughed about it afterwards.",
+        "Mateo: The call started late because the previous meeting overran. No one seemed bothered.",
+        "Mateo: Chat is hard to follow when three threads run at once. It had no effect on the plan.",
+        "Mateo: The office move on the client side is distracting everyone. It is the kind of thing that happens every project.",
+        "Hilde: The office move on the client side is distracting everyone. Everyone left in a decent mood."
       ],
       "ops": []
     },
@@ -356,9 +580,19 @@
       "n": 22,
       "date": "2026-06-15",
       "chat": [
-        "Mateo: Hilde wants the biggest accounts moved last, with the cleanest data. She confirmed migrating by customer tier.",
-        "Hilde sent feedback on the last build, mostly small copy edits.",
-        "Hilde sent feedback on the last build, mostly small copy edits."
+        "Mateo: The mood on the call was relaxed, mostly small talk. Everyone left in a decent mood.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. We laughed about it afterwards.",
+        "Mateo: Someone raised an unrelated idea for next year and we parked it. It is mostly background for whoever reads this later.",
+        "Mateo: The video link changed twice before everyone got in. Moving on.",
+        "Hilde: Feedback arrived as a long voice note, which took a while to digest. I will not go into detail.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. Someone should tidy that up eventually.",
+        "Mateo: Hilde wants the biggest accounts moved last, with the cleanest data. Migration goes by customer tier.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. Someone should tidy that up eventually.",
+        "Hilde: Feedback arrived as a long voice note, which took a while to digest. Everyone left in a decent mood.",
+        "Hilde: Chat is hard to follow when three threads run at once. We laughed about it afterwards.",
+        "Mateo: The office move on the client side is distracting everyone. Someone should tidy that up eventually.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. Someone should tidy that up eventually.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. No one seemed bothered."
       ],
       "ops": [
         {
@@ -379,8 +613,19 @@
       "n": 23,
       "date": "2026-06-22",
       "chat": [
-        "Mateo: Quiet week, the team spent it on build work and bug fixes.",
-        "Mateo: Weekly check-in held. No blockers raised."
+        "Hilde: We spent the first ten minutes on audio problems before anything useful happened. I will not go into detail.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. It is mostly background for whoever reads this later.",
+        "Mateo: Karl is updating the cutover plan.",
+        "Hilde: The notes from the last call were hard to read because of all the shorthand. I mention it only because it ate time.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. No one seemed bothered.",
+        "Mateo: Chat is hard to follow when three threads run at once. Nothing else came out of it.",
+        "Mateo: A new person joined on the client side and needed the basics explained. It is mostly background for whoever reads this later.",
+        "Mateo: There was a small misunderstanding about who was meant to reply to whom. Nothing else came out of it.",
+        "Hilde: The agency team had a quiet week with other client work crowding in. Not much to report beyond that.",
+        "Hilde: The office move on the client side is distracting everyone. I am only noting it for the record.",
+        "Karl: The runbook still says three regional waves, I will update it.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. We laughed about it afterwards.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. It took more of the hour than it should have."
       ],
       "ops": []
     },
@@ -388,8 +633,18 @@
       "n": 24,
       "date": "2026-06-29",
       "chat": [
-        "Mateo: Shared the staging link with Hilde.",
-        "Mateo: Standup moved to the afternoon this week."
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. I mention it only because it ate time.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. Nothing else came out of it.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. It took more of the hour than it should have.",
+        "Mateo: The call started late because the previous meeting overran. Moving on.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. We laughed about it afterwards.",
+        "Mateo: The shared folder structure confused two people again. It is mostly background for whoever reads this later.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. It is the kind of thing that happens every project.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. I mention it only because it ate time.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. It had no effect on the plan.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. It is mostly background for whoever reads this later.",
+        "Hilde: The mood on the call was relaxed, mostly small talk. It took more of the hour than it should have.",
+        "Hilde: The notes from the last call were hard to read because of all the shorthand. It had no effect on the plan."
       ],
       "ops": []
     },
@@ -397,9 +652,20 @@
       "n": 25,
       "date": "2026-07-06",
       "chat": [
+        "Hilde: The office move on the client side is distracting everyone. I will not go into detail.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. I am only noting it for the record.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. I will not go into detail.",
+        "Hilde: Someone raised an unrelated idea for next year and we parked it. I mention it only because it ate time.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. I am only noting it for the record.",
+        "Mateo: A new person joined on the client side and needed the basics explained. It had no effect on the plan.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. It is the kind of thing that happens every project.",
+        "Hilde: The call started late because the previous meeting overran. Someone should tidy that up eventually.",
+        "Hilde: The agency team had a quiet week with other client work crowding in. It took more of the hour than it should have.",
         "Mateo: The dispatch dashboards are configured.",
-        "Mateo: The invoice for the last milestone went out.",
-        "Mateo: Logged the open comments from Hilde's team."
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. Everyone left in a decent mood.",
+        "Mateo: Done: Configure the dispatch dashboards.",
+        "Mateo: The office move on the client side is distracting everyone. I mention it only because it ate time.",
+        "Mateo: The video link changed twice before everyone got in. Nothing else came out of it."
       ],
       "ops": [
         {
@@ -412,9 +678,19 @@
       "n": 26,
       "date": "2026-07-13",
       "chat": [
-        "Mateo: The warehouse peak runs to 31 July. Hilde confirmed go-live on 3 August.",
-        "Hilde asked for the status deck to be shorter next time.",
-        "Hilde asked for the status deck to be shorter next time."
+        "Mateo: A new person joined on the client side and needed the basics explained. It had no effect on the plan.",
+        "Hilde: The agency team had a quiet week with other client work crowding in. We laughed about it afterwards.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. It had no effect on the plan.",
+        "Mateo: The shared folder structure confused two people again. Nothing else came out of it.",
+        "Hilde: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
+        "Mateo: The warehouse peak runs to the end of July. Hilde set go-live for 3 August.",
+        "Hilde: Someone raised an unrelated idea for next year and we parked it. Someone should tidy that up eventually.",
+        "Hilde: The weather made travelling to the meeting a hassle for the client team. I mention it only because it ate time.",
+        "Hilde: Chat is hard to follow when three threads run at once. I will not go into detail.",
+        "Hilde: The video link changed twice before everyone got in. I mention it only because it ate time.",
+        "Mateo: We spent the first ten minutes on audio problems before anything useful happened. Not much to report beyond that.",
+        "Mateo: The video link changed twice before everyone got in. We laughed about it afterwards.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. Everyone left in a decent mood."
       ],
       "ops": [
         {
@@ -435,8 +711,20 @@
       "n": 27,
       "date": "2026-07-20",
       "chat": [
-        "Mateo: Logged the open comments from Hilde's team.",
-        "Mateo: The invoice for the last milestone went out."
+        "Hilde: The weather made travelling to the meeting a hassle for the client team. No one seemed bothered.",
+        "Mateo: The review meeting ran long because everyone had opinions on small wording choices. I am only noting it for the record.",
+        "Mateo: Feedback arrived as a long voice note, which took a while to digest. Someone should tidy that up eventually.",
+        "Hilde: Half the team was out sick this week, so replies were slower than usual. I will not go into detail.",
+        "Mateo: Acceptance test scripts are drafted.",
+        "Hilde: Chat is hard to follow when three threads run at once. We laughed about it afterwards.",
+        "Hilde: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. It had no effect on the plan.",
+        "Hilde: Feedback arrived as a long voice note, which took a while to digest. No one seemed bothered.",
+        "Fenna: HR asked who owns the academy slots.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. It had no effect on the plan.",
+        "Mateo: The shared folder structure confused two people again. No one seemed bothered.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. Nothing else came out of it.",
+        "Hilde: The review meeting ran long because everyone had opinions on small wording choices. No one seemed bothered."
       ],
       "ops": []
     },
@@ -444,8 +732,20 @@
       "n": 28,
       "date": "2026-07-27",
       "chat": [
-        "Mateo: Standup moved to the afternoon this week.",
-        "Mateo: Shared the staging link with Hilde."
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. I will not go into detail.",
+        "Hilde: The call started late because the previous meeting overran. It is the kind of thing that happens every project.",
+        "Mateo: The call started late because the previous meeting overran. It had no effect on the plan.",
+        "Hilde: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
+        "Hilde: Chat is hard to follow when three threads run at once. Not much to report beyond that.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. No one seemed bothered.",
+        "Mateo: The agency team had a quiet week with other client work crowding in. Not much to report beyond that.",
+        "Mateo: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. Moving on.",
+        "Mateo: The video link changed twice before everyone got in. Everyone left in a decent mood.",
+        "Mateo: Karl is sending depot notices this week.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. It had no effect on the plan.",
+        "Fenna: Please send the cutover notice for 13 July to the depots.",
+        "Hilde: The shared folder structure confused two people again. Nothing else came out of it."
       ],
       "ops": []
     },
@@ -453,9 +753,20 @@
       "n": 29,
       "date": "2026-08-03",
       "chat": [
-        "Mateo: Acceptance test scripts are ready. Training is still not agreed with HR.",
-        "Mateo: Weekly check-in held. No blockers raised.",
-        "Mateo: Quiet week, the team spent it on build work and bug fixes."
+        "Mateo: The video link changed twice before everyone got in. I mention it only because it ate time.",
+        "Hilde: The video link changed twice before everyone got in. It took more of the hour than it should have.",
+        "Mateo: The weather made travelling to the meeting a hassle for the client team. I am only noting it for the record.",
+        "Mateo: The office move on the client side is distracting everyone. Someone should tidy that up eventually.",
+        "Mateo: The video link changed twice before everyone got in. No one seemed bothered.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Hilde: Someone raised an unrelated idea for next year and we parked it. Moving on.",
+        "Hilde: Feedback arrived as a long voice note, which took a while to digest. It took more of the hour than it should have.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. It took more of the hour than it should have.",
+        "Hilde: Chat is hard to follow when three threads run at once. No one seemed bothered.",
+        "Hilde: A long email thread from last week went in circles and I stopped following it. We laughed about it afterwards.",
+        "Mateo: Chat is hard to follow when three threads run at once. Someone should tidy that up eventually.",
+        "Hilde: The mood on the call was relaxed, mostly small talk. Moving on.",
+        "Mateo: The video link changed twice before everyone got in. I mention it only because it ate time."
       ],
       "ops": []
     },
@@ -463,8 +774,19 @@
       "n": 30,
       "date": "2026-08-10",
       "chat": [
-        "Hilde sent feedback on the last build, mostly small copy edits.",
-        "Hilde sent feedback on the last build, mostly small copy edits."
+        "Mateo: A long email thread from last week went in circles and I stopped following it. I will not go into detail.",
+        "Mateo: Chat is hard to follow when three threads run at once. Moving on.",
+        "Mateo: The mood on the call was relaxed, mostly small talk. Not much to report beyond that.",
+        "Mateo: Chat is hard to follow when three threads run at once. Not much to report beyond that.",
+        "Mateo: The notes from the last call were hard to read because of all the shorthand. Moving on.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. Everyone left in a decent mood.",
+        "Hilde: Someone asked for a recap of the previous meeting and it took longer than expected. I am only noting it for the record.",
+        "Mateo: A long email thread from last week went in circles and I stopped following it. Not much to report beyond that.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. I am only noting it for the record.",
+        "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. We laughed about it afterwards.",
+        "Mateo: A couple of people mentioned holiday plans without naming dates. It took more of the hour than it should have.",
+        "Mateo: The office move on the client side is distracting everyone. Not much to report beyond that.",
+        "Hilde: The video link changed twice before everyone got in. It is mostly background for whoever reads this later."
       ],
       "ops": []
     }
@@ -516,7 +838,7 @@
         },
         {
           "id": "b",
-          "text": "No, it was proposed and HR has not agreed",
+          "text": "No, it was proposed but never confirmed",
           "status": "current"
         },
         {

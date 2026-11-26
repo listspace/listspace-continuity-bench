@@ -1,24 +1,35 @@
 {
   "id": "s006",
-  "title": "Shop migration for an outdoor gear retailer: go-live date moves twice, payments proposed and assumed but never confirmed",
+  "title": "Shop migration for an outdoor gear retailer: go-live date moves twice, payments assumed by the team but never confirmed",
   "people": {
     "agency": "Dana (agency lead)",
     "client": "Ravi (shop owner)"
   },
   "review": {
-    "drafted_by": "an AI agent (Claude), 2026-11-25",
-    "reviewed_by_jordi": true,
-    "reviewed_on": "2026-11-25",
-    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+    "drafted_by": "an AI agent (Claude), 2026-11-25. Chats rewritten as v2 on 2026-11-26.",
+    "v1_reviewed_by_jordi_on": "2026-11-25",
+    "reviewed_by_jordi": false,
+    "hard_case": false,
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
   },
   "sessions": [
     {
       "n": 1,
       "date": "2026-03-02",
       "chat": [
-        "Dana: Kickoff with Ravi. He confirmed going live on 1 June, ahead of the hiking season.",
-        "Dana: The invoice for the last milestone went out.",
-        "Dana: Logged the open comments from Ravi's team."
+        "Dana: Half the team was out sick this week, so replies were slower than usual. It took more of the hour than it should have.",
+        "Dana: Half the team was out sick this week, so replies were slower than usual. Nothing else came out of it.",
+        "Dana: The agency team had a quiet week with other client work crowding in. Nothing else came out of it.",
+        "Dana: A new person joined on the client side and needed the basics explained. I will not go into detail.",
+        "Dana: Kickoff with Ravi. He agreed to go live on 1 June, ahead of the hiking season.",
+        "Dana: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
+        "Ravi: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
+        "Dana: There was a small misunderstanding about who was meant to reply to whom. It is mostly background for whoever reads this later.",
+        "Ravi: We spent the first ten minutes on audio problems before anything useful happened. We laughed about it afterwards.",
+        "Ravi: The call started late because the previous meeting overran. I will not go into detail.",
+        "Ravi: The video link changed twice before everyone got in. Not much to report beyond that.",
+        "Dana: The coffee machine broke so the meeting moved to the cafe next door. It took more of the hour than it should have.",
+        "Dana: Plan, in order: Migrate the product catalogue, Redesign the product pages, Set up the shipping rules, Connect the payment gateway, Build the redirect map."
       ],
       "ops": [
         {
@@ -64,9 +75,19 @@
       "n": 2,
       "date": "2026-03-09",
       "chat": [
-        "Dana: Ravi confirmed free shipping above 80 euros, in line with competitors.",
-        "Ravi asked for the status deck to be shorter next time.",
-        "Ravi asked for the status deck to be shorter next time."
+        "Dana: Half the team was out sick this week, so replies were slower than usual. I am only noting it for the record.",
+        "Dana: We spent the first ten minutes on audio problems before anything useful happened. It is the kind of thing that happens every project.",
+        "Dana: Feedback arrived as a long voice note, which took a while to digest. Nothing else came out of it.",
+        "Dana: The coffee machine broke so the meeting moved to the cafe next door. It is the kind of thing that happens every project.",
+        "Ravi: The shared folder structure confused two people again. It is the kind of thing that happens every project.",
+        "Dana: The shared folder structure confused two people again. It took more of the hour than it should have.",
+        "Dana: A long email thread from last week went in circles and I stopped following it. Nothing else came out of it.",
+        "Ravi: The notes from the last call were hard to read because of all the shorthand. Not much to report beyond that.",
+        "Dana: Feedback arrived as a long voice note, which took a while to digest. I mention it only because it ate time.",
+        "Dana: The weather made travelling to the meeting a hassle for the client team. I will not go into detail.",
+        "Dana: Chat is hard to follow when three threads run at once. I will not go into detail.",
+        "Dana: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
+        "Dana: Ravi wants free shipping above 80 euros, in line with competitors."
       ],
       "ops": [
         {
@@ -87,10 +108,19 @@
       "n": 3,
       "date": "2026-03-16",
       "chat": [
-        "Dana: The product catalogue is migrated.",
+        "Dana: The review meeting ran long because everyone had opinions on small wording choices. I am only noting it for the record.",
+        "Ravi: Someone asked for a recap of the previous meeting and it took longer than expected. Not much to report beyond that.",
+        "Dana: The shared folder structure confused two people again. It had no effect on the plan.",
+        "Dana: The office move on the client side is distracting everyone. Moving on.",
+        "Ravi: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project.",
         "Dana: I suggest using the bank's card gateway. Ravi will think about it.",
-        "Dana: Logged the open comments from Ravi's team.",
-        "Dana: The invoice for the last milestone went out."
+        "Ravi: Chat is hard to follow when three threads run at once. I mention it only because it ate time.",
+        "Ravi: There was a small misunderstanding about who was meant to reply to whom. It had no effect on the plan.",
+        "Dana: The office move on the client side is distracting everyone. Not much to report beyond that.",
+        "Dana: Someone asked for a recap of the previous meeting and it took longer than expected. It is mostly background for whoever reads this later.",
+        "Dana: Done: Migrate the product catalogue.",
+        "Dana: There was a small misunderstanding about who was meant to reply to whom. Someone should tidy that up eventually.",
+        "Dana: We spent the first ten minutes on audio problems before anything useful happened. Not much to report beyond that."
       ],
       "ops": [
         {
@@ -109,9 +139,20 @@
       "n": 4,
       "date": "2026-03-23",
       "chat": [
-        "Dana: Product photos are late. Ravi confirmed a new go-live date of 22 June.",
-        "Dana: Standup moved to the afternoon this week.",
-        "Dana: Shared the staging link with Ravi."
+        "Dana: We spent the first ten minutes on audio problems before anything useful happened. It had no effect on the plan.",
+        "Dana: The video link changed twice before everyone got in. It had no effect on the plan.",
+        "Dana: A long email thread from last week went in circles and I stopped following it. I will not go into detail.",
+        "Dana: Product photos are late. Ravi moved the go-live date to 22 June.",
+        "Ravi: A couple of people mentioned holiday plans without naming dates. Everyone left in a decent mood.",
+        "Ravi: The review meeting ran long because everyone had opinions on small wording choices. It is the kind of thing that happens every project.",
+        "Dana: Someone raised an unrelated idea for next year and we parked it. It is mostly background for whoever reads this later.",
+        "Dana: The notes from the last call were hard to read because of all the shorthand. It took more of the hour than it should have.",
+        "Ravi: A couple of people mentioned holiday plans without naming dates. No one seemed bothered.",
+        "Dana: We spent the first ten minutes on audio problems before anything useful happened. I mention it only because it ate time.",
+        "Dana: Added to the plan: Train staff on the admin.",
+        "Dana: Feedback arrived as a long voice note, which took a while to digest. We laughed about it afterwards.",
+        "Dana: Chat is hard to follow when three threads run at once. We laughed about it afterwards.",
+        "Dana: The office move on the client side is distracting everyone. I am only noting it for the record."
       ],
       "ops": [
         {
@@ -137,10 +178,20 @@
       "n": 5,
       "date": "2026-03-30",
       "chat": [
-        "Dana: The redesigned product pages are done.",
+        "Ravi: The review meeting ran long because everyone had opinions on small wording choices. Someone should tidy that up eventually.",
+        "Ravi: Chat is hard to follow when three threads run at once. I am only noting it for the record.",
         "Ravi: Let us look at payments after the next review.",
-        "Dana: Weekly check-in held. No blockers raised.",
-        "Dana: Quiet week, the team spent it on build work and bug fixes."
+        "Dana: Feedback arrived as a long voice note, which took a while to digest. It had no effect on the plan.",
+        "Dana: Half the team was out sick this week, so replies were slower than usual. Not much to report beyond that.",
+        "Ravi: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
+        "Ravi: A couple of people mentioned holiday plans without naming dates. I am only noting it for the record.",
+        "Ravi: Someone asked for a recap of the previous meeting and it took longer than expected. I mention it only because it ate time.",
+        "Dana: The office move on the client side is distracting everyone. No one seemed bothered.",
+        "Dana: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
+        "Dana: The shared folder structure confused two people again. Someone should tidy that up eventually.",
+        "Dana: There was a small misunderstanding about who was meant to reply to whom. We laughed about it afterwards.",
+        "Dana: Done: Redesign the product pages.",
+        "Dana: Half the team was out sick this week, so replies were slower than usual. Everyone left in a decent mood."
       ],
       "ops": [
         {
@@ -153,9 +204,18 @@
       "n": 6,
       "date": "2026-04-06",
       "chat": [
-        "Dana: Ravi checked margins on bulky items and confirmed free shipping above 100 euros instead of 80.",
-        "Ravi sent feedback on the last build, mostly small copy edits.",
-        "Ravi sent feedback on the last build, mostly small copy edits."
+        "Dana: A new person joined on the client side and needed the basics explained. Someone should tidy that up eventually.",
+        "Dana: Ravi checked margins on bulky items and wants free shipping above 100 euros instead of 80.",
+        "Dana: A new person joined on the client side and needed the basics explained. It took more of the hour than it should have.",
+        "Dana: A new person joined on the client side and needed the basics explained. It is mostly background for whoever reads this later.",
+        "Dana: The coffee machine broke so the meeting moved to the cafe next door. Everyone left in a decent mood.",
+        "Ravi: The mood on the call was relaxed, mostly small talk. I mention it only because it ate time.",
+        "Dana: Someone raised an unrelated idea for next year and we parked it. I will not go into detail.",
+        "Dana: The notes from the last call were hard to read because of all the shorthand. Everyone left in a decent mood.",
+        "Dana: Someone asked for a recap of the previous meeting and it took longer than expected. We laughed about it afterwards.",
+        "Dana: A couple of people mentioned holiday plans without naming dates. It is mostly background for whoever reads this later.",
+        "Dana: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
+        "Kiran (Ravi's brother, runs the warehouse): Supplier call went well, they all have 1 June in their calendars."
       ],
       "ops": [
         {
@@ -176,10 +236,20 @@
       "n": 7,
       "date": "2026-04-13",
       "chat": [
-        "Dana: Shipping rules are set up.",
-        "Dana: I told the developers to wire in the bank's gateway so we do not lose time. Ravi has not signed off on it.",
-        "Dana: Quiet week, the team spent it on build work and bug fixes.",
-        "Dana: Weekly check-in held. No blockers raised."
+        "Ravi: A couple of people mentioned holiday plans without naming dates. I will not go into detail.",
+        "Dana: The developers started wiring in the bank's gateway so we do not lose time.",
+        "Ravi: Someone asked for a recap of the previous meeting and it took longer than expected. It took more of the hour than it should have.",
+        "Dana: The notes from the last call were hard to read because of all the shorthand. I am only noting it for the record.",
+        "Ravi: The coffee machine broke so the meeting moved to the cafe next door. Nothing else came out of it.",
+        "Dana: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Dana: A couple of people mentioned holiday plans without naming dates. Someone should tidy that up eventually.",
+        "Dana: The mood on the call was relaxed, mostly small talk. Everyone left in a decent mood.",
+        "Dana: The video link changed twice before everyone got in. We laughed about it afterwards.",
+        "Ravi: The mood on the call was relaxed, mostly small talk. No one seemed bothered.",
+        "Dana: Chat is hard to follow when three threads run at once. Not much to report beyond that.",
+        "Dana: The review meeting ran long because everyone had opinions on small wording choices. It is mostly background for whoever reads this later.",
+        "Dana: The agency team had a quiet week with other client work crowding in. I will not go into detail.",
+        "Dana: Done: Set up the shipping rules."
       ],
       "ops": [
         {
@@ -192,9 +262,20 @@
       "n": 8,
       "date": "2026-04-20",
       "chat": [
-        "Dana: The photos arrived early. Ravi confirmed moving go-live to 15 June.",
-        "Dana: Shared the staging link with Ravi.",
-        "Dana: Standup moved to the afternoon this week."
+        "Dana: The coffee machine broke so the meeting moved to the cafe next door. No one seemed bothered.",
+        "Ravi: Chat is hard to follow when three threads run at once. No one seemed bothered.",
+        "Ravi: We spent the first ten minutes on audio problems before anything useful happened. Moving on.",
+        "Dana: Feedback arrived as a long voice note, which took a while to digest. Moving on.",
+        "Dana: The photos arrived early. Ravi moved go-live to 15 June.",
+        "Ravi: A couple of people mentioned holiday plans without naming dates. It took more of the hour than it should have.",
+        "Dana: The call started late because the previous meeting overran. It took more of the hour than it should have.",
+        "Ravi: A couple of people mentioned holiday plans without naming dates. It had no effect on the plan.",
+        "Ravi: A long email thread from last week went in circles and I stopped following it. It had no effect on the plan.",
+        "Dana: A long email thread from last week went in circles and I stopped following it. We laughed about it afterwards.",
+        "Dana: Kiran, please tell the suppliers.",
+        "Dana: We spent the first ten minutes on audio problems before anything useful happened. No one seemed bothered.",
+        "Ravi: A new person joined on the client side and needed the basics explained. I mention it only because it ate time.",
+        "Dana: The agency team had a quiet week with other client work crowding in. It is the kind of thing that happens every project."
       ],
       "ops": [
         {
@@ -215,9 +296,20 @@
       "n": 9,
       "date": "2026-04-27",
       "chat": [
-        "Dana: The redirect map is done and tested.",
-        "Dana: The invoice for the last milestone went out.",
-        "Dana: Logged the open comments from Ravi's team."
+        "Dana: There was a small misunderstanding about who was meant to reply to whom. Everyone left in a decent mood.",
+        "Dana: The call started late because the previous meeting overran. I mention it only because it ate time.",
+        "Dana: The redirect map is tested.",
+        "Kiran: Is payments sorted? The bank gateway is already on staging so I assume yes.",
+        "Ravi: Feedback arrived as a long voice note, which took a while to digest. No one seemed bothered.",
+        "Dana: Someone raised an unrelated idea for next year and we parked it. I mention it only because it ate time.",
+        "Ravi: We spent the first ten minutes on audio problems before anything useful happened. I am only noting it for the record.",
+        "Dana: A long email thread from last week went in circles and I stopped following it. Not much to report beyond that.",
+        "Dana: Done: Build the redirect map.",
+        "Dana: The agency team had a quiet week with other client work crowding in. Everyone left in a decent mood.",
+        "Dana: The coffee machine broke so the meeting moved to the cafe next door. It is mostly background for whoever reads this later.",
+        "Ravi: A new person joined on the client side and needed the basics explained. I am only noting it for the record.",
+        "Dana: Chat is hard to follow when three threads run at once. Everyone left in a decent mood.",
+        "Ravi: Feedback arrived as a long voice note, which took a while to digest. It is the kind of thing that happens every project."
       ],
       "ops": [
         {
@@ -230,9 +322,19 @@
       "n": 10,
       "date": "2026-05-04",
       "chat": [
-        "Dana: Staging review went well. Payments are still waiting on a decision from Ravi.",
-        "Ravi asked for the status deck to be shorter next time.",
-        "Ravi asked for the status deck to be shorter next time."
+        "Dana: Half the team was out sick this week, so replies were slower than usual. I will not go into detail.",
+        "Dana: Chat is hard to follow when three threads run at once. It is mostly background for whoever reads this later.",
+        "Ravi: The weather made travelling to the meeting a hassle for the client team. It took more of the hour than it should have.",
+        "Dana: The video link changed twice before everyone got in. Everyone left in a decent mood.",
+        "Ravi: The review meeting ran long because everyone had opinions on small wording choices. It took more of the hour than it should have.",
+        "Dana: Staging review went well. Ravi will come back to us on payments.",
+        "Ravi: Chat is hard to follow when three threads run at once. Someone should tidy that up eventually.",
+        "Ravi: A long email thread from last week went in circles and I stopped following it. It is the kind of thing that happens every project.",
+        "Dana: Someone asked for a recap of the previous meeting and it took longer than expected. Everyone left in a decent mood.",
+        "Ravi: The video link changed twice before everyone got in. I will not go into detail.",
+        "Ravi: The call started late because the previous meeting overran. We laughed about it afterwards.",
+        "Dana: Someone raised an unrelated idea for next year and we parked it. I am only noting it for the record.",
+        "Dana: Someone asked for a recap of the previous meeting and it took longer than expected. Nothing else came out of it."
       ],
       "ops": []
     }
@@ -284,7 +386,7 @@
         },
         {
           "id": "b",
-          "text": "No, it was proposed and the developers were told to prepare it, but Ravi never confirmed",
+          "text": "No, it was proposed but never confirmed",
           "status": "current"
         },
         {

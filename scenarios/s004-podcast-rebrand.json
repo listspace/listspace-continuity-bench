@@ -6,10 +6,11 @@
     "client": "Pavel (network owner)"
   },
   "review": {
-    "drafted_by": "an AI agent (Claude), 2026-11-25",
-    "reviewed_by_jordi": true,
-    "reviewed_on": "2026-11-25",
-    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+    "drafted_by": "an AI agent (Claude), 2026-11-25. Chats rewritten as v2 on 2026-11-26.",
+    "v1_reviewed_by_jordi_on": "2026-11-25",
+    "reviewed_by_jordi": false,
+    "hard_case": false,
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
   },
   "sessions": [
     {
@@ -17,9 +18,15 @@
       "date": "2026-02-02",
       "chat": [
         "Ines: Kickoff done with Pavel. Direction one is a retro microphone mark.",
+        "Ines: The video link changed twice before everyone got in. It is the kind of thing that happens every project.",
         "Ines: Pavel approved the microphone mark on the call.",
+        "Ines: The weather made travelling to the meeting a hassle for the client team. I mention it only because it ate time.",
+        "Pavel: A new person joined on the client side and needed the basics explained. We laughed about it afterwards.",
         "Ines: I would like the launch event at Harbor Hall. I have not raised it with Pavel yet.",
-        "Ines: The invoice for the last milestone went out."
+        "Pavel: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Ines: The office move on the client side is distracting everyone. It had no effect on the plan.",
+        "Ines: The call started late because the previous meeting overran. No one seemed bothered.",
+        "Ines: Plan, in order: Draft logo concepts, Write the brand voice guide, Design cover art templates."
       ],
       "ops": [
         {
@@ -61,9 +68,16 @@
       "n": 2,
       "date": "2026-02-16",
       "chat": [
+        "Pavel: The office move on the client side is distracting everyone. It is mostly background for whoever reads this later.",
+        "Pavel: We spent the first ten minutes on audio problems before anything useful happened. I will not go into detail.",
         "Ines: Logo concepts are finished.",
-        "Ines: Pavel's co-host found the microphone too dated. Pavel now wants a rounded wordmark and confirmed it in the shared chat.",
-        "Pavel asked for the status deck to be shorter next time."
+        "Ines: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
+        "Pavel: Someone raised an unrelated idea for next year and we parked it. I will not go into detail.",
+        "Ines: The video link changed twice before everyone got in. Someone should tidy that up eventually.",
+        "Ines: Pavel's co-host found the microphone too dated. Pavel now wants a rounded wordmark and said so in the shared chat.",
+        "Ines: Feedback arrived as a long voice note, which took a while to digest. It is mostly background for whoever reads this later.",
+        "Nadia (Pavel's team): I already sent the microphone mark to the sticker printer, so that is in production.",
+        "Ines: Done: Draft logo concepts."
       ],
       "ops": [
         {
@@ -88,9 +102,16 @@
       "n": 3,
       "date": "2026-03-02",
       "chat": [
-        "Ines: The brand voice guide is done.",
-        "Ines: Pavel said Harbor Hall looks good and that he will check the budget and tell us. That is not a yes yet.",
-        "Ines: Logged the open comments from Pavel's team."
+        "Ines: The brand voice guide is finished.",
+        "Ines: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
+        "Ines: Pavel said Harbor Hall sounds good and that he will check the budget and come back to us.",
+        "Ines: Feedback arrived as a long voice note, which took a while to digest. Nothing else came out of it.",
+        "Ines: The weather made travelling to the meeting a hassle for the client team. It is the kind of thing that happens every project.",
+        "Ines: Feedback arrived as a long voice note, which took a while to digest. I will not go into detail.",
+        "Ines: The call started late because the previous meeting overran. I am only noting it for the record.",
+        "Pavel: Someone raised an unrelated idea for next year and we parked it. It took more of the hour than it should have.",
+        "Nadia: Pavel mentioned in the corridor that Harbor Hall is basically fine, so I told the caterer to pencil in a date.",
+        "Ines: Done: Write the brand voice guide."
       ],
       "ops": [
         {

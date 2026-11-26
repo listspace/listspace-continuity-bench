@@ -4,13 +4,15 @@
 export const OUTCOMES = ['current', 'replaced', 'unconfirmed', 'distractor', 'unknown', 'unparseable', 'context_overflow'];
 
 export function scoreReply(replyText, order) {
+  // The last JSON object in the reply that carries an answer. A model that explains first and answers last still scores.
   let letter;
-  try {
-    const m = /\{[^{}]*\}/.exec(replyText);
-    letter = JSON.parse(m?.[0] ?? '').answer;
-  } catch {
-    return { outcome: 'unparseable', option: null };
+  for (const m of replyText.match(/\{[^{}]*\}/g) ?? []) {
+    try {
+      const a = JSON.parse(m).answer;
+      if (typeof a === 'string') letter = a;
+    } catch { /* not JSON, keep looking */ }
   }
+  if (letter === undefined) return { outcome: 'unparseable', option: null };
   const idx = typeof letter === 'string' ? letter.trim().toUpperCase().charCodeAt(0) - 65 : -1;
   const option = order[idx];
   return option ? { outcome: option.status, option: option.id } : { outcome: 'unparseable', option: null };

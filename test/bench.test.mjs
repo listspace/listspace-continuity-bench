@@ -3,16 +3,16 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { validateScenario } from '../src/state.mjs';
+import { validateScenario, validateParity } from '../src/state.mjs';
 import { renderBoard, renderChat } from '../src/render.mjs';
 import { scoreReply, summarize } from '../src/score.mjs';
 import { shuffled } from '../src/rng.mjs';
 import { costOf, worstCaseCost, Meter, BudgetExceeded } from '../src/meter.mjs';
 import { priceFor, loadPrices } from '../src/prices.mjs';
 import { anthropicProvider, openaiProvider, ProviderError } from '../src/providers.mjs';
-import { estimate, execute } from '../src/runner.mjs';
+import { estimate, execute, summarizeRows, memoryText, keeperConditions } from '../src/runner.mjs';
 
-const scenarios = readdirSync(new URL('../scenarios/', import.meta.url)).map((f) =>
+const scenarios = readdirSync(new URL('../scenarios/', import.meta.url)).filter((f) => f.endsWith('.json')).map((f) =>
   JSON.parse(readFileSync(new URL(`../scenarios/${f}`, import.meta.url), 'utf8')));
 
 test('answer keys agree with events', () => {
@@ -25,7 +25,7 @@ test('board shows replaced and unconfirmed decisions with their status', () => {
   assert.match(b, /PROPOSED, NOT CONFIRMED: Host on Netlify/);
 });
 test('rendered contexts never leak the answer key', () => {
-  for (const s of scenarios) for (const c of [renderBoard(s), renderChat(s)]) assert.doesNotMatch(c, /"status"|current_decision|reviewed_by_jordi/);
+  for (const s of scenarios) for (const c of [renderBoard(s), renderChat(s), memoryText('A', s), memoryText('C', s)]) assert.doesNotMatch(c, /"status"|current_decision|reviewed_by_jordi|hard_case/);
 });
 test('scoring maps the letter to the authored status', () => {
   const q = scenarios[0].questions[0];
@@ -41,14 +41,14 @@ test('shuffle is reproducible from the seed', () => {
 });
 
 // ---- drafted scenarios --------------------------------------------------------------------
-test('scenarios beyond the three hand-written ones are drafted by an agent and reviewed by Jordi, over 3, 10 and 30 sessions', () => {
+test('v2 scenarios: seven agent drafts awaiting Jordi review of the changes, over 3, 10 and 30 sessions, with hard cases marked', () => {
   const drafts = scenarios.filter((s) => !['s001', 's002', 's003'].includes(s.id));
   assert.equal(drafts.length, 7);
   for (const s of drafts) {
-    assert.equal(s.review.reviewed_by_jordi, true);
-    assert.equal(s.review.reviewed_on, '2026-11-25');
-    assert.match(s.review.note, /Drafted by an AI agent/);
+    assert.equal(s.review.v1_reviewed_by_jordi_on, '2026-11-25');
+    assert.equal(s.review.reviewed_by_jordi, false);
   }
+  assert.deepEqual(drafts.filter((s) => s.review.hard_case).map((s) => s.id), ['s008', 's010']);
   assert.deepEqual([...new Set(scenarios.map((s) => s.sessions.length))].sort((a, b) => a - b), [3, 10, 30]);
 });
 
@@ -147,7 +147,7 @@ test('context window: a memory that cannot fit is recorded as an overflow and no
   assert.equal(r.status, 'completed');
   assert.equal(provider.calls.length, 0);
   assert.ok(rows.every((x) => x.outcome === 'context_overflow'));
-  assert.equal(Object.values(r.summary)[0].context_overflow_pct, 100);
+  assert.equal(Object.values(r.summary.by_type)[0].context_overflow_pct, 100);
 });
 
 test('dry run: the estimate counts calls without any provider', () => {
@@ -164,7 +164,9 @@ test('dry run CLI: prints the estimate, calls nothing, needs no key and no lock 
   const r = spawnSync(process.execPath, ['bench.mjs', 'run', '--dry-run', '--models', `${MODEL},gpt-6.2-sol`, '--runs', '1', '--scenarios', 's001,s002', '--budget', '5'], { cwd: ROOT, env, encoding: 'utf8' });
   assert.equal(r.status, 0, r.stderr);
   assert.match(r.stdout, /DRY RUN\. Nothing was called/);
-  assert.match(r.stdout, new RegExp(`TOTAL: ${callsFor(slice) * 2} calls`));
+  const frozen = JSON.parse(readFileSync(`${ROOT}protocol.lock.json`, 'utf8'));
+  const per = slice.reduce((n, s) => n + s.sessions.length * keeperConditions(frozen, frozen.conditions).length + s.questions.length * frozen.conditions.length, 0);
+  assert.match(r.stdout, new RegExp(`TOTAL: ${per * 2} calls`));
   assert.match(r.stdout, /inside the cap/);
 });
 
@@ -215,4 +217,65 @@ test('providers: key goes in a header only, usage is normalised, error text neve
   await assert.rejects(anthropicProvider({ env: {}, fetchImpl: okAnthropic }).ask({ model: MODEL, system: '', user: '', maxOutputTokens: 1, effort: 'low' }), /ANTHROPIC_API_KEY is not set/);
   const noUsage = async () => new Response(JSON.stringify({ content: [], stop_reason: 'end_turn' }), { status: 200 });
   await assert.rejects(anthropicProvider({ env: { ANTHROPIC_API_KEY: 'k' }, fetchImpl: noUsage }).ask({ model: MODEL, system: '', user: '', maxOutputTokens: 1, effort: 'low' }), /cannot be metered/);
+});
+
+
+test('chats are realistic in length: about 250 tokens a session in the short scenarios, about 350 or more in the long ones', () => {
+  for (const s of scenarios) {
+    const perSession = renderChat(s).length / 4 / s.sessions.length;
+    assert.ok(perSession >= (s.sessions.length === 3 ? 200 : 330), `${s.id} has ${Math.round(perSession)} tokens a session`);
+  }
+});
+
+test('information parity: every task and confirmation is in the chat, and the validator catches a plan that lives only in the ops', () => {
+  for (const s of scenarios) assert.deepEqual(validateParity(s), []);
+  const broken = JSON.parse(JSON.stringify(scenarios[0]));
+  broken.sessions[0].chat = broken.sessions[0].chat.filter((l) => !/plan, in order/i.test(l));
+  assert.match(validateParity(broken).join('\n'), /not listed in plan order/);
+  const bad = JSON.parse(JSON.stringify(scenarios[0]));
+  bad.questions.find((q) => q.type === 'was_confirmed').options[1].text = 'No, it was proposed and finance has not answered';
+  assert.match(validateParity(bad).join('\n'), /fixed texts/);
+});
+
+test('every condition opens with the same client and agency header', () => {
+  const s = scenarios[0];
+  const header = `Agency side: ${s.people.agency}. Client side: ${s.people.client}.`;
+  for (const c of ['A', 'B', 'B2', 'C']) assert.ok(memoryText(c, s, 'notes').includes(header), c);
+});
+
+test('scoring takes the last JSON object, so a model that explains first still scores', () => {
+  const order = scenarios[0].questions[0].options;
+  assert.equal(scoreReply('I think {not json} maybe. {"answer":"A"}\n\n{"answer":"B"}', order).option, order[1].id);
+  assert.equal(scoreReply('{"x":1}', order).outcome, 'unparseable');
+});
+
+test('summary keeps next_task apart from the other question types', () => {
+  const rows = [
+    { kind: 'answer', model: 'm', condition: 'C', type: 'next_task', outcome: 'current' },
+    { kind: 'answer', model: 'm', condition: 'C', type: 'was_confirmed', outcome: 'unknown' },
+  ];
+  const s = summarizeRows(rows);
+  assert.equal(s.next_task['m | C'].correct_pct, 100);
+  assert.equal(s.status_questions['m | C'].correct_pct, 0);
+  assert.deepEqual(Object.keys(s).sort(), ['by_type', 'next_task', 'status_questions']);
+});
+
+test('keeper arms: B and B2 each keep their own notes, and every answer uses its own arm', async () => {
+  const frozen = JSON.parse(readFileSync(`${ROOT}protocol.lock.json`, 'utf8'));
+  assert.deepEqual(keeperConditions(frozen, frozen.conditions), ['B', 'B2']);
+  const provider = {
+    calls: [],
+    async ask(req) {
+      this.calls.push(req);
+      const text = req.system === frozen.prompts.keepers.B ? 'NOTES-FROM-B' : req.system === frozen.prompts.keepers.B2 ? 'NOTES-FROM-B2' : '{"answer":"A"}';
+      return { text, stopReason: 'end_turn', usage: { input: 100, cacheRead: 0, cacheWrite: 0, output: 10 } };
+    },
+  };
+  await execute({ ...runArgs({ protocol: frozen, conditions: frozen.conditions, scenarios: [scenarios[0]] }), providers: { anthropic: provider }, meter: new Meter(1000), sink: () => {} });
+  const s = scenarios[0];
+  assert.equal(provider.calls.length, s.sessions.length * 2 + s.questions.length * 4);
+  const answers = provider.calls.filter((c) => c.system === frozen.prompts.answer_system);
+  assert.ok(answers.some((c) => c.user.includes('NOTES-FROM-B2') && !c.user.includes('NOTES-FROM-B\n')));
+  assert.ok(answers.some((c) => c.user.includes('NOTES-FROM-B') && !c.user.includes('NOTES-FROM-B2')));
+  assert.ok(answers.every((c) => c.user.includes('Agency side:')));
 });

@@ -1,54 +1,65 @@
 {
-  "status": "FROZEN 2026-11-25 for the Tier A pilot. Written from protocol.draft.json after Jordi reviewed scenarios s004 to s010 and the prompts. Change nothing here after the first answer is generated.",
-  "frozen": "2026-11-25",
+  "status": "FROZEN v2, 2026-11-26, for the Tier A pilot rerun. Written from protocol.draft.json after the v1 pilot (tag pilot-v1, protocol.lock.v1.json kept for the record). Change nothing here after the first answer is generated.",
+  "version": 2,
   "tier": "A",
   "temperature": "provider_default",
   "conditions": [
     "A",
     "B",
+    "B2",
     "C"
   ],
   "models": {
     "claude-sonnet-5-5": {
       "send_temperature": false,
       "effort": "low",
-      "note": "Mid-tier Claude. Anthropic's docs say this model returns a 400 for any non-default temperature, so temperature cannot be sent. The run records that sampling was the provider default. Thinking is left on its default (adaptive); effort is pinned to low."
+      "note": "Mid-tier Claude. Anthropic's docs say this model returns a 400 for any non-default temperature, so none is sent. Sampling is the provider default. Thinking is left on its default (adaptive); effort is pinned to low."
     },
     "gpt-6.2-sol": {
       "send_temperature": false,
       "effort": "low",
-      "note": "Mid-tier GPT, same list price as claude-sonnet-5-5. Whether the GPT-6 family accepts temperature is not stated in the docs read on 2026-11-25, so it is not sent. Set send_temperature to true only after one test call shows it is accepted. Reasoning effort is pinned to low (the API rejects none)."
+      "note": "Mid-tier GPT, same list price as claude-sonnet-5-5. No temperature is sent. Reasoning effort is pinned to low (the API rejects none)."
     }
   },
   "max_output_tokens": {
     "answer": 4096,
-    "keeper": 4096
+    "keeper": 3000
   },
   "estimate_assumptions": {
-    "note": "Used by --dry-run only. answer_output_tokens is measured from one real call per provider on 2026-11-25 (Claude 11 output tokens, OpenAI 9) and rounded to 10. keeper_output_tokens and the notes sizes are still assumptions until the pilot.",
+    "note": "Used by --dry-run only. Measured in the v1 pilot (2026-11-26): Claude tokenizer about 2.6 characters per token, GPT about 3.9; answer output 78 tokens (Claude, prose before the JSON in 44 percent of replies) and 9 (GPT); keeper output 2117 (Claude, uncapped) and 650 (GPT). v2 caps the notes at 450 words and tightens the answer prompt, so the output figures below are conservative guesses to be replaced by the v2 run.",
     "chars_per_token": {
-      "anthropic": 3.1,
-      "openai": 4
+      "anthropic": 2.6,
+      "openai": 3.9
     },
-    "answer_output_tokens": 10,
-    "keeper_output_tokens": 700,
-    "notes_tokens_per_session": 250,
-    "notes_tokens_cap": 1500
+    "answer_output_tokens": {
+      "anthropic": 40,
+      "openai": 10
+    },
+    "keeper_output_tokens": {
+      "anthropic": 1000,
+      "openai": 700
+    },
+    "notes_tokens_per_session": 60,
+    "notes_tokens_cap": 650
   },
   "prompts": {
-    "answer_system": "You answer one closed question about an agency project. The project memory in the message is all you know about the project. A decision counts as settled only once a person confirmed it. A proposal that nobody has confirmed is not settled, and a decision that was replaced is no longer current. If the memory does not let you tell, choose the cannot-tell option. Reply with JSON only.",
-    "keeper_system": "You keep the project notes for an agency project. You receive the current notes file and the transcript of one new session. Return the complete updated notes file in markdown and nothing else. Record every decision with who confirmed it and why. A decision counts as confirmed only when a person confirmed it. Record a proposal that nobody confirmed as a proposal, not as a decision. Record a replaced decision as replaced, with what replaced it. Keep a task list in plan order with done marks. Keep the file under about 800 words."
+    "answer_system": "You answer one closed question about an agency project. The project memory in the message is all you know about the project. A decision counts as settled only once a person confirmed it. A proposal that nobody has confirmed is not settled, and a decision that was replaced is no longer current. If the memory does not let you tell, choose the cannot-tell option. Reply with exactly one line of JSON and nothing else.",
+    "keepers": {
+      "B": "You keep the project notes for an agency project. You receive the current notes file and the transcript of one new session. Return the complete updated notes file in markdown and nothing else. Record decisions with who confirmed them and why, and keep the plan of tasks in plan order with done marks. A decision counts as confirmed only when a person confirmed it. Record a proposal that nobody confirmed as a proposal. Record a replaced decision as replaced, with what replaced it. Leave out chatter and logistics. Hard limit: the whole file stays under 450 words, so shorten older entries to make room.",
+      "B2": "You keep the project notes for an agency project. You receive the current notes file and the transcript of one new session. Return the complete updated notes file in markdown and nothing else, in exactly this layout. Section one, Decisions: one line per decision, in one of three forms. CONFIRMED <what> (confirmed by <person>, because <reason>). REPLACED <what> (was confirmed by <person>, replaced by <what>). PROPOSED, NOT CONFIRMED <what> (proposed by <person>). A decision is CONFIRMED only when a person said yes to it. Someone acting on a proposal, repeating a decision, or hinting that a person will probably agree does not make it confirmed. When a new decision replaces an old one, mark the old line REPLACED. Section two, Plan: one line per task in plan order, marked [x] when done and [ ] when open. Take tasks only from the plan, added and done lines of the transcript. Leave out chatter, logistics and anything that is neither a decision nor a plan task. Each line at most 25 words, and the whole file under 450 words."
+    }
   },
+  "frozen": "2026-11-26",
   "scenario_sha256": {
-    "s001": "c0afb9c8df0de272866315fc576577db5c3be1f223cb2a3356b524df02b4159e",
-    "s002": "ad476262aa03c47f835f2eddc5df7a5a789d3e76c4dc8611e995f90e13cf345d",
-    "s003": "bb6ebbebb492f97bd489ba886ed20988382ae79cb5e0515d324814d9b936867e",
-    "s004": "04e1dc3ffc42a83fb26c2da9e698218e622af71ec86e45523ce44180aa4fbd44",
-    "s005": "9398039f3d9b4ab87244066545fb021aaf28764cd4979e720902efaf02ea615e",
-    "s006": "07cbe78da20594e1db937648f58fe89db7f1a92f194e742e909f45712a6e0966",
-    "s007": "603060d2a8e66b4e0871bcd0282b4b0e279ff3d0ee31d3c72618b585bbadb48a",
-    "s008": "56bb3c65c6b067d183a68bcdf9d09f3132a560d0ebe0555389b85f5ae2c3f689",
-    "s009": "b64a103f0f182a3d64051151affadb35f531750a6df11fbd66e3a8ef99aaa67a",
-    "s010": "181fd7eca11e942e6ce3b0fb7ba624c862d9ec743dce86b9e9f9d635db45fc27"
+    "s001": "3c21ad06d206ebbd792f7665850c049420396b5335a525ba6de3922b46f41ffa",
+    "s002": "897ae1a0fd185e1d4732ae6f1f65fba76c30467e58032494f1fec0e4ab506eaa",
+    "s003": "f182c819826018e98a8b75ec70abdf1271c2b6445ed39c0674255c3e80356b13",
+    "s004": "fdccb5cb58909ec9e2c27afa5cf86722f916cd70ee97205d2176149e3145b9b7",
+    "s005": "0b9d5e1b495982ea7d1764e92bd35c8d1a11cce974df098eb39aa181f35f217e",
+    "s006": "6c9759ea1627dd355872f4730a3a28d827420970627e248f84a390b37a6b66c9",
+    "s007": "b2a8ce0f2ecad290d6c3fceb50c0ee88bd7acd7cf0760f6bb5d09268ebe9f313",
+    "s008": "2bdc82fc103d694ae7b64daf0d995f639185dd0aaccdf8e0bf5022a8553c02b5",
+    "s009": "306185d6dfe253cb8d574c54cb233bc4d4bc5ea41d0adf105cb1b192c08d02f5",
+    "s010": "e5f903a9725c446841bd7bd2cf8aeddcf0ae531889295ecf843c33f7886b98a5"
   }
 }

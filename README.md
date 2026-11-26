@@ -4,7 +4,7 @@ Does your AI work from the current plan?
 
 Memory benchmarks mostly ask whether an AI can recall an old fact. This one asks a different question. After a project has changed its mind several times, does a fresh AI session answer from the current confirmed decision, or from one that was replaced or never confirmed?
 
-Status: pilot-ready scaffold. Ten scenarios (three hand written, seven drafted by an AI agent and not yet reviewed by Jordi), deterministic scoring, a validator, provider calls, a spend meter and a dry run. No model has been called. Nothing here is a result.
+Status: protocol v2, frozen for a Tier A rerun. The v1 pilot (tag `pilot-v1`, `protocol.lock.v1.json`) found two flaws in the question set and the notes keeper, so v2 changes the scenarios (see `scenarios/CHANGES-v2.md`), the keeper prompts, the answer prompt and the scorer. Nothing here is a published result.
 
 ## What is measured
 
@@ -15,6 +15,7 @@ A scenario is a short project history: sessions in which decisions are proposed,
 | A. Chat | Every past session's conversation, in order |
 | B. Notes | A markdown notes file that an AI kept, session by session |
 | C. Board | The Listspace board view: decisions marked Confirmed, Replaced or Proposed (with history), tasks in plan order |
+| B2. Notes, structured keeper | The same notes idea with a stronger, structured keeper prompt. A sensitivity arm so nobody can say B was handicapped |
 | D. Continuity SDK (optional) | The governed claim store from `continuity-sdk`, authority states PD, SU, RNA, CAC |
 
 All conditions get the same system prompt, including one sentence saying a decision counts only once a person confirmed it. The test is memory structure, not instruction.

@@ -2,6 +2,11 @@
 // The answer keys and option statuses are never rendered.
 import { foldState } from './state.mjs';
 
+/** The same two lines open every condition, so who is the client and who is the agency is no one condition's advantage. */
+export function renderHeader(scenario) {
+  return `Agency side: ${scenario.people.agency}. Client side: ${scenario.people.client}.`;
+}
+
 /** Condition A: every past session's chat, in order, as one dump. */
 export function renderChat(scenario) {
   return scenario.sessions
@@ -34,5 +39,5 @@ export function approxTokens(text) {
 /** The question block shown to the model. Option order is shuffled by the caller's seeded PRNG. */
 export function renderQuestion(q, order) {
   const lines = order.map((o, i) => `${String.fromCharCode(65 + i)}. ${o.text}`);
-  return `Question: ${q.prompt}\n${lines.join('\n')}\n\nReply with JSON only: {"answer":"<letter>"}`;
+  return `Question: ${q.prompt}\n${lines.join('\n')}\n\nReply with exactly one line of JSON and nothing else, no explanation: {"answer":"<letter>"}`;
 }

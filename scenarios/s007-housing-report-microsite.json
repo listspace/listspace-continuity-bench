@@ -6,19 +6,30 @@
     "client": "Greta (communications head)"
   },
   "review": {
-    "drafted_by": "an AI agent (Claude), 2026-11-25",
-    "reviewed_by_jordi": true,
-    "reviewed_on": "2026-11-25",
-    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+    "drafted_by": "an AI agent (Claude), 2026-11-25. Chats rewritten as v2 on 2026-11-26.",
+    "v1_reviewed_by_jordi_on": "2026-11-25",
+    "reviewed_by_jordi": false,
+    "hard_case": false,
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
   },
   "sessions": [
     {
       "n": 1,
       "date": "2026-04-06",
       "chat": [
-        "Noor: Kickoff with Greta. She confirmed English and Spanish, the two largest tenant groups.",
-        "Noor: The invoice for the last milestone went out.",
-        "Noor: Logged the open comments from Greta's team."
+        "Noor: Half the team was out sick this week, so replies were slower than usual. It took more of the hour than it should have.",
+        "Noor: Half the team was out sick this week, so replies were slower than usual. Nothing else came out of it.",
+        "Noor: The agency team had a quiet week with other client work crowding in. Nothing else came out of it.",
+        "Noor: A new person joined on the client side and needed the basics explained. I will not go into detail.",
+        "Noor: Kickoff with Greta. She wants English and Spanish, the two largest tenant groups.",
+        "Noor: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
+        "Greta: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
+        "Noor: There was a small misunderstanding about who was meant to reply to whom. It is mostly background for whoever reads this later.",
+        "Greta: We spent the first ten minutes on audio problems before anything useful happened. We laughed about it afterwards.",
+        "Greta: The call started late because the previous meeting overran. I will not go into detail.",
+        "Greta: The video link changed twice before everyone got in. Not much to report beyond that.",
+        "Noor: The coffee machine broke so the meeting moved to the cafe next door. It took more of the hour than it should have.",
+        "Noor: Plan, in order: Collect the report figures, Write the web summary, Build the page templates, Produce the translations, Run the accessibility check."
       ],
       "ops": [
         {
@@ -64,9 +75,19 @@
       "n": 2,
       "date": "2026-04-13",
       "chat": [
-        "Noor: Greta confirmed the community garden photo as the hero image. Residents in it gave consent.",
-        "Greta asked for the status deck to be shorter next time.",
-        "Greta asked for the status deck to be shorter next time."
+        "Noor: Half the team was out sick this week, so replies were slower than usual. I am only noting it for the record.",
+        "Noor: We spent the first ten minutes on audio problems before anything useful happened. It is the kind of thing that happens every project.",
+        "Noor: Feedback arrived as a long voice note, which took a while to digest. Nothing else came out of it.",
+        "Noor: The coffee machine broke so the meeting moved to the cafe next door. It is the kind of thing that happens every project.",
+        "Greta: The shared folder structure confused two people again. It is the kind of thing that happens every project.",
+        "Noor: The shared folder structure confused two people again. It took more of the hour than it should have.",
+        "Noor: A long email thread from last week went in circles and I stopped following it. Nothing else came out of it.",
+        "Greta: The notes from the last call were hard to read because of all the shorthand. Not much to report beyond that.",
+        "Noor: Feedback arrived as a long voice note, which took a while to digest. I mention it only because it ate time.",
+        "Noor: The weather made travelling to the meeting a hassle for the client team. I will not go into detail.",
+        "Noor: Chat is hard to follow when three threads run at once. I will not go into detail.",
+        "Noor: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
+        "Noor: Greta chose the community garden photo as the hero image. Residents in it gave consent."
       ],
       "ops": [
         {
@@ -87,10 +108,19 @@
       "n": 3,
       "date": "2026-04-20",
       "chat": [
-        "Noor: The report figures are collected.",
-        "Noor: I propose an interactive map of housing units. Greta likes the idea but needs to check the data first.",
-        "Noor: Logged the open comments from Greta's team.",
-        "Noor: The invoice for the last milestone went out."
+        "Noor: The review meeting ran long because everyone had opinions on small wording choices. I am only noting it for the record.",
+        "Greta: Someone asked for a recap of the previous meeting and it took longer than expected. Not much to report beyond that.",
+        "Noor: The shared folder structure confused two people again. It had no effect on the plan.",
+        "Noor: The office move on the client side is distracting everyone. Moving on.",
+        "Greta: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project.",
+        "Noor: I propose an interactive map of housing units. Greta likes the idea but wants to check the data first.",
+        "Greta: Chat is hard to follow when three threads run at once. I mention it only because it ate time.",
+        "Greta: There was a small misunderstanding about who was meant to reply to whom. It had no effect on the plan.",
+        "Noor: The office move on the client side is distracting everyone. Not much to report beyond that.",
+        "Noor: Someone asked for a recap of the previous meeting and it took longer than expected. It is mostly background for whoever reads this later.",
+        "Noor: Done: Collect the report figures.",
+        "Noor: There was a small misunderstanding about who was meant to reply to whom. Someone should tidy that up eventually.",
+        "Noor: We spent the first ten minutes on audio problems before anything useful happened. Not much to report beyond that."
       ],
       "ops": [
         {
@@ -109,10 +139,20 @@
       "n": 4,
       "date": "2026-04-27",
       "chat": [
-        "Noor: The web summary is drafted.",
+        "Noor: We spent the first ten minutes on audio problems before anything useful happened. It had no effect on the plan.",
+        "Noor: The video link changed twice before everyone got in. It had no effect on the plan.",
+        "Noor: A long email thread from last week went in circles and I stopped following it. I will not go into detail.",
         "Greta: The map depends on whether we can publish unit locations. I will ask the lawyer.",
-        "Noor: Standup moved to the afternoon this week.",
-        "Noor: Shared the staging link with Greta."
+        "Greta: A couple of people mentioned holiday plans without naming dates. Everyone left in a decent mood.",
+        "Greta: The review meeting ran long because everyone had opinions on small wording choices. It is the kind of thing that happens every project.",
+        "Noor: Someone raised an unrelated idea for next year and we parked it. It is mostly background for whoever reads this later.",
+        "Noor: The notes from the last call were hard to read because of all the shorthand. It took more of the hour than it should have.",
+        "Greta: A couple of people mentioned holiday plans without naming dates. No one seemed bothered.",
+        "Noor: We spent the first ten minutes on audio problems before anything useful happened. I mention it only because it ate time.",
+        "Noor: Done: Write the web summary.",
+        "Noor: Feedback arrived as a long voice note, which took a while to digest. We laughed about it afterwards.",
+        "Noor: Chat is hard to follow when three threads run at once. We laughed about it afterwards.",
+        "Noor: The office move on the client side is distracting everyone. I am only noting it for the record."
       ],
       "ops": [
         {
@@ -125,9 +165,19 @@
       "n": 5,
       "date": "2026-05-04",
       "chat": [
-        "Noor: A new funder asked for Polish. Greta confirmed adding it to the languages.",
-        "Noor: Weekly check-in held. No blockers raised.",
-        "Noor: Quiet week, the team spent it on build work and bug fixes."
+        "Greta: The review meeting ran long because everyone had opinions on small wording choices. Someone should tidy that up eventually.",
+        "Greta: Chat is hard to follow when three threads run at once. I am only noting it for the record.",
+        "Greta: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
+        "Noor: Feedback arrived as a long voice note, which took a while to digest. It had no effect on the plan.",
+        "Noor: Half the team was out sick this week, so replies were slower than usual. Not much to report beyond that.",
+        "Noor: The office move on the client side is distracting everyone. No one seemed bothered.",
+        "Greta: A couple of people mentioned holiday plans without naming dates. I am only noting it for the record.",
+        "Greta: Someone asked for a recap of the previous meeting and it took longer than expected. I mention it only because it ate time.",
+        "Noor: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
+        "Noor: The shared folder structure confused two people again. Someone should tidy that up eventually.",
+        "Noor: There was a small misunderstanding about who was meant to reply to whom. We laughed about it afterwards.",
+        "Noor: A new funder asked for Polish. Greta added it to the languages.",
+        "Noor: Half the team was out sick this week, so replies were slower than usual. Everyone left in a decent mood."
       ],
       "ops": [
         {
@@ -148,9 +198,19 @@
       "n": 6,
       "date": "2026-05-11",
       "chat": [
-        "Noor: I suggest swapping the hero for a photo of the new building. Greta wants the board to see both first.",
-        "Greta sent feedback on the last build, mostly small copy edits.",
-        "Greta sent feedback on the last build, mostly small copy edits."
+        "Noor: Someone raised an unrelated idea for next year and we parked it. I will not go into detail.",
+        "Noor: I suggest swapping the hero for a photo of the new building. Greta wants the board to see both.",
+        "Greta: The mood on the call was relaxed, mostly small talk. I mention it only because it ate time.",
+        "Noor: A new person joined on the client side and needed the basics explained. It took more of the hour than it should have.",
+        "Bilal (Greta's designer): I mocked up the map page, the board will love it.",
+        "Noor: Someone asked for a recap of the previous meeting and it took longer than expected. We laughed about it afterwards.",
+        "Noor: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
+        "Noor: A couple of people mentioned holiday plans without naming dates. It is mostly background for whoever reads this later.",
+        "Noor: The coffee machine broke so the meeting moved to the cafe next door. Everyone left in a decent mood.",
+        "Noor: A new person joined on the client side and needed the basics explained. It is mostly background for whoever reads this later.",
+        "Noor: A new person joined on the client side and needed the basics explained. Someone should tidy that up eventually.",
+        "Noor: The notes from the last call were hard to read because of all the shorthand. Everyone left in a decent mood.",
+        "Noor: Chat is hard to follow when three threads run at once. Not much to report beyond that."
       ],
       "ops": [
         {
@@ -165,9 +225,20 @@
       "n": 7,
       "date": "2026-05-18",
       "chat": [
-        "Noor: Page templates are done.",
-        "Noor: Quiet week, the team spent it on build work and bug fixes.",
-        "Noor: Weekly check-in held. No blockers raised."
+        "Greta: There was a small misunderstanding about who was meant to reply to whom. Not much to report beyond that.",
+        "Noor: Page templates are ready.",
+        "Greta: Someone asked for a recap of the previous meeting and it took longer than expected. It took more of the hour than it should have.",
+        "Greta: Feedback arrived as a long voice note, which took a while to digest. Someone should tidy that up eventually.",
+        "Noor: Half the team was out sick this week, so replies were slower than usual. It is mostly background for whoever reads this later.",
+        "Noor: Someone asked for a recap of the previous meeting and it took longer than expected. I am only noting it for the record.",
+        "Bilal: I used the new building photo in the slide for the board preview. Looks great.",
+        "Noor: The shared folder structure confused two people again. I am only noting it for the record.",
+        "Noor: A new person joined on the client side and needed the basics explained. Not much to report beyond that.",
+        "Noor: The agency team had a quiet week with other client work crowding in. I will not go into detail.",
+        "Noor: The office move on the client side is distracting everyone. I will not go into detail.",
+        "Greta: The coffee machine broke so the meeting moved to the cafe next door. Nothing else came out of it.",
+        "Noor: The notes from the last call were hard to read because of all the shorthand. I am only noting it for the record.",
+        "Noor: Done: Build the page templates."
       ],
       "ops": [
         {
@@ -180,10 +251,20 @@
       "n": 8,
       "date": "2026-05-25",
       "chat": [
-        "Noor: The lawyer has not replied about unit locations. The map stays an open proposal.",
-        "Noor: The board meets next week and will pick the hero photo then.",
-        "Noor: Shared the staging link with Greta.",
-        "Noor: Standup moved to the afternoon this week."
+        "Greta: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Noor: The lawyer has not replied about unit locations.",
+        "Noor: A long email thread from last week went in circles and I stopped following it. I mention it only because it ate time.",
+        "Greta: The weather made travelling to the meeting a hassle for the client team. It is the kind of thing that happens every project.",
+        "Greta: Chat is hard to follow when three threads run at once. Everyone left in a decent mood.",
+        "Noor: Feedback arrived as a long voice note, which took a while to digest. Moving on.",
+        "Bilal: The translation vendor quote still lists two languages, so I will use that for the budget line.",
+        "Greta: The call started late because the previous meeting overran. We laughed about it afterwards.",
+        "Noor: A couple of people mentioned holiday plans without naming dates. I will not go into detail.",
+        "Greta: A new person joined on the client side and needed the basics explained. Nothing else came out of it.",
+        "Noor: We spent the first ten minutes on audio problems before anything useful happened. No one seemed bothered.",
+        "Noor: Feedback arrived as a long voice note, which took a while to digest. It is the kind of thing that happens every project.",
+        "Greta: A couple of people mentioned holiday plans without naming dates. It took more of the hour than it should have.",
+        "Greta: The video link changed twice before everyone got in. Someone should tidy that up eventually."
       ],
       "ops": []
     },
@@ -191,9 +272,20 @@
       "n": 9,
       "date": "2026-06-01",
       "chat": [
+        "Greta: Feedback arrived as a long voice note, which took a while to digest. It took more of the hour than it should have.",
+        "Noor: The coffee machine broke so the meeting moved to the cafe next door. It is mostly background for whoever reads this later.",
+        "Noor: Someone asked for a recap of the previous meeting and it took longer than expected. Nothing else came out of it.",
+        "Noor: The mood on the call was relaxed, mostly small talk. Everyone left in a decent mood.",
         "Noor: Polish translations are in progress.",
-        "Noor: The invoice for the last milestone went out.",
-        "Noor: Logged the open comments from Greta's team."
+        "Noor: The call started late because the previous meeting overran. I mention it only because it ate time.",
+        "Greta: The weather made travelling to the meeting a hassle for the client team. We laughed about it afterwards.",
+        "Noor: I asked the vendor to requote with Polish.",
+        "Noor: Someone raised an unrelated idea for next year and we parked it. I mention it only because it ate time.",
+        "Noor: The agency team had a quiet week with other client work crowding in. Everyone left in a decent mood.",
+        "Greta: Someone asked for a recap of the previous meeting and it took longer than expected. It had no effect on the plan.",
+        "Greta: A new person joined on the client side and needed the basics explained. I am only noting it for the record.",
+        "Noor: The weather made travelling to the meeting a hassle for the client team. Someone should tidy that up eventually.",
+        "Greta: The review meeting ran long because everyone had opinions on small wording choices. Moving on."
       ],
       "ops": []
     },
@@ -201,9 +293,20 @@
       "n": 10,
       "date": "2026-06-08",
       "chat": [
-        "Noor: Staging is ready for the board. Hero photo and map are still undecided.",
-        "Greta asked for the status deck to be shorter next time.",
-        "Greta asked for the status deck to be shorter next time."
+        "Noor: There was a small misunderstanding about who was meant to reply to whom. I mention it only because it ate time.",
+        "Greta: A long email thread from last week went in circles and I stopped following it. It is the kind of thing that happens every project.",
+        "Noor: Staging is ready for the board next week.",
+        "Noor: Chat is hard to follow when three threads run at once. It is mostly background for whoever reads this later.",
+        "Greta: The mood on the call was relaxed, mostly small talk. I will not go into detail.",
+        "Noor: The mood on the call was relaxed, mostly small talk. No one seemed bothered.",
+        "Noor: Someone raised an unrelated idea for next year and we parked it. No one seemed bothered.",
+        "Noor: The office move on the client side is distracting everyone. It is the kind of thing that happens every project.",
+        "Noor: Someone asked for a recap of the previous meeting and it took longer than expected. Everyone left in a decent mood.",
+        "Greta: The video link changed twice before everyone got in. Moving on.",
+        "Noor: The notes from the last call were hard to read because of all the shorthand. I will not go into detail.",
+        "Greta: The weather made travelling to the meeting a hassle for the client team. It took more of the hour than it should have.",
+        "Noor: The mood on the call was relaxed, mostly small talk. I am only noting it for the record.",
+        "Noor: Someone raised an unrelated idea for next year and we parked it. I am only noting it for the record."
       ],
       "ops": []
     }
@@ -250,7 +353,7 @@
         },
         {
           "id": "b",
-          "text": "No, it was proposed and is waiting on a legal answer",
+          "text": "No, it was proposed but never confirmed",
           "status": "current"
         },
         {

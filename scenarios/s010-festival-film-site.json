@@ -1,24 +1,34 @@
 {
   "id": "s010",
-  "title": "Film festival site over 30 sessions: launch date moves twice, ticketing replaced, sponsor logo previewed but never approved",
+  "title": "Film festival site over 30 sessions: launch date moves twice, ticketing replaced, sponsor logo acted on but never confirmed",
   "people": {
     "agency": "Priya (agency lead)",
     "client": "Tomasz (festival director)"
   },
   "review": {
-    "drafted_by": "an AI agent (Claude), 2026-11-25",
-    "reviewed_by_jordi": true,
-    "reviewed_on": "2026-11-25",
-    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+    "drafted_by": "an AI agent (Claude), 2026-11-25. Chats rewritten as v2 on 2026-11-26.",
+    "v1_reviewed_by_jordi_on": "2026-11-25",
+    "reviewed_by_jordi": false,
+    "hard_case": true,
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
   },
   "sessions": [
     {
       "n": 1,
       "date": "2026-02-02",
       "chat": [
+        "Tomasz: The call started late because the previous meeting overran. It is the kind of thing that happens every project.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. It had no effect on the plan.",
         "Priya: Kickoff with Tomasz for the festival site.",
-        "Priya: The invoice for the last milestone went out.",
-        "Priya: Logged the open comments from Tomasz's team."
+        "Priya: The weather made travelling to the meeting a hassle for the client team. It took more of the hour than it should have.",
+        "Tomasz: The shared folder structure confused two people again. It is the kind of thing that happens every project.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. No one seemed bothered.",
+        "Priya: Plan, in order: Gather the film stills, Write the programme copy, Build the schedule page, Build the ticket flow, Add captions to the trailers, Write the press page, Run the accessibility checks, Prepare the launch announcement.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. It is the kind of thing that happens every project.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. It is mostly background for whoever reads this later.",
+        "Tomasz: The shared folder structure confused two people again. It took more of the hour than it should have.",
+        "Priya: The shared folder structure confused two people again. Nothing else came out of it."
       ],
       "ops": [
         {
@@ -67,9 +77,18 @@
       "n": 2,
       "date": "2026-02-09",
       "chat": [
-        "Priya: Tomasz confirmed launching the site on 12 September, two weeks before the festival.",
-        "Tomasz asked for the status deck to be shorter next time.",
-        "Tomasz asked for the status deck to be shorter next time."
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. It is mostly background for whoever reads this later.",
+        "Priya: The agency team had a quiet week with other client work crowding in. I mention it only because it ate time.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. Someone should tidy that up eventually.",
+        "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. We laughed about it afterwards.",
+        "Tomasz: A new person joined on the client side and needed the basics explained. No one seemed bothered.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. It is the kind of thing that happens every project.",
+        "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. Nothing else came out of it.",
+        "Priya: The video link changed twice before everyone got in. Someone should tidy that up eventually.",
+        "Priya: Tomasz wants the site to launch on 12 September, two weeks before the festival.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. No one seemed bothered.",
+        "Priya: Chat is hard to follow when three threads run at once. Not much to report beyond that.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. Everyone left in a decent mood."
       ],
       "ops": [
         {
@@ -90,9 +109,18 @@
       "n": 3,
       "date": "2026-02-16",
       "chat": [
-        "Priya: Tomasz confirmed selling tickets through the festival's own box office page, so the festival keeps the audience data.",
-        "Priya: Logged the open comments from Tomasz's team.",
-        "Priya: The invoice for the last milestone went out."
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. It had no effect on the plan.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. It took more of the hour than it should have.",
+        "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. It is mostly background for whoever reads this later.",
+        "Tomasz: The call started late because the previous meeting overran. Not much to report beyond that.",
+        "Tomasz: The review meeting ran long because everyone had opinions on small wording choices. No one seemed bothered.",
+        "Priya: A new person joined on the client side and needed the basics explained. I will not go into detail.",
+        "Priya: A new person joined on the client side and needed the basics explained. We laughed about it afterwards.",
+        "Priya: Tomasz wants tickets sold through the festival's own box office page, so the festival keeps the audience data.",
+        "Priya: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
+        "Tomasz: The agency team had a quiet week with other client work crowding in. Not much to report beyond that.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. Nothing else came out of it.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. Nothing else came out of it."
       ],
       "ops": [
         {
@@ -113,9 +141,20 @@
       "n": 4,
       "date": "2026-02-23",
       "chat": [
-        "Priya: The film stills are gathered.",
-        "Priya: Standup moved to the afternoon this week.",
-        "Priya: Shared the staging link with Tomasz."
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. No one seemed bothered.",
+        "Tomasz: A long email thread from last week went in circles and I stopped following it. I will not go into detail.",
+        "Priya: Someone raised an unrelated idea for next year and we parked it. I mention it only because it ate time.",
+        "Tomasz: The office move on the client side is distracting everyone. I am only noting it for the record.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. It took more of the hour than it should have.",
+        "Priya: The office move on the client side is distracting everyone. It had no effect on the plan.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. I mention it only because it ate time.",
+        "Priya: The film stills are in.",
+        "Priya: Done: Gather the film stills.",
+        "Tomasz: The review meeting ran long because everyone had opinions on small wording choices. Moving on.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. Someone should tidy that up eventually.",
+        "Tomasz: The mood on the call was relaxed, mostly small talk. I mention it only because it ate time.",
+        "Priya: The office move on the client side is distracting everyone. Nothing else came out of it.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. Moving on."
       ],
       "ops": [
         {
@@ -128,8 +167,18 @@
       "n": 5,
       "date": "2026-03-02",
       "chat": [
-        "Priya: Weekly check-in held. No blockers raised.",
-        "Priya: Quiet week, the team spent it on build work and bug fixes."
+        "Priya: The weather made travelling to the meeting a hassle for the client team. Not much to report beyond that.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. I will not go into detail.",
+        "Tomasz: Feedback arrived as a long voice note, which took a while to digest. No one seemed bothered.",
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. Someone should tidy that up eventually.",
+        "Priya: A new person joined on the client side and needed the basics explained. I mention it only because it ate time.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. Everyone left in a decent mood.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. It took more of the hour than it should have.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. It took more of the hour than it should have.",
+        "Priya: The call started late because the previous meeting overran. Nothing else came out of it.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. Someone should tidy that up eventually.",
+        "Tomasz: The office move on the client side is distracting everyone. It is mostly background for whoever reads this later.",
+        "Priya: The shared folder structure confused two people again. No one seemed bothered."
       ],
       "ops": []
     },
@@ -137,9 +186,19 @@
       "n": 6,
       "date": "2026-03-09",
       "chat": [
-        "Priya: Tomasz confirmed captions on every trailer. The arts council grant requires it.",
-        "Tomasz sent feedback on the last build, mostly small copy edits.",
-        "Tomasz sent feedback on the last build, mostly small copy edits."
+        "Tomasz: The shared folder structure confused two people again. It had no effect on the plan.",
+        "Tomasz: The video link changed twice before everyone got in. Nothing else came out of it.",
+        "Tomasz: The office move on the client side is distracting everyone. It is the kind of thing that happens every project.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. It took more of the hour than it should have.",
+        "Tomasz: The call started late because the previous meeting overran. Moving on.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. It is the kind of thing that happens every project.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. We laughed about it afterwards.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. Everyone left in a decent mood.",
+        "Tomasz: A new person joined on the client side and needed the basics explained. It had no effect on the plan.",
+        "Priya: Tomasz wants captions on every trailer. The arts council grant requires it.",
+        "Priya: The weather made travelling to the meeting a hassle for the client team. Everyone left in a decent mood.",
+        "Priya: Chat is hard to follow when three threads run at once. Nothing else came out of it.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. I am only noting it for the record."
       ],
       "ops": [
         {
@@ -160,8 +219,19 @@
       "n": 7,
       "date": "2026-03-16",
       "chat": [
-        "Priya: Quiet week, the team spent it on build work and bug fixes.",
-        "Priya: Weekly check-in held. No blockers raised."
+        "Priya: The shared folder structure confused two people again. I will not go into detail.",
+        "Priya: The agency team had a quiet week with other client work crowding in. Someone should tidy that up eventually.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. It took more of the hour than it should have.",
+        "Tomasz: The review meeting ran long because everyone had opinions on small wording choices. It had no effect on the plan.",
+        "Tomasz: The call started late because the previous meeting overran. Everyone left in a decent mood.",
+        "Tomasz: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Priya: The shared folder structure confused two people again. We laughed about it afterwards.",
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. Nothing else came out of it.",
+        "Priya: Chat is hard to follow when three threads run at once. It had no effect on the plan.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. It had no effect on the plan.",
+        "Tomasz: A couple of people mentioned holiday plans without naming dates. Moving on.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. It had no effect on the plan.",
+        "Tomasz: The video link changed twice before everyone got in. Not much to report beyond that."
       ],
       "ops": []
     },
@@ -169,9 +239,19 @@
       "n": 8,
       "date": "2026-03-23",
       "chat": [
+        "Tomasz: Half the team was out sick this week, so replies were slower than usual. It had no effect on the plan.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. We laughed about it afterwards.",
+        "Priya: There was a small misunderstanding about who was meant to reply to whom. It had no effect on the plan.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. I am only noting it for the record.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. It is mostly background for whoever reads this later.",
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. Everyone left in a decent mood.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. Moving on.",
+        "Priya: Someone raised an unrelated idea for next year and we parked it. We laughed about it afterwards.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. Not much to report beyond that.",
         "Priya: The programme copy is written.",
-        "Priya: Shared the staging link with Tomasz.",
-        "Priya: Standup moved to the afternoon this week."
+        "Priya: The call started late because the previous meeting overran. It is mostly background for whoever reads this later.",
+        "Priya: Done: Write the programme copy.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. Everyone left in a decent mood."
       ],
       "ops": [
         {
@@ -184,8 +264,18 @@
       "n": 9,
       "date": "2026-03-30",
       "chat": [
-        "Priya: The invoice for the last milestone went out.",
-        "Priya: Logged the open comments from Tomasz's team."
+        "Priya: The call started late because the previous meeting overran. We laughed about it afterwards.",
+        "Tomasz: The agency team had a quiet week with other client work crowding in. No one seemed bothered.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
+        "Tomasz: A new person joined on the client side and needed the basics explained. It is the kind of thing that happens every project.",
+        "Tomasz: Feedback arrived as a long voice note, which took a while to digest. It is mostly background for whoever reads this later.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. It is mostly background for whoever reads this later.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. It is the kind of thing that happens every project.",
+        "Tomasz: Chat is hard to follow when three threads run at once. It is the kind of thing that happens every project.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. Nothing else came out of it.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. Not much to report beyond that.",
+        "Tomasz: Chat is hard to follow when three threads run at once. Someone should tidy that up eventually.",
+        "Priya: The mood on the call was relaxed, mostly small talk. I am only noting it for the record."
       ],
       "ops": []
     },
@@ -193,9 +283,20 @@
       "n": 10,
       "date": "2026-04-06",
       "chat": [
-        "Priya: The trailer edit slipped by a week. Tomasz confirmed launching on 19 September.",
-        "Tomasz asked for the status deck to be shorter next time.",
-        "Tomasz asked for the status deck to be shorter next time."
+        "Tomasz: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
+        "Priya: Chat is hard to follow when three threads run at once. I will not go into detail.",
+        "Tomasz: The video link changed twice before everyone got in. It is the kind of thing that happens every project.",
+        "Priya: The mood on the call was relaxed, mostly small talk. Moving on.",
+        "Priya: The mood on the call was relaxed, mostly small talk. It had no effect on the plan.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. I will not go into detail.",
+        "Tomasz: The coffee machine broke so the meeting moved to the cafe next door. It is mostly background for whoever reads this later.",
+        "Priya: Someone raised an unrelated idea for next year and we parked it. Not much to report beyond that.",
+        "Tomasz: The shared folder structure confused two people again. Someone should tidy that up eventually.",
+        "Priya: The mood on the call was relaxed, mostly small talk. It took more of the hour than it should have.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. Not much to report beyond that.",
+        "Tomasz: The call started late because the previous meeting overran. I mention it only because it ate time.",
+        "Priya: The trailer edit slipped by a week. Tomasz moved the launch to 19 September.",
+        "Priya: The mood on the call was relaxed, mostly small talk. We laughed about it afterwards."
       ],
       "ops": [
         {
@@ -216,8 +317,19 @@
       "n": 11,
       "date": "2026-04-13",
       "chat": [
-        "Priya: Logged the open comments from Tomasz's team.",
-        "Priya: The invoice for the last milestone went out."
+        "Tomasz: The shared folder structure confused two people again. Everyone left in a decent mood.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. Nothing else came out of it.",
+        "Priya: The agency team had a quiet week with other client work crowding in. Moving on.",
+        "Priya: Chat is hard to follow when three threads run at once. I mention it only because it ate time.",
+        "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. Not much to report beyond that.",
+        "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. It had no effect on the plan.",
+        "Priya: Someone raised an unrelated idea for next year and we parked it. Someone should tidy that up eventually.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. Someone should tidy that up eventually.",
+        "Tomasz: A long email thread from last week went in circles and I stopped following it. It is the kind of thing that happens every project.",
+        "Tomasz: The mood on the call was relaxed, mostly small talk. Everyone left in a decent mood.",
+        "Tomasz: The mood on the call was relaxed, mostly small talk. I will not go into detail.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. Moving on.",
+        "Tomasz: The video link changed twice before everyone got in. I will not go into detail."
       ],
       "ops": []
     },
@@ -225,9 +337,19 @@
       "n": 12,
       "date": "2026-04-20",
       "chat": [
-        "Priya: The box office page failed the load test. Tomasz confirmed moving to an external ticket platform.",
-        "Priya: Standup moved to the afternoon this week.",
-        "Priya: Shared the staging link with Tomasz."
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. It is the kind of thing that happens every project.",
+        "Priya: The shared folder structure confused two people again. Not much to report beyond that.",
+        "Priya: A new person joined on the client side and needed the basics explained. Not much to report beyond that.",
+        "Priya: The agency team had a quiet week with other client work crowding in. It had no effect on the plan.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. Not much to report beyond that.",
+        "Priya: The mood on the call was relaxed, mostly small talk. Not much to report beyond that.",
+        "Priya: The office move on the client side is distracting everyone. It took more of the hour than it should have.",
+        "Tomasz: A long email thread from last week went in circles and I stopped following it. I mention it only because it ate time.",
+        "Tomasz: The office move on the client side is distracting everyone. We laughed about it afterwards.",
+        "Priya: The box office page failed the load test. Tomasz moved to an external ticket platform.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. Nothing else came out of it.",
+        "Priya: A new person joined on the client side and needed the basics explained. Someone should tidy that up eventually.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. It took more of the hour than it should have."
       ],
       "ops": [
         {
@@ -248,9 +370,20 @@
       "n": 13,
       "date": "2026-04-27",
       "chat": [
+        "Tomasz: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
+        "Priya: Someone raised an unrelated idea for next year and we parked it. Everyone left in a decent mood.",
         "Priya: The schedule page is built.",
-        "Priya: Weekly check-in held. No blockers raised.",
-        "Priya: Quiet week, the team spent it on build work and bug fixes."
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. I am only noting it for the record.",
+        "Priya: There was a small misunderstanding about who was meant to reply to whom. I am only noting it for the record.",
+        "Tomasz: Chat is hard to follow when three threads run at once. Everyone left in a decent mood.",
+        "Rosa (festival press): The press release says 12 September, I am sending it today.",
+        "Tomasz: The review meeting ran long because everyone had opinions on small wording choices. Nothing else came out of it.",
+        "Priya: Chat is hard to follow when three threads run at once. No one seemed bothered.",
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. It is the kind of thing that happens every project.",
+        "Priya: Done: Build the schedule page.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. I will not go into detail.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. I mention it only because it ate time.",
+        "Tomasz: The video link changed twice before everyone got in. No one seemed bothered."
       ],
       "ops": [
         {
@@ -263,8 +396,19 @@
       "n": 14,
       "date": "2026-05-04",
       "chat": [
-        "Tomasz sent feedback on the last build, mostly small copy edits.",
-        "Tomasz sent feedback on the last build, mostly small copy edits."
+        "Priya: A couple of people mentioned holiday plans without naming dates. I am only noting it for the record.",
+        "Priya: A new person joined on the client side and needed the basics explained. Moving on.",
+        "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. I will not go into detail.",
+        "Tomasz: A couple of people mentioned holiday plans without naming dates. It is mostly background for whoever reads this later.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. Everyone left in a decent mood.",
+        "Priya: The shared folder structure confused two people again. It is mostly background for whoever reads this later.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. I mention it only because it ate time.",
+        "Tomasz: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project.",
+        "Priya: Rosa, hold the release until the date is final.",
+        "Priya: The video link changed twice before everyone got in. I mention it only because it ate time.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. Not much to report beyond that.",
+        "Rosa: The box office page link is in the brochure draft.",
+        "Priya: A new person joined on the client side and needed the basics explained. It took more of the hour than it should have."
       ],
       "ops": []
     },
@@ -272,9 +416,18 @@
       "n": 15,
       "date": "2026-05-11",
       "chat": [
-        "Priya: I suggest putting the main sponsor logo in the site header. Tomasz says the sponsor contract is not signed yet.",
-        "Priya: Quiet week, the team spent it on build work and bug fixes.",
-        "Priya: Weekly check-in held. No blockers raised."
+        "Tomasz: The video link changed twice before everyone got in. It took more of the hour than it should have.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. I will not go into detail.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. I mention it only because it ate time.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. Someone should tidy that up eventually.",
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. No one seemed bothered.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. It is the kind of thing that happens every project.",
+        "Tomasz: A long email thread from last week went in circles and I stopped following it. I am only noting it for the record.",
+        "Tomasz: The agency team had a quiet week with other client work crowding in. I will not go into detail.",
+        "Tomasz: The office move on the client side is distracting everyone. Someone should tidy that up eventually.",
+        "Tomasz: The mood on the call was relaxed, mostly small talk. No one seemed bothered.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. It took more of the hour than it should have.",
+        "Priya: I suggest putting the main sponsor logo in the site header. Tomasz wants to talk to the sponsor first."
       ],
       "ops": [
         {
@@ -289,8 +442,18 @@
       "n": 16,
       "date": "2026-05-18",
       "chat": [
-        "Priya: Shared the staging link with Tomasz.",
-        "Priya: Standup moved to the afternoon this week."
+        "Priya: The video link changed twice before everyone got in. It had no effect on the plan.",
+        "Tomasz: The coffee machine broke so the meeting moved to the cafe next door. I will not go into detail.",
+        "Priya: The agency team had a quiet week with other client work crowding in. It is the kind of thing that happens every project.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. Someone should tidy that up eventually.",
+        "Tomasz: The agency team had a quiet week with other client work crowding in. It is mostly background for whoever reads this later.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. Moving on.",
+        "Priya: The call started late because the previous meeting overran. No one seemed bothered.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. I am only noting it for the record.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. We laughed about it afterwards.",
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. I am only noting it for the record.",
+        "Tomasz: A new person joined on the client side and needed the basics explained. Nothing else came out of it.",
+        "Tomasz: The coffee machine broke so the meeting moved to the cafe next door. We laughed about it afterwards."
       ],
       "ops": []
     },
@@ -298,8 +461,19 @@
       "n": 17,
       "date": "2026-05-25",
       "chat": [
-        "Priya: The invoice for the last milestone went out.",
-        "Priya: Logged the open comments from Tomasz's team."
+        "Priya: The call started late because the previous meeting overran. I will not go into detail.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. It is mostly background for whoever reads this later.",
+        "Tomasz: Half the team was out sick this week, so replies were slower than usual. No one seemed bothered.",
+        "Priya: The office move on the client side is distracting everyone. Everyone left in a decent mood.",
+        "Tomasz: A couple of people mentioned holiday plans without naming dates. It had no effect on the plan.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. It is the kind of thing that happens every project.",
+        "Tomasz: Feedback arrived as a long voice note, which took a while to digest. I mention it only because it ate time.",
+        "Priya: There was a small misunderstanding about who was meant to reply to whom. Moving on.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. I am only noting it for the record.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. Moving on.",
+        "Priya: The office move on the client side is distracting everyone. Not much to report beyond that.",
+        "Priya: The call started late because the previous meeting overran. It took more of the hour than it should have.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. No one seemed bothered."
       ],
       "ops": []
     },
@@ -307,8 +481,20 @@
       "n": 18,
       "date": "2026-06-01",
       "chat": [
-        "Tomasz asked for the status deck to be shorter next time.",
-        "Tomasz asked for the status deck to be shorter next time."
+        "Priya: There was a small misunderstanding about who was meant to reply to whom. It is the kind of thing that happens every project.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. Nothing else came out of it.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. Someone should tidy that up eventually.",
+        "Priya: Rosa spoke to the sponsor this week.",
+        "Rosa: The sponsor is expecting their logo in the header, I told them it is done.",
+        "Priya: The weather made travelling to the meeting a hassle for the client team. We laughed about it afterwards.",
+        "Tomasz: The call started late because the previous meeting overran. It had no effect on the plan.",
+        "Tomasz: The agency team had a quiet week with other client work crowding in. It took more of the hour than it should have.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. It had no effect on the plan.",
+        "Priya: The agency team had a quiet week with other client work crowding in. Nothing else came out of it.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. I will not go into detail.",
+        "Tomasz: The office move on the client side is distracting everyone. I mention it only because it ate time.",
+        "Priya: A new person joined on the client side and needed the basics explained. Everyone left in a decent mood.",
+        "Priya: The shared folder structure confused two people again. I mention it only because it ate time."
       ],
       "ops": []
     },
@@ -316,9 +502,19 @@
       "n": 19,
       "date": "2026-06-08",
       "chat": [
-        "Priya: The festival moved its opening a week earlier. Tomasz confirmed launching the site on 5 September.",
-        "Priya: Logged the open comments from Tomasz's team.",
-        "Priya: The invoice for the last milestone went out."
+        "Tomasz: The office move on the client side is distracting everyone. Moving on.",
+        "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. I am only noting it for the record.",
+        "Tomasz: Feedback arrived as a long voice note, which took a while to digest. It had no effect on the plan.",
+        "Tomasz: The call started late because the previous meeting overran. Someone should tidy that up eventually.",
+        "Priya: The festival moved its opening a week earlier. Tomasz moved the site launch to 5 September.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. Everyone left in a decent mood.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. Someone should tidy that up eventually.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. Not much to report beyond that.",
+        "Priya: The shared folder structure confused two people again. I am only noting it for the record.",
+        "Tomasz: Half the team was out sick this week, so replies were slower than usual. I am only noting it for the record.",
+        "Priya: The office move on the client side is distracting everyone. No one seemed bothered.",
+        "Priya: The video link changed twice before everyone got in. I am only noting it for the record.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. It took more of the hour than it should have."
       ],
       "ops": [
         {
@@ -339,8 +535,21 @@
       "n": 20,
       "date": "2026-06-15",
       "chat": [
-        "Priya: Standup moved to the afternoon this week.",
-        "Priya: Shared the staging link with Tomasz."
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. I mention it only because it ate time.",
+        "Priya: The video link changed twice before everyone got in. Everyone left in a decent mood.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. We laughed about it afterwards.",
+        "Priya: The weather made travelling to the meeting a hassle for the client team. Moving on.",
+        "Priya: Rosa is updating the press material.",
+        "Rosa: The press release now says 19 September.",
+        "Priya: Chat is hard to follow when three threads run at once. We laughed about it afterwards.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. I mention it only because it ate time.",
+        "Tomasz: A long email thread from last week went in circles and I stopped following it. No one seemed bothered.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. I will not go into detail.",
+        "Priya: The video link changed twice before everyone got in. Moving on.",
+        "Tomasz: The shared folder structure confused two people again. Moving on.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. Everyone left in a decent mood.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. Nothing else came out of it.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. I am only noting it for the record."
       ],
       "ops": []
     },
@@ -348,9 +557,20 @@
       "n": 21,
       "date": "2026-06-22",
       "chat": [
+        "Priya: The notes from the last call were hard to read because of all the shorthand. Someone should tidy that up eventually.",
+        "Tomasz: The video link changed twice before everyone got in. It is mostly background for whoever reads this later.",
+        "Priya: Chat is hard to follow when three threads run at once. Moving on.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. We laughed about it afterwards.",
+        "Tomasz: The coffee machine broke so the meeting moved to the cafe next door. No one seemed bothered.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. I mention it only because it ate time.",
+        "Priya: The video link changed twice before everyone got in. We laughed about it afterwards.",
         "Priya: The ticket flow is built against the external platform.",
-        "Priya: Weekly check-in held. No blockers raised.",
-        "Priya: Quiet week, the team spent it on build work and bug fixes."
+        "Priya: Done: Build the ticket flow.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. I will not go into detail.",
+        "Priya: The agency team had a quiet week with other client work crowding in. Everyone left in a decent mood.",
+        "Tomasz: The coffee machine broke so the meeting moved to the cafe next door. It took more of the hour than it should have.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. It is mostly background for whoever reads this later.",
+        "Tomasz: The call started late because the previous meeting overran. I am only noting it for the record."
       ],
       "ops": [
         {
@@ -363,8 +583,18 @@
       "n": 22,
       "date": "2026-06-29",
       "chat": [
-        "Tomasz sent feedback on the last build, mostly small copy edits.",
-        "Tomasz sent feedback on the last build, mostly small copy edits."
+        "Tomasz: Half the team was out sick this week, so replies were slower than usual. I will not go into detail.",
+        "Tomasz: A new person joined on the client side and needed the basics explained. I am only noting it for the record.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. Nothing else came out of it.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. Everyone left in a decent mood.",
+        "Priya: Chat is hard to follow when three threads run at once. It is mostly background for whoever reads this later.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. Someone should tidy that up eventually.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. Moving on.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. Not much to report beyond that.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. I mention it only because it ate time.",
+        "Priya: A new person joined on the client side and needed the basics explained. It is mostly background for whoever reads this later.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. Nothing else came out of it.",
+        "Priya: The weather made travelling to the meeting a hassle for the client team. I will not go into detail."
       ],
       "ops": []
     },
@@ -372,9 +602,20 @@
       "n": 23,
       "date": "2026-07-06",
       "chat": [
-        "Priya: Captions are on all trailers.",
-        "Priya: Quiet week, the team spent it on build work and bug fixes.",
-        "Priya: Weekly check-in held. No blockers raised."
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. It is mostly background for whoever reads this later.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. Moving on.",
+        "Priya: Captions are on all the trailers.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. Not much to report beyond that.",
+        "Priya: Someone raised an unrelated idea for next year and we parked it. Moving on.",
+        "Priya: Chat is hard to follow when three threads run at once. I am only noting it for the record.",
+        "Priya: The weather made travelling to the meeting a hassle for the client team. No one seemed bothered.",
+        "Priya: The mood on the call was relaxed, mostly small talk. It is the kind of thing that happens every project.",
+        "Priya: Chat is hard to follow when three threads run at once. It took more of the hour than it should have.",
+        "Tomasz: The mood on the call was relaxed, mostly small talk. Someone should tidy that up eventually.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. It is mostly background for whoever reads this later.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. I mention it only because it ate time.",
+        "Priya: There was a small misunderstanding about who was meant to reply to whom. We laughed about it afterwards.",
+        "Priya: Done: Add captions to the trailers."
       ],
       "ops": [
         {
@@ -387,9 +628,19 @@
       "n": 24,
       "date": "2026-07-13",
       "chat": [
-        "Priya: I put the sponsor logo in the staging header to show how it looks. That is a preview only, nothing is approved.",
-        "Priya: Shared the staging link with Tomasz.",
-        "Priya: Standup moved to the afternoon this week."
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. Someone should tidy that up eventually.",
+        "Tomasz: The office move on the client side is distracting everyone. I will not go into detail.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. Not much to report beyond that.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. It is the kind of thing that happens every project.",
+        "Tomasz: The mood on the call was relaxed, mostly small talk. I will not go into detail.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. Moving on.",
+        "Priya: I put the logo in the staging header to show how it looks.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. Someone should tidy that up eventually.",
+        "Priya: The mood on the call was relaxed, mostly small talk. It took more of the hour than it should have.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. I am only noting it for the record.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. No one seemed bothered.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. I mention it only because it ate time.",
+        "Tomasz: The coffee machine broke so the meeting moved to the cafe next door. It took more of the hour than it should have."
       ],
       "ops": []
     },
@@ -397,8 +648,18 @@
       "n": 25,
       "date": "2026-07-20",
       "chat": [
-        "Priya: The invoice for the last milestone went out.",
-        "Priya: Logged the open comments from Tomasz's team."
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. Everyone left in a decent mood.",
+        "Tomasz: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. Nothing else came out of it.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. It is mostly background for whoever reads this later.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. We laughed about it afterwards.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. I will not go into detail.",
+        "Priya: A new person joined on the client side and needed the basics explained. Someone should tidy that up eventually.",
+        "Tomasz: Half the team was out sick this week, so replies were slower than usual. No one seemed bothered.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. I am only noting it for the record.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. No one seemed bothered.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. I am only noting it for the record.",
+        "Priya: There was a small misunderstanding about who was meant to reply to whom. I am only noting it for the record."
       ],
       "ops": []
     },
@@ -406,8 +667,18 @@
       "n": 26,
       "date": "2026-07-27",
       "chat": [
-        "Tomasz asked for the status deck to be shorter next time.",
-        "Tomasz asked for the status deck to be shorter next time."
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. It had no effect on the plan.",
+        "Priya: Chat is hard to follow when three threads run at once. I am only noting it for the record.",
+        "Priya: The weather made travelling to the meeting a hassle for the client team. Someone should tidy that up eventually.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. I mention it only because it ate time.",
+        "Tomasz: Half the team was out sick this week, so replies were slower than usual. Not much to report beyond that.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. Everyone left in a decent mood.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. We laughed about it afterwards.",
+        "Priya: The weather made travelling to the meeting a hassle for the client team. It is the kind of thing that happens every project.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. Nothing else came out of it.",
+        "Tomasz: Half the team was out sick this week, so replies were slower than usual. It took more of the hour than it should have.",
+        "Priya: A long email thread from last week went in circles and I stopped following it. Not much to report beyond that.",
+        "Tomasz: Feedback arrived as a long voice note, which took a while to digest. I am only noting it for the record."
       ],
       "ops": []
     },
@@ -416,8 +687,19 @@
       "date": "2026-08-03",
       "chat": [
         "Priya: The press page is written.",
-        "Priya: Logged the open comments from Tomasz's team.",
-        "Priya: The invoice for the last milestone went out."
+        "Priya: A new person joined on the client side and needed the basics explained. We laughed about it afterwards.",
+        "Priya: Done: Write the press page.",
+        "Priya: Half the team was out sick this week, so replies were slower than usual. No one seemed bothered.",
+        "Priya: The office move on the client side is distracting everyone. Moving on.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. I will not go into detail.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. I will not go into detail.",
+        "Priya: There was a small misunderstanding about who was meant to reply to whom. We laughed about it afterwards.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. Nothing else came out of it.",
+        "Tomasz: The weather made travelling to the meeting a hassle for the client team. Everyone left in a decent mood.",
+        "Priya: The call started late because the previous meeting overran. It is mostly background for whoever reads this later.",
+        "Tomasz: The review meeting ran long because everyone had opinions on small wording choices. Nothing else came out of it.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. We laughed about it afterwards.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. It took more of the hour than it should have."
       ],
       "ops": [
         {
@@ -430,8 +712,19 @@
       "n": 28,
       "date": "2026-08-10",
       "chat": [
-        "Priya: Standup moved to the afternoon this week.",
-        "Priya: Shared the staging link with Tomasz."
+        "Tomasz: The review meeting ran long because everyone had opinions on small wording choices. It is the kind of thing that happens every project.",
+        "Tomasz: There was a small misunderstanding about who was meant to reply to whom. It had no effect on the plan.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
+        "Priya: The call started late because the previous meeting overran. I am only noting it for the record.",
+        "Priya: We spent the first ten minutes on audio problems before anything useful happened. No one seemed bothered.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. I am only noting it for the record.",
+        "Priya: The coffee machine broke so the meeting moved to the cafe next door. Someone should tidy that up eventually.",
+        "Priya: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Tomasz: The call started late because the previous meeting overran. We laughed about it afterwards.",
+        "Tomasz: Someone raised an unrelated idea for next year and we parked it. I mention it only because it ate time.",
+        "Priya: The agency team had a quiet week with other client work crowding in. I will not go into detail.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. No one seemed bothered.",
+        "Tomasz: The shared folder structure confused two people again. Someone should tidy that up eventually."
       ],
       "ops": []
     },
@@ -439,9 +732,20 @@
       "n": 29,
       "date": "2026-08-17",
       "chat": [
-        "Priya: Still waiting for the sponsor contract, so the header stays open.",
-        "Priya: Weekly check-in held. No blockers raised.",
-        "Priya: Quiet week, the team spent it on build work and bug fixes."
+        "Priya: A couple of people mentioned holiday plans without naming dates. It is mostly background for whoever reads this later.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. Nothing else came out of it.",
+        "Tomasz: Someone asked for a recap of the previous meeting and it took longer than expected. No one seemed bothered.",
+        "Priya: The shared folder structure confused two people again. It is mostly background for whoever reads this later.",
+        "Priya: The office move on the client side is distracting everyone. It took more of the hour than it should have.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
+        "Priya: The sponsor asked when the header goes live.",
+        "Priya: Feedback arrived as a long voice note, which took a while to digest. I will not go into detail.",
+        "Priya: The office move on the client side is distracting everyone. It is the kind of thing that happens every project.",
+        "Priya: The notes from the last call were hard to read because of all the shorthand. No one seemed bothered.",
+        "Rosa: Sponsor asks if the logo is in on launch day.",
+        "Priya: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
+        "Tomasz: The mood on the call was relaxed, mostly small talk. No one seemed bothered."
       ],
       "ops": []
     },
@@ -449,8 +753,20 @@
       "n": 30,
       "date": "2026-08-24",
       "chat": [
-        "Tomasz sent feedback on the last build, mostly small copy edits.",
-        "Tomasz sent feedback on the last build, mostly small copy edits."
+        "Priya: There was a small misunderstanding about who was meant to reply to whom. Not much to report beyond that.",
+        "Priya: The call started late because the previous meeting overran. We laughed about it afterwards.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. Nothing else came out of it.",
+        "Priya: Someone raised an unrelated idea for next year and we parked it. Moving on.",
+        "Priya: The review meeting ran long because everyone had opinions on small wording choices. We laughed about it afterwards.",
+        "Priya: The shared folder structure confused two people again. Moving on.",
+        "Priya: A new person joined on the client side and needed the basics explained. We laughed about it afterwards.",
+        "Tomasz: The notes from the last call were hard to read because of all the shorthand. Moving on.",
+        "Priya: The weather made travelling to the meeting a hassle for the client team. It is the kind of thing that happens every project.",
+        "Priya: The video link changed twice before everyone got in. Moving on.",
+        "Priya: Someone asked for a recap of the previous meeting and it took longer than expected. It had no effect on the plan.",
+        "Priya: A couple of people mentioned holiday plans without naming dates. I will not go into detail.",
+        "Priya: The office move on the client side is distracting everyone. Everyone left in a decent mood.",
+        "Priya: The call started late because the previous meeting overran. Moving on."
       ],
       "ops": []
     }
@@ -493,7 +809,7 @@
       "id": "q2",
       "type": "was_confirmed",
       "key": "sponsor_logo",
-      "prompt": "Has Tomasz approved the main sponsor logo in the site header?",
+      "prompt": "Has Tomasz confirmed the main sponsor logo in the site header?",
       "options": [
         {
           "id": "a",
@@ -502,7 +818,7 @@
         },
         {
           "id": "b",
-          "text": "No, it was proposed and previewed on staging, but never approved",
+          "text": "No, it was proposed but never confirmed",
           "status": "current"
         },
         {

@@ -1,6 +1,6 @@
 // Run planning and execution. Pure of IO except through the injected providers and sink,
 // so the dry run, the spend meter and the budget abort can all be tested with a fake provider.
-import { renderChat, renderBoard, renderQuestion } from './render.mjs';
+import { renderChat, renderBoard, renderQuestion, renderHeader } from './render.mjs';
 import { shuffled, seedFrom } from './rng.mjs';
 import { scoreReply, summarize } from './score.mjs';
 import { costOf, worstCaseCost, BudgetExceeded } from './meter.mjs';
@@ -11,10 +11,15 @@ export function orderFor(scenario, q, run) {
   return shuffled(q.options, seedFrom(`${scenario.id}/${q.id}/${run}`));
 }
 
+/** Conditions that rest on a notes file kept by an AI, each with its own keeper prompt (B and the B2 sensitivity arm). */
+export const keeperConditions = (protocol, conditions) => conditions.filter((c) => protocol.prompts.keepers?.[c]);
+
+/** `notes` is the notes file for a keeper condition, ignored for the others. Every condition opens with the same header. */
 export function memoryText(condition, scenario, notes) {
-  if (condition === 'A') return `# Project memory: every past session, in order\n\n${renderChat(scenario)}`;
-  if (condition === 'B') return `# Project memory: notes file\n\n${notes}`;
-  if (condition === 'C') return `# Project memory\n\n${renderBoard(scenario)}`;
+  const header = renderHeader(scenario);
+  if (condition === 'A') return `# Project memory: every past session, in order\n\n${header}\n\n${renderChat(scenario)}`;
+  if (condition === 'C') return `# Project memory\n\n${header}\n\n${renderBoard(scenario)}`;
+  if (condition === 'B' || condition === 'B2') return `# Project memory: notes file\n\n${header}\n\n${notes}`;
   throw new Error(`unknown condition ${condition}`);
 }
 
@@ -22,11 +27,11 @@ export function answerRequest(protocol, memory, q, order) {
   return { system: protocol.prompts.answer_system, user: `${memory}\n\n${renderQuestion(q, order)}` };
 }
 
-export function keeperRequest(protocol, notes, session) {
+export function keeperRequest(protocol, condition, notes, session, scenario) {
   const chat = session.chat.join('\n');
   return {
-    system: protocol.prompts.keeper_system,
-    user: `# Current notes\n\n${notes || '(empty)'}\n\n# New session ${session.n} (${session.date})\n\n${chat}`,
+    system: protocol.prompts.keepers[condition],
+    user: `${renderHeader(scenario)}\n\n# Current notes\n\n${notes || '(empty)'}\n\n# New session ${session.n} (${session.date})\n\n${chat}`,
   };
 }
 
@@ -39,11 +44,12 @@ export const estTokens = (text, charsPerToken) => Math.ceil(text.length / charsP
 const CONSERVATIVE_CPT = 3;
 
 /**
- * Dry-run estimate. Makes no call. Notes (condition B) are not known before the keeper runs,
- * so their size is an assumption from the protocol.
+ * Dry-run estimate. Makes no call. Notes are not known before the keeper runs, so their size and the
+ * keeper's output are assumptions from the protocol, per provider.
  */
 export function estimate({ scenarios, protocol, models, runs, conditions, prices }) {
   const as = protocol.estimate_assumptions;
+  const keepers = keeperConditions(protocol, conditions);
   const out = { byModel: {}, totals: { calls: 0, keeperCalls: 0, answerCalls: 0, inputTokens: 0, outputTokens: 0, costUsd: 0 } };
   for (const model of models) {
     const price = prices.models[model];
@@ -58,11 +64,11 @@ export function estimate({ scenarios, protocol, models, runs, conditions, prices
     };
     for (const s of scenarios) {
       const finalNotes = PLACEHOLDER(Math.min(as.notes_tokens_cap, as.notes_tokens_per_session * s.sessions.length), cpt);
-      if (conditions.includes('B')) {
+      for (const kc of keepers) {
         s.sessions.forEach((session, i) => {
           const notes = PLACEHOLDER(Math.min(as.notes_tokens_cap, as.notes_tokens_per_session * i), cpt);
-          const r = keeperRequest(protocol, notes, session);
-          add('keeper', estTokens(r.system + r.user, cpt), as.keeper_output_tokens, 'B-keeper');
+          const r = keeperRequest(protocol, kc, notes, session, s);
+          add('keeper', estTokens(r.system + r.user, cpt), as.keeper_output_tokens[price.provider], `${kc}-keeper`);
         });
       }
       for (const q of s.questions) {
@@ -70,7 +76,7 @@ export function estimate({ scenarios, protocol, models, runs, conditions, prices
           const order = orderFor(s, q, run);
           for (const cond of conditions) {
             const r = answerRequest(protocol, memoryText(cond, s, finalNotes), q, order);
-            add('answer', estTokens(r.system + r.user, cpt), as.answer_output_tokens, cond);
+            add('answer', estTokens(r.system + r.user, cpt), as.answer_output_tokens[price.provider], cond);
           }
         }
       }
@@ -89,6 +95,7 @@ export function estimate({ scenarios, protocol, models, runs, conditions, prices
 export async function execute({ scenarios, protocol, models, runs, conditions, prices, providers, meter, sink }) {
   const rows = [];
   const emit = (row) => { rows.push(row); sink(row); };
+  const keepers = keeperConditions(protocol, conditions);
   let status = 'completed';
   let error = null;
   try {
@@ -109,20 +116,21 @@ export async function execute({ scenarios, protocol, models, runs, conditions, p
       };
 
       for (const s of scenarios) {
-        let notes = '';
-        if (conditions.includes('B')) {
+        const notes = Object.fromEntries(keepers.map((kc) => [kc, '']));
+        for (const kc of keepers) {
           for (const session of s.sessions) {
-            const r = await call(keeperRequest(protocol, notes, session), protocol.max_output_tokens.keeper);
-            if (r.overflow) { emit({ kind: 'keeper', model, scenario: s.id, session: session.n, outcome: 'context_overflow', est_input_tokens: r.estInput }); continue; }
-            notes = r.res.text;
-            emit({ kind: 'keeper', model, scenario: s.id, session: session.n, notes, stop_reason: r.res.stopReason, usage: r.res.usage, cost_usd: r.cost });
+            const r = await call(keeperRequest(protocol, kc, notes[kc], session, s), protocol.max_output_tokens.keeper);
+            const base = { kind: 'keeper', condition: kc, model, scenario: s.id, session: session.n };
+            if (r.overflow) { emit({ ...base, outcome: 'context_overflow', est_input_tokens: r.estInput }); continue; }
+            notes[kc] = r.res.text;
+            emit({ ...base, notes: r.res.text, stop_reason: r.res.stopReason, usage: r.res.usage, cost_usd: r.cost });
           }
         }
         for (const q of s.questions) {
           for (let run = 1; run <= runs; run++) {
             const order = orderFor(s, q, run);
             for (const condition of conditions) {
-              const req = answerRequest(protocol, memoryText(condition, s, notes), q, order);
+              const req = answerRequest(protocol, memoryText(condition, s, notes[condition]), q, order);
               const base = { kind: 'answer', model, scenario: s.id, question: q.id, type: q.type, condition, run, order: order.map((o) => o.id) };
               const r = await call(req, protocol.max_output_tokens.answer);
               if (r.overflow) { emit({ ...base, outcome: 'context_overflow', est_input_tokens: r.estInput }); continue; }
@@ -142,15 +150,25 @@ export async function execute({ scenarios, protocol, models, runs, conditions, p
   return { status, error, spentUsd: meter.spent, budgetUsd: meter.budget, calls: meter.calls, summary: summarizeRows(rows) };
 }
 
+/**
+ * Metrics per model and condition for the three status questions, and next_task on its own.
+ * next_task is never pooled with the others: it asks about the plan order, which the board holds
+ * as structure, so its result is reported separately. Every question type is also listed by itself.
+ */
 export function summarizeRows(rows) {
   const answers = rows.filter((r) => r.kind === 'answer');
-  const groups = {};
-  for (const r of answers) (groups[`${r.model} | ${r.condition}`] ??= []).push(r);
-  const out = {};
-  for (const [k, g] of Object.entries(groups)) {
+  const meanIn = (g) => {
     const used = g.filter((r) => r.usage);
-    out[k] = { ...summarize(g), mean_input_tokens: used.length ? used.reduce((n, r) => n + r.usage.input + r.usage.cacheRead + r.usage.cacheWrite, 0) / used.length : null };
-  }
-  return out;
+    return used.length ? used.reduce((n, r) => n + r.usage.input + r.usage.cacheRead + r.usage.cacheWrite, 0) / used.length : null;
+  };
+  const group = (keyOf, pick) => {
+    const groups = {};
+    for (const r of answers.filter(pick)) (groups[keyOf(r)] ??= []).push(r);
+    return Object.fromEntries(Object.entries(groups).map(([k, g]) => [k, { ...summarize(g), mean_input_tokens: meanIn(g) }]));
+  };
+  return {
+    status_questions: group((r) => `${r.model} | ${r.condition}`, (r) => r.type !== 'next_task'),
+    next_task: group((r) => `${r.model} | ${r.condition}`, (r) => r.type === 'next_task'),
+    by_type: group((r) => `${r.model} | ${r.condition} | ${r.type}`, () => true),
+  };
 }
-

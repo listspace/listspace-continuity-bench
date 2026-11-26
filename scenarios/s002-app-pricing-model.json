@@ -1,86 +1,232 @@
 {
   "id": "s002",
   "title": "Booking app for a yoga studio: pricing choice replaced, payment provider proposed by the AI only",
-  "people": { "agency": "Dev (lead)", "client": "Ines (studio owner)" },
+  "people": {
+    "agency": "Dev (lead)",
+    "client": "Ines (studio owner)"
+  },
   "sessions": [
     {
-      "n": 1, "date": "2026-02-02",
+      "n": 1,
+      "date": "2026-02-02",
       "chat": [
         "Dev: Ines picked a monthly subscription for members. She confirmed it.",
-        "Dev: I think Stripe is the best payment provider. Putting it forward for Ines."
+        "Ines: Feedback arrived as a long voice note, which took a while to digest. Not much to report beyond that.",
+        "Dev: I think Stripe is the best payment provider. Putting it forward for Ines.",
+        "Dev: The notes from the last call were hard to read because of all the shorthand. Nothing else came out of it.",
+        "Dev: The notes from the last call were hard to read because of all the shorthand. It took more of the hour than it should have.",
+        "Ines: Chat is hard to follow when three threads run at once. I mention it only because it ate time.",
+        "Ines: The review meeting ran long because everyone had opinions on small wording choices. I will not go into detail.",
+        "Dev: Plan, in order: Class schedule screen, Member sign-up flow, Payment screen, Reminder emails.",
+        "Dev: The call started late because the previous meeting overran. Moving on.",
+        "Dev: The video link changed twice before everyone got in. Someone should tidy that up eventually."
       ],
       "ops": [
-        { "op": "propose", "key": "pricing", "text": "Monthly subscription", "by": "Dev" },
-        { "op": "confirm", "key": "pricing", "by": "Ines", "reason": "Simplest for regular members" },
-        { "op": "propose", "key": "payments", "text": "Use Stripe", "by": "Dev" },
-        { "op": "task_add", "id": "t1", "title": "Class schedule screen" },
-        { "op": "task_add", "id": "t2", "title": "Member sign-up flow" },
-        { "op": "task_add", "id": "t3", "title": "Payment screen" },
-        { "op": "task_add", "id": "t4", "title": "Reminder emails" }
+        {
+          "op": "propose",
+          "key": "pricing",
+          "text": "Monthly subscription",
+          "by": "Dev"
+        },
+        {
+          "op": "confirm",
+          "key": "pricing",
+          "by": "Ines",
+          "reason": "Simplest for regular members"
+        },
+        {
+          "op": "propose",
+          "key": "payments",
+          "text": "Use Stripe",
+          "by": "Dev"
+        },
+        {
+          "op": "task_add",
+          "id": "t1",
+          "title": "Class schedule screen"
+        },
+        {
+          "op": "task_add",
+          "id": "t2",
+          "title": "Member sign-up flow"
+        },
+        {
+          "op": "task_add",
+          "id": "t3",
+          "title": "Payment screen"
+        },
+        {
+          "op": "task_add",
+          "id": "t4",
+          "title": "Reminder emails"
+        }
       ]
     },
     {
-      "n": 2, "date": "2026-02-16",
+      "n": 2,
+      "date": "2026-02-16",
       "chat": [
+        "Ines: The office move on the client side is distracting everyone. Moving on.",
         "Dev: Class schedule screen is done.",
-        "Dev: Ines now wants class packs of ten instead of a subscription, because tourists use the studio too. She confirmed the change in the shared chat."
+        "Dev: The weather made travelling to the meeting a hassle for the client team. Nothing else came out of it.",
+        "Dev: The review meeting ran long because everyone had opinions on small wording choices. It is mostly background for whoever reads this later.",
+        "Ines: A long email thread from last week went in circles and I stopped following it. It is mostly background for whoever reads this later.",
+        "Dev: Someone asked for a recap of the previous meeting and it took longer than expected. It is the kind of thing that happens every project.",
+        "Dev: Ines now wants class packs of ten instead of a subscription, because tourists use the studio too. She confirmed the change in the shared chat.",
+        "Ines: Half the team was out sick this week, so replies were slower than usual. Someone should tidy that up eventually.",
+        "Dev: Done: Class schedule screen."
       ],
       "ops": [
-        { "op": "task_done", "id": "t1" },
-        { "op": "propose", "key": "pricing", "text": "Ten-class packs", "by": "Dev" },
-        { "op": "confirm", "key": "pricing", "by": "Ines", "reason": "Tourists use the studio and will not subscribe" }
+        {
+          "op": "task_done",
+          "id": "t1"
+        },
+        {
+          "op": "propose",
+          "key": "pricing",
+          "text": "Ten-class packs",
+          "by": "Dev"
+        },
+        {
+          "op": "confirm",
+          "key": "pricing",
+          "by": "Ines",
+          "reason": "Tourists use the studio and will not subscribe"
+        }
       ]
     },
     {
-      "n": 3, "date": "2026-03-02",
+      "n": 3,
+      "date": "2026-03-02",
       "chat": [
         "Dev: Member sign-up flow is done.",
-        "Dev: Reminder emails are blocked until pricing is final, and it is final now. Payment screen comes first."
+        "Dev: Reminder emails are blocked until pricing is final, and it is final now. Payment screen comes first.",
+        "Ines: Someone asked for a recap of the previous meeting and it took longer than expected. It took more of the hour than it should have.",
+        "Ines: The call started late because the previous meeting overran. It is the kind of thing that happens every project.",
+        "Dev: The coffee machine broke so the meeting moved to the cafe next door. Someone should tidy that up eventually.",
+        "Dev: Someone asked for a recap of the previous meeting and it took longer than expected. I am only noting it for the record.",
+        "Dev: The agency team had a quiet week with other client work crowding in. Everyone left in a decent mood.",
+        "Dev: Done: Member sign-up flow.",
+        "Ines: There was a small misunderstanding about who was meant to reply to whom. Everyone left in a decent mood.",
+        "Dev: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project."
       ],
       "ops": [
-        { "op": "task_done", "id": "t2" }
+        {
+          "op": "task_done",
+          "id": "t2"
+        }
       ]
     }
   ],
   "questions": [
     {
-      "id": "q1", "type": "current_decision", "key": "pricing",
+      "id": "q1",
+      "type": "current_decision",
+      "key": "pricing",
       "prompt": "What is the current pricing model for members?",
       "options": [
-        { "id": "a", "text": "Monthly subscription", "status": "replaced" },
-        { "id": "b", "text": "Ten-class packs", "status": "current" },
-        { "id": "c", "text": "Pay per class", "status": "distractor" },
-        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+        {
+          "id": "a",
+          "text": "Monthly subscription",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Ten-class packs",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Pay per class",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
       ]
     },
     {
-      "id": "q2", "type": "was_confirmed", "key": "payments",
+      "id": "q2",
+      "type": "was_confirmed",
+      "key": "payments",
       "prompt": "Has Ines confirmed Stripe as the payment provider?",
       "options": [
-        { "id": "a", "text": "Yes, confirmed", "status": "unconfirmed" },
-        { "id": "b", "text": "No, it was proposed but never confirmed", "status": "current" },
-        { "id": "c", "text": "Cannot tell from the memory provided", "status": "unknown" }
+        {
+          "id": "a",
+          "text": "Yes, confirmed",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "No, it was proposed but never confirmed",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
       ]
     },
     {
-      "id": "q3", "type": "next_task",
+      "id": "q3",
+      "type": "next_task",
       "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
       "options": [
-        { "id": "a", "text": "Member sign-up flow", "status": "replaced" },
-        { "id": "b", "text": "Payment screen", "status": "current" },
-        { "id": "c", "text": "Reminder emails", "status": "distractor" },
-        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+        {
+          "id": "a",
+          "text": "Member sign-up flow",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Payment screen",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Reminder emails",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
       ]
     },
     {
-      "id": "q4", "type": "who_decided", "key": "pricing",
+      "id": "q4",
+      "type": "who_decided",
+      "key": "pricing",
       "prompt": "Who confirmed the current pricing model, and why?",
       "options": [
-        { "id": "a", "text": "Ines, because tourists use the studio and will not subscribe", "status": "current" },
-        { "id": "b", "text": "Ines, because a subscription is simplest for regular members", "status": "replaced" },
-        { "id": "c", "text": "Dev, because packs are easier to build", "status": "distractor" },
-        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+        {
+          "id": "a",
+          "text": "Ines, because tourists use the studio and will not subscribe",
+          "status": "current"
+        },
+        {
+          "id": "b",
+          "text": "Ines, because a subscription is simplest for regular members",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Dev, because packs are easier to build",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
       ]
     }
-  ]
+  ],
+  "review": {
+    "v2_note": "Hand written by Jordi. v2 only added plan and done lines (information parity) and neutral chatter. No story line or answer key changed."
+  }
 }

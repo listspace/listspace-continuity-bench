@@ -1,86 +1,229 @@
 {
   "id": "s001",
   "title": "Brand site for a bakery chain: launch date moves, hosting proposed but never confirmed",
-  "people": { "agency": "Marta (producer)", "client": "Tom (client owner)" },
+  "people": {
+    "agency": "Marta (producer)",
+    "client": "Tom (client owner)"
+  },
   "sessions": [
     {
-      "n": 1, "date": "2026-01-12",
+      "n": 1,
+      "date": "2026-01-12",
       "chat": [
         "Marta: Kickoff done. Tom wants the site live on 14 March.",
         "Marta: Tom confirmed 14 March as the launch date on the call.",
-        "Marta: I suggest we host on Netlify. Nobody has agreed yet."
+        "Tom: A long email thread from last week went in circles and I stopped following it. Not much to report beyond that.",
+        "Marta: I suggest we host on Netlify. Nobody has agreed yet.",
+        "Marta: Chat is hard to follow when three threads run at once. No one seemed bothered.",
+        "Marta: Someone asked for a recap of the previous meeting and it took longer than expected. No one seemed bothered.",
+        "Marta: Half the team was out sick this week, so replies were slower than usual. It is mostly background for whoever reads this later.",
+        "Marta: Plan, in order: Write page copy, Design the home page, Build the store locator.",
+        "Marta: The coffee machine broke so the meeting moved to the cafe next door. It took more of the hour than it should have.",
+        "Marta: The weather made travelling to the meeting a hassle for the client team. Someone should tidy that up eventually."
       ],
       "ops": [
-        { "op": "propose", "key": "launch_date", "text": "Launch on 14 March", "by": "Marta" },
-        { "op": "confirm", "key": "launch_date", "by": "Tom", "reason": "Matches the spring menu campaign" },
-        { "op": "propose", "key": "hosting", "text": "Host on Netlify", "by": "Marta" },
-        { "op": "task_add", "id": "t1", "title": "Write page copy" },
-        { "op": "task_add", "id": "t2", "title": "Design the home page" },
-        { "op": "task_add", "id": "t3", "title": "Build the store locator" }
+        {
+          "op": "propose",
+          "key": "launch_date",
+          "text": "Launch on 14 March",
+          "by": "Marta"
+        },
+        {
+          "op": "confirm",
+          "key": "launch_date",
+          "by": "Tom",
+          "reason": "Matches the spring menu campaign"
+        },
+        {
+          "op": "propose",
+          "key": "hosting",
+          "text": "Host on Netlify",
+          "by": "Marta"
+        },
+        {
+          "op": "task_add",
+          "id": "t1",
+          "title": "Write page copy"
+        },
+        {
+          "op": "task_add",
+          "id": "t2",
+          "title": "Design the home page"
+        },
+        {
+          "op": "task_add",
+          "id": "t3",
+          "title": "Build the store locator"
+        }
       ]
     },
     {
-      "n": 2, "date": "2026-01-26",
+      "n": 2,
+      "date": "2026-01-26",
       "chat": [
+        "Marta: A new person joined on the client side and needed the basics explained. No one seemed bothered.",
+        "Marta: The shared folder structure confused two people again. It had no effect on the plan.",
+        "Marta: The agency team had a quiet week with other client work crowding in. We laughed about it afterwards.",
+        "Marta: The office move on the client side is distracting everyone. I will not go into detail.",
+        "Tom: The call started late because the previous meeting overran. Nothing else came out of it.",
+        "Marta: The office move on the client side is distracting everyone. No one seemed bothered.",
         "Marta: Page copy is finished and approved.",
-        "Marta: Tom says the 14 March date is too early because the photo shoot slipped. New date: 4 April. He confirmed by email."
+        "Marta: Tom says the 14 March date is too early because the photo shoot slipped. New date: 4 April. He confirmed by email.",
+        "Tom: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project.",
+        "Marta: Done: Write page copy."
       ],
       "ops": [
-        { "op": "task_done", "id": "t1" },
-        { "op": "propose", "key": "launch_date", "text": "Launch on 4 April", "by": "Marta" },
-        { "op": "confirm", "key": "launch_date", "by": "Tom", "reason": "Photo shoot slipped two weeks" }
+        {
+          "op": "task_done",
+          "id": "t1"
+        },
+        {
+          "op": "propose",
+          "key": "launch_date",
+          "text": "Launch on 4 April",
+          "by": "Marta"
+        },
+        {
+          "op": "confirm",
+          "key": "launch_date",
+          "by": "Tom",
+          "reason": "Photo shoot slipped two weeks"
+        }
       ]
     },
     {
-      "n": 3, "date": "2026-02-09",
+      "n": 3,
+      "date": "2026-02-09",
       "chat": [
         "Marta: Home page design is done.",
-        "Marta: Still no answer from Tom on hosting. I will keep working as if Netlify is fine, but it is not decided."
+        "Marta: Someone raised an unrelated idea for next year and we parked it. It had no effect on the plan.",
+        "Marta: The shared folder structure confused two people again. Someone should tidy that up eventually.",
+        "Tom: The call started late because the previous meeting overran. Not much to report beyond that.",
+        "Tom: Half the team was out sick this week, so replies were slower than usual. No one seemed bothered.",
+        "Tom: Someone raised an unrelated idea for next year and we parked it. I mention it only because it ate time.",
+        "Marta: We spent the first ten minutes on audio problems before anything useful happened. Moving on.",
+        "Tom: A new person joined on the client side and needed the basics explained. Not much to report beyond that.",
+        "Marta: Still no answer from Tom on hosting. I will keep working as if Netlify is fine, but it is not decided.",
+        "Marta: The video link changed twice before everyone got in. Everyone left in a decent mood.",
+        "Marta: Done: Design the home page."
       ],
       "ops": [
-        { "op": "task_done", "id": "t2" }
+        {
+          "op": "task_done",
+          "id": "t2"
+        }
       ]
     }
   ],
   "questions": [
     {
-      "id": "q1", "type": "current_decision", "key": "launch_date",
+      "id": "q1",
+      "type": "current_decision",
+      "key": "launch_date",
       "prompt": "What is the current launch date for this project?",
       "options": [
-        { "id": "a", "text": "14 March", "status": "replaced" },
-        { "id": "b", "text": "4 April", "status": "current" },
-        { "id": "c", "text": "No date has been set", "status": "distractor" },
-        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+        {
+          "id": "a",
+          "text": "14 March",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "4 April",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "No date has been set",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
       ]
     },
     {
-      "id": "q2", "type": "was_confirmed", "key": "hosting",
+      "id": "q2",
+      "type": "was_confirmed",
+      "key": "hosting",
       "prompt": "Has the hosting choice (Netlify) been confirmed by the client?",
       "options": [
-        { "id": "a", "text": "Yes, confirmed", "status": "unconfirmed" },
-        { "id": "b", "text": "No, it was proposed but never confirmed", "status": "current" },
-        { "id": "c", "text": "Cannot tell from the memory provided", "status": "unknown" }
+        {
+          "id": "a",
+          "text": "Yes, confirmed",
+          "status": "unconfirmed"
+        },
+        {
+          "id": "b",
+          "text": "No, it was proposed but never confirmed",
+          "status": "current"
+        },
+        {
+          "id": "c",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
       ]
     },
     {
-      "id": "q3", "type": "next_task",
+      "id": "q3",
+      "type": "next_task",
       "prompt": "Which open task should be worked on next, taking the tasks in plan order?",
       "options": [
-        { "id": "a", "text": "Write page copy", "status": "replaced" },
-        { "id": "b", "text": "Design the home page", "status": "replaced" },
-        { "id": "c", "text": "Build the store locator", "status": "current" },
-        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+        {
+          "id": "a",
+          "text": "Write page copy",
+          "status": "replaced"
+        },
+        {
+          "id": "b",
+          "text": "Design the home page",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Build the store locator",
+          "status": "current"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
       ]
     },
     {
-      "id": "q4", "type": "who_decided", "key": "launch_date",
+      "id": "q4",
+      "type": "who_decided",
+      "key": "launch_date",
       "prompt": "Who confirmed the current launch date, and why?",
       "options": [
-        { "id": "a", "text": "Tom, because the photo shoot slipped two weeks", "status": "current" },
-        { "id": "b", "text": "Tom, because it matches the spring menu campaign", "status": "replaced" },
-        { "id": "c", "text": "Marta, because the build is ahead of schedule", "status": "distractor" },
-        { "id": "d", "text": "Cannot tell from the memory provided", "status": "unknown" }
+        {
+          "id": "a",
+          "text": "Tom, because the photo shoot slipped two weeks",
+          "status": "current"
+        },
+        {
+          "id": "b",
+          "text": "Tom, because it matches the spring menu campaign",
+          "status": "replaced"
+        },
+        {
+          "id": "c",
+          "text": "Marta, because the build is ahead of schedule",
+          "status": "distractor"
+        },
+        {
+          "id": "d",
+          "text": "Cannot tell from the memory provided",
+          "status": "unknown"
+        }
       ]
     }
-  ]
+  ],
+  "review": {
+    "v2_note": "Hand written by Jordi. v2 only added plan and done lines (information parity) and neutral chatter. No story line or answer key changed."
+  }
 }

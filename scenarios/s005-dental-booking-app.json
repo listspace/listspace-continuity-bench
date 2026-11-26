@@ -6,19 +6,26 @@
     "client": "Marcus (operations director)"
   },
   "review": {
-    "drafted_by": "an AI agent (Claude), 2026-11-25",
-    "reviewed_by_jordi": true,
-    "reviewed_on": "2026-11-25",
-    "note": "Drafted by an AI agent, then read by Jordi on 2026-11-25."
+    "drafted_by": "an AI agent (Claude), 2026-11-25. Chats rewritten as v2 on 2026-11-26.",
+    "v1_reviewed_by_jordi_on": "2026-11-25",
+    "reviewed_by_jordi": false,
+    "hard_case": false,
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
   },
   "sessions": [
     {
       "n": 1,
       "date": "2026-03-09",
       "chat": [
-        "Lena: Marcus confirmed we embed a hosted booking widget. It is the fastest way to ship before the spring promotion.",
-        "Lena: I suggest we cap the build at 40,000 euros. Marcus said he needs to ask finance.",
-        "Lena: The invoice for the last milestone went out."
+        "Lena: Marcus agreed we embed a hosted booking widget. It is the fastest way to ship before the spring promotion.",
+        "Lena: The video link changed twice before everyone got in. It is the kind of thing that happens every project.",
+        "Lena: I suggest we cap the build at 40,000 euros. Marcus wants to ask finance.",
+        "Lena: The weather made travelling to the meeting a hassle for the client team. I mention it only because it ate time.",
+        "Marcus: A new person joined on the client side and needed the basics explained. We laughed about it afterwards.",
+        "Lena: Plan, in order: Map the booking flow, Design the onboarding screens, Set up push notifications.",
+        "Lena: The office move on the client side is distracting everyone. It had no effect on the plan.",
+        "Marcus: The mood on the call was relaxed, mostly small talk. Nothing else came out of it.",
+        "Lena: The call started late because the previous meeting overran. No one seemed bothered."
       ],
       "ops": [
         {
@@ -60,9 +67,14 @@
       "n": 2,
       "date": "2026-03-23",
       "chat": [
-        "Lena: The booking flow map is finished.",
-        "Lena: Marcus reversed the booking approach. Clinics need patients to reschedule inside the app, so we build booking into the app on the clinics' own scheduling system. He confirmed by email.",
-        "Marcus asked for the status deck to be shorter next time."
+        "Lena: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
+        "Lena: Marcus reversed the booking approach. Clinics need patients to reschedule inside the app, so we build booking into the app on the clinics' own scheduling system. He said yes by email.",
+        "Marcus: Someone raised an unrelated idea for next year and we parked it. I will not go into detail.",
+        "Tessa (front desk lead): We already told patients the app will have a book now button that opens the booking widget. The poster is printed.",
+        "Marcus: We spent the first ten minutes on audio problems before anything useful happened. I will not go into detail.",
+        "Lena: Done: Map the booking flow.",
+        "Marcus: The office move on the client side is distracting everyone. It is mostly background for whoever reads this later.",
+        "Lena: Feedback arrived as a long voice note, which took a while to digest. It is mostly background for whoever reads this later."
       ],
       "ops": [
         {
@@ -87,9 +99,15 @@
       "n": 3,
       "date": "2026-04-06",
       "chat": [
-        "Lena: The onboarding screens are done.",
-        "Lena: Finance has not answered on the 40,000 euro cap. I am planning as if it holds, but it is not agreed.",
-        "Lena: Logged the open comments from Marcus's team."
+        "Lena: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
+        "Lena: Finance has not come back on the 40,000 euro cap. I am planning as if it holds.",
+        "Lena: There was a small misunderstanding about who was meant to reply to whom. It took more of the hour than it should have.",
+        "Lena: There was a small misunderstanding about who was meant to reply to whom. It had no effect on the plan.",
+        "Lena: The weather made travelling to the meeting a hassle for the client team. It is the kind of thing that happens every project.",
+        "Lena: The notes from the last call were hard to read because of all the shorthand. It had no effect on the plan.",
+        "Tessa: Marcus said 40,000 sounds fine to him personally, finance just has to stamp it.",
+        "Lena: A long email thread from last week went in circles and I stopped following it. It had no effect on the plan.",
+        "Lena: Done: Design the onboarding screens."
       ],
       "ops": [
         {
@@ -141,7 +159,7 @@
         },
         {
           "id": "b",
-          "text": "No, it was proposed but finance has not answered",
+          "text": "No, it was proposed but never confirmed",
           "status": "current"
         },
         {
