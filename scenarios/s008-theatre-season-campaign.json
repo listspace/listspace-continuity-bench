@@ -10,7 +10,8 @@
     "v1_reviewed_by_jordi_on": "2026-11-25",
     "reviewed_by_jordi": false,
     "hard_case": true,
-    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   },
   "sessions": [
     {
@@ -22,7 +23,8 @@
         "Wei: Half the team was out sick this week, so replies were slower than usual. It took more of the hour than it should have.",
         "Wei: A new person joined on the client side and needed the basics explained. I will not go into detail.",
         "Sofia: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
-        "Wei: Kickoff with Sofia. She wants the season announced on 9 September, in line with the subscriber renewal letter.",
+        "Wei: Kickoff with Sofia.",
+        "Sofia: Confirmed, we announce the season on 9 September. It lines up with the subscriber renewal letter.",
         "Wei: Half the team was out sick this week, so replies were slower than usual. Nothing else came out of it.",
         "Sofia: The video link changed twice before everyone got in. Not much to report beyond that.",
         "Sofia: The call started late because the previous meeting overran. I will not go into detail.",
@@ -85,7 +87,7 @@
         "Wei: The weather made travelling to the meeting a hassle for the client team. It had no effect on the plan.",
         "Wei: A long email thread from last week went in circles and I stopped following it. No one seemed bothered.",
         "Wei: A couple of people mentioned holiday plans without naming dates. We laughed about it afterwards.",
-        "Wei: Sofia wants most of the budget in social video, because the growth target is a younger audience.",
+        "Sofia: Confirmed, most of the budget goes into social video. The growth target is a younger audience.",
         "Wei: We spent the first ten minutes on audio problems before anything useful happened. Nothing else came out of it."
       ],
       "ops": [
@@ -160,7 +162,8 @@
       "date": "2026-06-01",
       "chat": [
         "Wei: The notes from the last call were hard to read because of all the shorthand. It had no effect on the plan.",
-        "Wei: The board approval slipped to mid-September. Sofia moved the announcement to 23 September.",
+        "Wei: The board approval slipped to mid-September.",
+        "Sofia: Confirmed, we announce on 23 September instead.",
         "Sofia: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
         "Wei: The mood on the call was relaxed, mostly small talk. It had no effect on the plan.",
         "Wei: The shared folder structure confused two people again. We laughed about it afterwards.",
@@ -221,7 +224,8 @@
       "chat": [
         "Wei: The review meeting ran long because everyone had opinions on small wording choices. It had no effect on the plan.",
         "Sofia: Feedback arrived as a long voice note, which took a while to digest. Someone should tidy that up eventually.",
-        "Wei: Subscriber data shows older subscribers still renew by post. Sofia wants the budget split between social video and print.",
+        "Wei: Subscriber data shows older subscribers still renew by post.",
+        "Sofia: Confirmed, split the budget between social video and print, because older subscribers still renew by post.",
         "Wei: Half the team was out sick this week, so replies were slower than usual. It is mostly background for whoever reads this later.",
         "Wei: Jamal, I will check the letter text.",
         "Wei: The shared folder structure confused two people again. I am only noting it for the record.",

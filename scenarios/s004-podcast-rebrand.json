@@ -10,7 +10,8 @@
     "v1_reviewed_by_jordi_on": "2026-11-25",
     "reviewed_by_jordi": false,
     "hard_case": false,
-    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   },
   "sessions": [
     {
@@ -19,7 +20,7 @@
       "chat": [
         "Ines: Kickoff done with Pavel. Direction one is a retro microphone mark.",
         "Ines: The video link changed twice before everyone got in. It is the kind of thing that happens every project.",
-        "Ines: Pavel approved the microphone mark on the call.",
+        "Pavel: Confirmed, the retro microphone mark. It fits the show's analog sound.",
         "Ines: The weather made travelling to the meeting a hassle for the client team. I mention it only because it ate time.",
         "Pavel: A new person joined on the client side and needed the basics explained. We laughed about it afterwards.",
         "Ines: I would like the launch event at Harbor Hall. I have not raised it with Pavel yet.",
@@ -74,7 +75,8 @@
         "Ines: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
         "Pavel: Someone raised an unrelated idea for next year and we parked it. I will not go into detail.",
         "Ines: The video link changed twice before everyone got in. Someone should tidy that up eventually.",
-        "Ines: Pavel's co-host found the microphone too dated. Pavel now wants a rounded wordmark and said so in the shared chat.",
+        "Ines: Pavel's co-host does not like the microphone mark.",
+        "Pavel: Confirmed, we switch to a rounded wordmark. The co-host found the microphone too dated.",
         "Ines: Feedback arrived as a long voice note, which took a while to digest. It is mostly background for whoever reads this later.",
         "Nadia (Pavel's team): I already sent the microphone mark to the sticker printer, so that is in production.",
         "Ines: Done: Draft logo concepts."

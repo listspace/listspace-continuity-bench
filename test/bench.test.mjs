@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { validateScenario, validateParity } from '../src/state.mjs';
+import { validateScenario, validateParity, CONFIRM_WORDS } from '../src/state.mjs';
 import { renderBoard, renderChat } from '../src/render.mjs';
 import { scoreReply, summarize } from '../src/score.mjs';
 import { shuffled } from '../src/rng.mjs';
@@ -278,4 +278,22 @@ test('keeper arms: B and B2 each keep their own notes, and every answer uses its
   assert.ok(answers.some((c) => c.user.includes('NOTES-FROM-B2') && !c.user.includes('NOTES-FROM-B\n')));
   assert.ok(answers.some((c) => c.user.includes('NOTES-FROM-B') && !c.user.includes('NOTES-FROM-B2')));
   assert.ok(answers.every((c) => c.user.includes('Agency side:')));
+});
+test('every confirmation is said directly by the decider with an explicit word, and the validator catches a wish or a relay', () => {
+  for (const s of scenarios) assert.deepEqual(validateParity(s), []);
+  assert.ok(CONFIRM_WORDS.test('tom: confirmed, 4 april') && !CONFIRM_WORDS.test('tom: unconfirmed, maybe'));
+  const s = JSON.parse(JSON.stringify(scenarios.find((x) => x.id === 's008')));
+  const i = s.sessions[1].chat.findIndex((l) => l.startsWith('Sofia: Confirmed'));
+  assert.ok(i >= 0);
+  s.sessions[1].chat[i] = 'Wei: Sofia wants most of the budget in social video.';
+  assert.match(validateParity(s).join(String.fromCharCode(10)), /Sofia confirms channel_mix but has no chat line of their own/);
+  s.sessions[1].chat[i] = 'Sofia: Most of the budget in social video, I think.';
+  assert.match(validateParity(s).join(String.fromCharCode(10)), /confirmation word/);
+});
+
+test('the traps meant to stay unconfirmed carry no confirmation word from the person who would have to confirm', () => {
+  const s = scenarios.find((x) => x.id === 's010');
+  const sponsor = s.sessions.flatMap((x) => x.chat).filter((l) => /sponsor/i.test(l) && /logo/i.test(l));
+  assert.ok(sponsor.length >= 3);
+  assert.ok(sponsor.every((l) => !l.startsWith('Tomasz:') || !CONFIRM_WORDS.test(l.toLowerCase())));
 });

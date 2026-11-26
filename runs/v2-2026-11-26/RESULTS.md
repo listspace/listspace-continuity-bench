@@ -1,3 +1,5 @@
+**Superseded by v3 (rerun in `runs/v3-2026-11-26`) because of the confirmation wording: confirmations in the v2 chats read as wishes or relays, which cost the notes arms answers. Do not quote these rates.**
+
 # Results, v2 run of 2026-11-26
 
 Run: protocol v2 (tag `protocol-v2`), 10 synthetic scenarios, 3 runs per question, models `claude-sonnet-5-5` and `gpt-6.2-sol`, sampling at the provider default (no temperature sent), reasoning effort low. 1,380 calls, completed, $5.98 of the $14 budget. Raw rows: `results.jsonl`. Intervals: `scripts/analyze.mjs`, output in `analysis.json`.

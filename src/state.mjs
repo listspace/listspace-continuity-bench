@@ -59,6 +59,8 @@ export function validateScenario(scenario) {
   return [...errors, ...validateParity(scenario)];
 }
 
+/** Words that make a line an explicit confirmation. Fixed list, checked for every confirm op. */
+export const CONFIRM_WORDS = /\b(confirmed|confirm|approved|agreed)\b/;
 export const UNCONFIRMED_NO = 'No, it was proposed but never confirmed';
 export const YES_CONFIRMED = 'Yes, confirmed';
 export const CANNOT_TELL = 'Cannot tell from the memory provided';
@@ -80,8 +82,12 @@ export function validateParity(scenario) {
         const title = addOps.find((x) => x.id === o.id)?.title ?? '';
         if (!chat.includes(title.toLowerCase())) errors.push(`${scenario.id}/s${s.n}: task done "${title}" is not named in the chat`);
       }
-      if (o.op === 'confirm' && !chat.includes(o.by.toLowerCase().split(' ')[0]))
-        errors.push(`${scenario.id}/s${s.n}: confirmation by ${o.by} is not named in the chat`);
+      if (o.op === 'confirm') {
+        // The decider says it themselves, with an explicit word, so a confirmation never reads as a wish or a relay.
+        const first = o.by.toLowerCase().split(' ')[0];
+        const direct = lines.some((l) => l.startsWith(`${first}:`) && CONFIRM_WORDS.test(l));
+        if (!direct) errors.push(`${scenario.id}/s${s.n}: ${o.by} confirms ${o.key} but has no chat line of their own with a confirmation word (${CONFIRM_WORDS.source})`);
+      }
     }
     const added = s.ops.filter((o) => o.op === 'task_add').map((o) => o.title.toLowerCase());
     if (added.length) {

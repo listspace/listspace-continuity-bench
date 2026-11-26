@@ -10,7 +10,8 @@
     "v1_reviewed_by_jordi_on": "2026-11-25",
     "reviewed_by_jordi": false,
     "hard_case": false,
-    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   },
   "sessions": [
     {
@@ -21,7 +22,8 @@
         "Noor: Half the team was out sick this week, so replies were slower than usual. Nothing else came out of it.",
         "Noor: The agency team had a quiet week with other client work crowding in. Nothing else came out of it.",
         "Noor: A new person joined on the client side and needed the basics explained. I will not go into detail.",
-        "Noor: Kickoff with Greta. She wants English and Spanish, the two largest tenant groups.",
+        "Noor: Kickoff with Greta.",
+        "Greta: Confirmed, English and Spanish. They are the two largest tenant groups.",
         "Noor: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
         "Greta: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
         "Noor: There was a small misunderstanding about who was meant to reply to whom. It is mostly background for whoever reads this later.",
@@ -87,7 +89,7 @@
         "Noor: The weather made travelling to the meeting a hassle for the client team. I will not go into detail.",
         "Noor: Chat is hard to follow when three threads run at once. I will not go into detail.",
         "Noor: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
-        "Noor: Greta chose the community garden photo as the hero image. Residents in it gave consent."
+        "Greta: Confirmed, the community garden photo is the hero image. The residents in it gave consent."
       ],
       "ops": [
         {
@@ -176,7 +178,8 @@
         "Noor: The notes from the last call were hard to read because of all the shorthand. We laughed about it afterwards.",
         "Noor: The shared folder structure confused two people again. Someone should tidy that up eventually.",
         "Noor: There was a small misunderstanding about who was meant to reply to whom. We laughed about it afterwards.",
-        "Noor: A new funder asked for Polish. Greta added it to the languages.",
+        "Noor: A new funder asked for Polish.",
+        "Greta: Confirmed, add Polish to the languages, because a new funder asked for it.",
         "Noor: Half the team was out sick this week, so replies were slower than usual. Everyone left in a decent mood."
       ],
       "ops": [

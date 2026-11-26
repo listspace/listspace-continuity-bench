@@ -10,7 +10,8 @@
     "v1_reviewed_by_jordi_on": "2026-11-25",
     "reviewed_by_jordi": false,
     "hard_case": true,
-    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   },
   "sessions": [
     {
@@ -85,7 +86,7 @@
         "Tomasz: The weather made travelling to the meeting a hassle for the client team. It is the kind of thing that happens every project.",
         "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. Nothing else came out of it.",
         "Priya: The video link changed twice before everyone got in. Someone should tidy that up eventually.",
-        "Priya: Tomasz wants the site to launch on 12 September, two weeks before the festival.",
+        "Tomasz: Confirmed, the site launches on 12 September, two weeks before the festival.",
         "Tomasz: The notes from the last call were hard to read because of all the shorthand. No one seemed bothered.",
         "Priya: Chat is hard to follow when three threads run at once. Not much to report beyond that.",
         "Priya: A couple of people mentioned holiday plans without naming dates. Everyone left in a decent mood."
@@ -116,7 +117,7 @@
         "Tomasz: The review meeting ran long because everyone had opinions on small wording choices. No one seemed bothered.",
         "Priya: A new person joined on the client side and needed the basics explained. I will not go into detail.",
         "Priya: A new person joined on the client side and needed the basics explained. We laughed about it afterwards.",
-        "Priya: Tomasz wants tickets sold through the festival's own box office page, so the festival keeps the audience data.",
+        "Tomasz: Confirmed, we sell tickets through the festival's own box office page. It keeps the audience data.",
         "Priya: The mood on the call was relaxed, mostly small talk. It is mostly background for whoever reads this later.",
         "Tomasz: The agency team had a quiet week with other client work crowding in. Not much to report beyond that.",
         "Priya: Feedback arrived as a long voice note, which took a while to digest. Nothing else came out of it.",
@@ -195,7 +196,7 @@
         "Priya: Feedback arrived as a long voice note, which took a while to digest. We laughed about it afterwards.",
         "Priya: Feedback arrived as a long voice note, which took a while to digest. Everyone left in a decent mood.",
         "Tomasz: A new person joined on the client side and needed the basics explained. It had no effect on the plan.",
-        "Priya: Tomasz wants captions on every trailer. The arts council grant requires it.",
+        "Tomasz: Confirmed, captions on every trailer. The arts council grant requires it.",
         "Priya: The weather made travelling to the meeting a hassle for the client team. Everyone left in a decent mood.",
         "Priya: Chat is hard to follow when three threads run at once. Nothing else came out of it.",
         "Tomasz: Someone raised an unrelated idea for next year and we parked it. I am only noting it for the record."
@@ -295,7 +296,8 @@
         "Priya: The mood on the call was relaxed, mostly small talk. It took more of the hour than it should have.",
         "Priya: Feedback arrived as a long voice note, which took a while to digest. Not much to report beyond that.",
         "Tomasz: The call started late because the previous meeting overran. I mention it only because it ate time.",
-        "Priya: The trailer edit slipped by a week. Tomasz moved the launch to 19 September.",
+        "Priya: The trailer edit slipped by a week.",
+        "Tomasz: Confirmed, the launch moves to 19 September.",
         "Priya: The mood on the call was relaxed, mostly small talk. We laughed about it afterwards."
       ],
       "ops": [
@@ -346,7 +348,8 @@
         "Priya: The office move on the client side is distracting everyone. It took more of the hour than it should have.",
         "Tomasz: A long email thread from last week went in circles and I stopped following it. I mention it only because it ate time.",
         "Tomasz: The office move on the client side is distracting everyone. We laughed about it afterwards.",
-        "Priya: The box office page failed the load test. Tomasz moved to an external ticket platform.",
+        "Priya: The box office page failed the load test.",
+        "Tomasz: Confirmed, we move to an external ticket platform.",
         "Priya: The coffee machine broke so the meeting moved to the cafe next door. Nothing else came out of it.",
         "Priya: A new person joined on the client side and needed the basics explained. Someone should tidy that up eventually.",
         "Priya: We spent the first ten minutes on audio problems before anything useful happened. It took more of the hour than it should have."
@@ -506,7 +509,8 @@
         "Tomasz: We spent the first ten minutes on audio problems before anything useful happened. I am only noting it for the record.",
         "Tomasz: Feedback arrived as a long voice note, which took a while to digest. It had no effect on the plan.",
         "Tomasz: The call started late because the previous meeting overran. Someone should tidy that up eventually.",
-        "Priya: The festival moved its opening a week earlier. Tomasz moved the site launch to 5 September.",
+        "Priya: The festival moved its opening a week earlier.",
+        "Tomasz: Confirmed, the site launch moves to 5 September.",
         "Priya: We spent the first ten minutes on audio problems before anything useful happened. Everyone left in a decent mood.",
         "Priya: A couple of people mentioned holiday plans without naming dates. Someone should tidy that up eventually.",
         "Tomasz: There was a small misunderstanding about who was meant to reply to whom. Not much to report beyond that.",

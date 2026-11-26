@@ -1,10 +1,15 @@
 {
-  "status": "DRAFT v2. Not frozen. Written by an AI agent on 2026-11-26 after the v1 pilot (tag pilot-v1, protocol.lock.v1.json). Freeze: this file plus scenario_sha256 from node bench.mjs hashes becomes protocol.lock.json.",
-  "version": 2,
+  "status": "DRAFT v3. Not frozen. Written by an AI agent on 2026-11-26 after the v2 run (tag protocol-v2, protocol.lock.v2.json). v3 changes only the scenario chats, see scenarios/CHANGES-v3.md.",
+  "version": 3,
   "drafted": "2026-11-26",
   "tier": "A",
   "temperature": "provider_default",
-  "conditions": ["A", "B", "B2", "C"],
+  "conditions": [
+    "A",
+    "B",
+    "B2",
+    "C"
+  ],
   "models": {
     "claude-sonnet-5-5": {
       "send_temperature": false,
@@ -17,14 +22,26 @@
       "note": "Mid-tier GPT, same list price as claude-sonnet-5-5. No temperature is sent. Reasoning effort is pinned to low (the API rejects none)."
     }
   },
-  "max_output_tokens": { "answer": 4096, "keeper": 3000 },
+  "max_output_tokens": {
+    "answer": 4096,
+    "keeper": 3000
+  },
   "estimate_assumptions": {
-    "note": "Used by --dry-run only. Measured in the v1 pilot (2026-11-26): Claude tokenizer about 2.6 characters per token, GPT about 3.9; answer output 78 tokens (Claude, prose before the JSON in 44 percent of replies) and 9 (GPT); keeper output 2117 (Claude, uncapped) and 650 (GPT). v2 caps the notes at 450 words and tightens the answer prompt, so the output figures below are conservative guesses to be replaced by the v2 run.",
-    "chars_per_token": { "anthropic": 2.6, "openai": 3.9 },
-    "answer_output_tokens": { "anthropic": 40, "openai": 10 },
-    "keeper_output_tokens": { "anthropic": 1000, "openai": 700 },
-    "notes_tokens_per_session": 60,
-    "notes_tokens_cap": 650
+    "note": "Used by --dry-run only. Measured in the v2 run (2026-11-26): keeper output per call Claude 914 (B) and 304 (B2), GPT 337 and 175, so the figures below are the mean of the two arms; answer output 66 tokens (Claude, prose before the JSON in 40 percent of replies) and 9 (GPT); Claude tokenizer about 2.6 characters per token, GPT about 3.9. v3 changes no prompt, so these should hold.",
+    "chars_per_token": {
+      "anthropic": 2.6,
+      "openai": 3.9
+    },
+    "answer_output_tokens": {
+      "anthropic": 66,
+      "openai": 9
+    },
+    "keeper_output_tokens": {
+      "anthropic": 610,
+      "openai": 260
+    },
+    "notes_tokens_per_session": 50,
+    "notes_tokens_cap": 550
   },
   "prompts": {
     "answer_system": "You answer one closed question about an agency project. The project memory in the message is all you know about the project. A decision counts as settled only once a person confirmed it. A proposal that nobody has confirmed is not settled, and a decision that was replaced is no longer current. If the memory does not let you tell, choose the cannot-tell option. Reply with exactly one line of JSON and nothing else.",

@@ -10,7 +10,8 @@
     "v1_reviewed_by_jordi_on": "2026-11-25",
     "reviewed_by_jordi": false,
     "hard_case": false,
-    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   },
   "sessions": [
     {
@@ -21,7 +22,8 @@
         "Dana: Half the team was out sick this week, so replies were slower than usual. Nothing else came out of it.",
         "Dana: The agency team had a quiet week with other client work crowding in. Nothing else came out of it.",
         "Dana: A new person joined on the client side and needed the basics explained. I will not go into detail.",
-        "Dana: Kickoff with Ravi. He agreed to go live on 1 June, ahead of the hiking season.",
+        "Dana: Kickoff with Ravi.",
+        "Ravi: Confirmed, we go live on 1 June, before the summer hiking season.",
         "Dana: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
         "Ravi: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
         "Dana: There was a small misunderstanding about who was meant to reply to whom. It is mostly background for whoever reads this later.",
@@ -87,7 +89,7 @@
         "Dana: The weather made travelling to the meeting a hassle for the client team. I will not go into detail.",
         "Dana: Chat is hard to follow when three threads run at once. I will not go into detail.",
         "Dana: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
-        "Dana: Ravi wants free shipping above 80 euros, in line with competitors."
+        "Ravi: Confirmed, free shipping above 80 euros. It matches the competitor threshold."
       ],
       "ops": [
         {
@@ -142,7 +144,8 @@
         "Dana: We spent the first ten minutes on audio problems before anything useful happened. It had no effect on the plan.",
         "Dana: The video link changed twice before everyone got in. It had no effect on the plan.",
         "Dana: A long email thread from last week went in circles and I stopped following it. I will not go into detail.",
-        "Dana: Product photos are late. Ravi moved the go-live date to 22 June.",
+        "Dana: The product photos are late.",
+        "Ravi: Confirmed, the new go-live date is 22 June. The photos arrive late.",
         "Ravi: A couple of people mentioned holiday plans without naming dates. Everyone left in a decent mood.",
         "Ravi: The review meeting ran long because everyone had opinions on small wording choices. It is the kind of thing that happens every project.",
         "Dana: Someone raised an unrelated idea for next year and we parked it. It is mostly background for whoever reads this later.",
@@ -205,7 +208,8 @@
       "date": "2026-04-06",
       "chat": [
         "Dana: A new person joined on the client side and needed the basics explained. Someone should tidy that up eventually.",
-        "Dana: Ravi checked margins on bulky items and wants free shipping above 100 euros instead of 80.",
+        "Dana: Ravi checked the margins on bulky items.",
+        "Ravi: Confirmed, free shipping above 100 euros instead of 80. Margins on bulky items are thinner than expected.",
         "Dana: A new person joined on the client side and needed the basics explained. It took more of the hour than it should have.",
         "Dana: A new person joined on the client side and needed the basics explained. It is mostly background for whoever reads this later.",
         "Dana: The coffee machine broke so the meeting moved to the cafe next door. Everyone left in a decent mood.",
@@ -266,7 +270,8 @@
         "Ravi: Chat is hard to follow when three threads run at once. No one seemed bothered.",
         "Ravi: We spent the first ten minutes on audio problems before anything useful happened. Moving on.",
         "Dana: Feedback arrived as a long voice note, which took a while to digest. Moving on.",
-        "Dana: The photos arrived early. Ravi moved go-live to 15 June.",
+        "Dana: The photos arrived early.",
+        "Ravi: Confirmed, go live on 15 June. The photos arrived early and the season starts sooner.",
         "Ravi: A couple of people mentioned holiday plans without naming dates. It took more of the hour than it should have.",
         "Dana: The call started late because the previous meeting overran. It took more of the hour than it should have.",
         "Ravi: A couple of people mentioned holiday plans without naming dates. It had no effect on the plan.",

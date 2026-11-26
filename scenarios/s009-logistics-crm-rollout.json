@@ -10,7 +10,8 @@
     "v1_reviewed_by_jordi_on": "2026-11-25",
     "reviewed_by_jordi": false,
     "hard_case": false,
-    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   },
   "sessions": [
     {
@@ -19,7 +20,8 @@
       "chat": [
         "Mateo: Someone raised an unrelated idea for next year and we parked it. Moving on.",
         "Hilde: A new person joined on the client side and needed the basics explained. Moving on.",
-        "Mateo: Kickoff with Hilde. She wants all customer records moved in one cutover, as the simplest option.",
+        "Mateo: Kickoff with Hilde.",
+        "Hilde: Confirmed, one cutover for all customer records. It is the simplest cutover.",
         "Mateo: The call started late because the previous meeting overran. Everyone left in a decent mood.",
         "Hilde: A couple of people mentioned holiday plans without naming dates. It is the kind of thing that happens every project.",
         "Hilde: The shared folder structure confused two people again. Someone should tidy that up eventually.",
@@ -92,7 +94,7 @@
         "Mateo: The call started late because the previous meeting overran. Nothing else came out of it.",
         "Mateo: A new person joined on the client side and needed the basics explained. Someone should tidy that up eventually.",
         "Mateo: The agency team had a quiet week with other client work crowding in. It took more of the hour than it should have.",
-        "Mateo: Hilde set go-live for 15 June, the end of the fiscal quarter.",
+        "Hilde: Confirmed, go live on 15 June. It is the end of the fiscal quarter.",
         "Mateo: The review meeting ran long because everyone had opinions on small wording choices. I will not go into detail.",
         "Hilde: The shared folder structure confused two people again. It took more of the hour than it should have.",
         "Hilde: We spent the first ten minutes on audio problems before anything useful happened. Nothing else came out of it.",
@@ -272,7 +274,8 @@
         "Mateo: The mood on the call was relaxed, mostly small talk. I mention it only because it ate time.",
         "Hilde: Someone raised an unrelated idea for next year and we parked it. It took more of the hour than it should have.",
         "Mateo: A couple of people mentioned holiday plans without naming dates. Someone should tidy that up eventually.",
-        "Mateo: The duplicate review shows a one shot migration is too risky. Hilde moved to three regional waves.",
+        "Mateo: The duplicate review shows a one shot migration is too risky.",
+        "Hilde: Confirmed, we migrate in three regional waves. The risk review found too many duplicate records.",
         "Hilde: A new person joined on the client side and needed the basics explained. It had no effect on the plan.",
         "Hilde: A couple of people mentioned holiday plans without naming dates. Nothing else came out of it."
       ],
@@ -319,7 +322,7 @@
         "Mateo: A new person joined on the client side and needed the basics explained. No one seemed bothered.",
         "Mateo: The call started late because the previous meeting overran. I am only noting it for the record.",
         "Mateo: The coffee machine broke so the meeting moved to the cafe next door. It had no effect on the plan.",
-        "Mateo: Hilde wants single sign-on in phase one. The security audit requires it.",
+        "Hilde: Confirmed, single sign-on goes into phase one. The security audit requires it.",
         "Mateo: The mood on the call was relaxed, mostly small talk. We laughed about it afterwards.",
         "Hilde: Half the team was out sick this week, so replies were slower than usual. Everyone left in a decent mood.",
         "Hilde: The video link changed twice before everyone got in. It took more of the hour than it should have.",
@@ -394,7 +397,8 @@
       "date": "2026-04-20",
       "chat": [
         "Mateo: The weather made travelling to the meeting a hassle for the client team. Moving on.",
-        "Mateo: The duplicate cleanup takes longer than planned. Hilde moved go-live to 13 July.",
+        "Mateo: The duplicate cleanup takes longer than planned.",
+        "Hilde: Confirmed, go live on 13 July instead.",
         "Mateo: Someone raised an unrelated idea for next year and we parked it. I am only noting it for the record.",
         "Mateo: Someone asked for a recap of the previous meeting and it took longer than expected. Everyone left in a decent mood.",
         "Hilde: There was a small misunderstanding about who was meant to reply to whom. No one seemed bothered.",
@@ -586,7 +590,7 @@
         "Mateo: The video link changed twice before everyone got in. Moving on.",
         "Hilde: Feedback arrived as a long voice note, which took a while to digest. I will not go into detail.",
         "Mateo: The notes from the last call were hard to read because of all the shorthand. Someone should tidy that up eventually.",
-        "Mateo: Hilde wants the biggest accounts moved last, with the cleanest data. Migration goes by customer tier.",
+        "Hilde: Confirmed, migrate by customer tier, largest accounts last. The largest accounts need the cleanest data.",
         "Mateo: The agency team had a quiet week with other client work crowding in. Someone should tidy that up eventually.",
         "Hilde: Feedback arrived as a long voice note, which took a while to digest. Everyone left in a decent mood.",
         "Hilde: Chat is hard to follow when three threads run at once. We laughed about it afterwards.",
@@ -683,7 +687,8 @@
         "Mateo: Half the team was out sick this week, so replies were slower than usual. It had no effect on the plan.",
         "Mateo: The shared folder structure confused two people again. Nothing else came out of it.",
         "Hilde: The agency team had a quiet week with other client work crowding in. I am only noting it for the record.",
-        "Mateo: The warehouse peak runs to the end of July. Hilde set go-live for 3 August.",
+        "Mateo: The warehouse peak runs to the end of July.",
+        "Hilde: Confirmed, go live on 3 August. The warehouse peak ends 31 July.",
         "Hilde: Someone raised an unrelated idea for next year and we parked it. Someone should tidy that up eventually.",
         "Hilde: The weather made travelling to the meeting a hassle for the client team. I mention it only because it ate time.",
         "Hilde: Chat is hard to follow when three threads run at once. I will not go into detail.",

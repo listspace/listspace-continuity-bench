@@ -12,6 +12,7 @@
       "chat": [
         "Lucia: There was a small misunderstanding about who was meant to reply to whom. We laughed about it afterwards.",
         "Lucia: Pablo confirmed a 48-page report, print and PDF.",
+        "Pablo: Confirmed, 48 pages, print and PDF. It matches last year's format.",
         "Pablo: We spent the first ten minutes on audio problems before anything useful happened. Moving on.",
         "Lucia: The mood on the call was relaxed, mostly small talk. Not much to report beyond that.",
         "Lucia: I would like an illustrated style. Proposed, not yet answered.",
@@ -66,8 +67,10 @@
         "Lucia: A couple of people mentioned holiday plans without naming dates. It had no effect on the plan.",
         "Lucia: Figures collected.",
         "Lucia: Budget cut. Pablo confirmed 32 pages, PDF only, no print.",
+        "Pablo: Confirmed, 32 pages, PDF only. The board cut the budget.",
         "Pablo: The agency team had a quiet week with other client work crowding in. Everyone left in a decent mood.",
         "Lucia: Pablo also confirmed the illustrated style.",
+        "Pablo: Confirmed, the illustrated style. It is warmer than last year's photo style.",
         "Lucia: The review meeting ran long because everyone had opinions on small wording choices. I am only noting it for the record.",
         "Lucia: Done: Collect the annual figures.",
         "Lucia: Someone asked for a recap of the previous meeting and it took longer than expected. I will not go into detail.",
@@ -106,6 +109,7 @@
         "Lucia: The mood on the call was relaxed, mostly small talk. I will not go into detail.",
         "Lucia: The coffee machine broke so the meeting moved to the cafe next door. It is the kind of thing that happens every project.",
         "Lucia: The board found money again. Pablo confirmed 40 pages, PDF plus a small print run.",
+        "Pablo: Confirmed, 40 pages, PDF plus a small print run. The board restored part of the budget.",
         "Pablo: The review meeting ran long because everyone had opinions on small wording choices. We laughed about it afterwards.",
         "Pablo: Feedback arrived as a long voice note, which took a while to digest. I am only noting it for the record.",
         "Lucia: The weather made travelling to the meeting a hassle for the client team. Not much to report beyond that.",
@@ -237,6 +241,7 @@
     }
   ],
   "review": {
-    "v2_note": "Hand written by Jordi. v2 only added plan and done lines (information parity) and neutral chatter. No story line or answer key changed."
+    "v2_note": "Hand written by Jordi. v2 only added plan and done lines (information parity) and neutral chatter. No story line or answer key changed.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   }
 }

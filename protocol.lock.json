@@ -1,6 +1,6 @@
 {
-  "status": "FROZEN v2, 2026-11-26, for the Tier A pilot rerun. Written from protocol.draft.json after the v1 pilot (tag pilot-v1, protocol.lock.v1.json kept for the record). Change nothing here after the first answer is generated.",
-  "version": 2,
+  "status": "FROZEN v3, 2026-11-26, for the Tier A rerun. Written from protocol.draft.json after the v2 run (tag protocol-v2). protocol.lock.v1.json and protocol.lock.v2.json are kept for the record. Change nothing here after the first answer is generated.",
+  "version": 3,
   "tier": "A",
   "temperature": "provider_default",
   "conditions": [
@@ -26,21 +26,21 @@
     "keeper": 3000
   },
   "estimate_assumptions": {
-    "note": "Used by --dry-run only. Measured in the v1 pilot (2026-11-26): Claude tokenizer about 2.6 characters per token, GPT about 3.9; answer output 78 tokens (Claude, prose before the JSON in 44 percent of replies) and 9 (GPT); keeper output 2117 (Claude, uncapped) and 650 (GPT). v2 caps the notes at 450 words and tightens the answer prompt, so the output figures below are conservative guesses to be replaced by the v2 run.",
+    "note": "Used by --dry-run only. Measured in the v2 run (2026-11-26): keeper output per call Claude 914 (B) and 304 (B2), GPT 337 and 175, so the figures below are the mean of the two arms; answer output 66 tokens (Claude, prose before the JSON in 40 percent of replies) and 9 (GPT); Claude tokenizer about 2.6 characters per token, GPT about 3.9. v3 changes no prompt, so these should hold.",
     "chars_per_token": {
       "anthropic": 2.6,
       "openai": 3.9
     },
     "answer_output_tokens": {
-      "anthropic": 40,
-      "openai": 10
+      "anthropic": 66,
+      "openai": 9
     },
     "keeper_output_tokens": {
-      "anthropic": 1000,
-      "openai": 700
+      "anthropic": 610,
+      "openai": 260
     },
-    "notes_tokens_per_session": 60,
-    "notes_tokens_cap": 650
+    "notes_tokens_per_session": 50,
+    "notes_tokens_cap": 550
   },
   "prompts": {
     "answer_system": "You answer one closed question about an agency project. The project memory in the message is all you know about the project. A decision counts as settled only once a person confirmed it. A proposal that nobody has confirmed is not settled, and a decision that was replaced is no longer current. If the memory does not let you tell, choose the cannot-tell option. Reply with exactly one line of JSON and nothing else.",
@@ -51,15 +51,15 @@
   },
   "frozen": "2026-11-26",
   "scenario_sha256": {
-    "s001": "3c21ad06d206ebbd792f7665850c049420396b5335a525ba6de3922b46f41ffa",
-    "s002": "897ae1a0fd185e1d4732ae6f1f65fba76c30467e58032494f1fec0e4ab506eaa",
-    "s003": "f182c819826018e98a8b75ec70abdf1271c2b6445ed39c0674255c3e80356b13",
-    "s004": "fdccb5cb58909ec9e2c27afa5cf86722f916cd70ee97205d2176149e3145b9b7",
-    "s005": "0b9d5e1b495982ea7d1764e92bd35c8d1a11cce974df098eb39aa181f35f217e",
-    "s006": "6c9759ea1627dd355872f4730a3a28d827420970627e248f84a390b37a6b66c9",
-    "s007": "b2a8ce0f2ecad290d6c3fceb50c0ee88bd7acd7cf0760f6bb5d09268ebe9f313",
-    "s008": "2bdc82fc103d694ae7b64daf0d995f639185dd0aaccdf8e0bf5022a8553c02b5",
-    "s009": "306185d6dfe253cb8d574c54cb233bc4d4bc5ea41d0adf105cb1b192c08d02f5",
-    "s010": "e5f903a9725c446841bd7bd2cf8aeddcf0ae531889295ecf843c33f7886b98a5"
+    "s001": "2f50618018d29c88b2dfb6baea7f8459f178274fa84c298f67718913fb802e0e",
+    "s002": "852ad10d4833d4dee17d19027964d7e718e644f98ec672c9489fe20a478ef3a2",
+    "s003": "2764506759c5ee49d34c633384df18f76bffcc9b97b1b53517902ead68282097",
+    "s004": "54768d646eaf6b80ad20ea5e0e1dcce3c6c667721cb9dc23c2262249df99984f",
+    "s005": "e156367a9e50360dff906cf1a6ca799ae98d8a91d75b0a136e803b6c2c04a145",
+    "s006": "78b83b8001fe81c70240a27edf11fd36f7aab9aee300cc8f904f110c648f0cfd",
+    "s007": "f6ac27c065e031168a26ff9fa797538c07e47963b4bbfc75c4ca3c8a67330222",
+    "s008": "f569d7c8cafbd2db42083798f728805e293a2dfed603841c1f55a8c798d4bcd3",
+    "s009": "8d7eb4c84b624bc21f220c96e6a846795fe105827182c932ba117847fc4ab468",
+    "s010": "8f9320fc8ba928e13ac59e454a2bd9da8ff2d1a8e18484962aa425bc06df8099"
   }
 }

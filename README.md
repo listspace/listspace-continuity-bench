@@ -4,7 +4,7 @@ Does your AI work from the current plan?
 
 Memory benchmarks mostly ask whether an AI can recall an old fact. This one asks a different question. After a project has changed its mind several times, does a fresh AI session answer from the current confirmed decision, or from one that was replaced or never confirmed?
 
-Status: protocol v2, frozen for a Tier A rerun. The v1 pilot (tag `pilot-v1`, `protocol.lock.v1.json`) found two flaws in the question set and the notes keeper, so v2 changes the scenarios (see `scenarios/CHANGES-v2.md`), the keeper prompts, the answer prompt and the scorer. Nothing here is a published result.
+Status: protocol v3, frozen for a Tier A rerun. The v1 pilot (tag `pilot-v1`, `protocol.lock.v1.json`) found two flaws in the question set and the notes keeper, v2 fixed them (`scenarios/CHANGES-v2.md`, `protocol.lock.v2.json`), and the v2 run showed that confirmations written as wishes or relays cost the notes arms answers, so v3 rewrites them (`scenarios/CHANGES-v3.md`). Nothing here is a published result.
 
 ## What is measured
 

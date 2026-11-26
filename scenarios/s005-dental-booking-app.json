@@ -10,14 +10,15 @@
     "v1_reviewed_by_jordi_on": "2026-11-25",
     "reviewed_by_jordi": false,
     "hard_case": false,
-    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md."
+    "note": "v2: chats rewritten for realistic length, plan lines, and traps. Jordi reviews the changes listed in scenarios/CHANGES-v2.md.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   },
   "sessions": [
     {
       "n": 1,
       "date": "2026-03-09",
       "chat": [
-        "Lena: Marcus agreed we embed a hosted booking widget. It is the fastest way to ship before the spring promotion.",
+        "Marcus: Confirmed, embed a hosted booking widget. It is the fastest way to ship before the spring promotion.",
         "Lena: The video link changed twice before everyone got in. It is the kind of thing that happens every project.",
         "Lena: I suggest we cap the build at 40,000 euros. Marcus wants to ask finance.",
         "Lena: The weather made travelling to the meeting a hassle for the client team. I mention it only because it ate time.",
@@ -68,7 +69,8 @@
       "date": "2026-03-23",
       "chat": [
         "Lena: A long email thread from last week went in circles and I stopped following it. It took more of the hour than it should have.",
-        "Lena: Marcus reversed the booking approach. Clinics need patients to reschedule inside the app, so we build booking into the app on the clinics' own scheduling system. He said yes by email.",
+        "Lena: Marcus sent his answer on the booking approach.",
+        "Marcus: Confirmed, build booking into the app on the clinics' own scheduling system. Clinics need patients to reschedule inside the app.",
         "Marcus: Someone raised an unrelated idea for next year and we parked it. I will not go into detail.",
         "Tessa (front desk lead): We already told patients the app will have a book now button that opens the booking widget. The poster is printed.",
         "Marcus: We spent the first ten minutes on audio problems before anything useful happened. I will not go into detail.",

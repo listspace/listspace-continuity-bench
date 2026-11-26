@@ -12,6 +12,7 @@
       "chat": [
         "Marta: Kickoff done. Tom wants the site live on 14 March.",
         "Marta: Tom confirmed 14 March as the launch date on the call.",
+        "Tom: Confirmed, 14 March. It matches the spring menu campaign.",
         "Tom: A long email thread from last week went in circles and I stopped following it. Not much to report beyond that.",
         "Marta: I suggest we host on Netlify. Nobody has agreed yet.",
         "Marta: Chat is hard to follow when three threads run at once. No one seemed bothered.",
@@ -69,6 +70,7 @@
         "Marta: The office move on the client side is distracting everyone. No one seemed bothered.",
         "Marta: Page copy is finished and approved.",
         "Marta: Tom says the 14 March date is too early because the photo shoot slipped. New date: 4 April. He confirmed by email.",
+        "Tom: Confirmed, launch on 4 April. The photo shoot slipped two weeks.",
         "Tom: Half the team was out sick this week, so replies were slower than usual. It is the kind of thing that happens every project.",
         "Marta: Done: Write page copy."
       ],
@@ -224,6 +226,7 @@
     }
   ],
   "review": {
-    "v2_note": "Hand written by Jordi. v2 only added plan and done lines (information parity) and neutral chatter. No story line or answer key changed."
+    "v2_note": "Hand written by Jordi. v2 only added plan and done lines (information parity) and neutral chatter. No story line or answer key changed.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   }
 }

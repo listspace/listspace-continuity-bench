@@ -11,6 +11,7 @@
       "date": "2026-02-02",
       "chat": [
         "Dev: Ines picked a monthly subscription for members. She confirmed it.",
+        "Ines: Confirmed, a monthly subscription. It is the simplest for regular members.",
         "Ines: Feedback arrived as a long voice note, which took a while to digest. Not much to report beyond that.",
         "Dev: I think Stripe is the best payment provider. Putting it forward for Ines.",
         "Dev: The notes from the last call were hard to read because of all the shorthand. Nothing else came out of it.",
@@ -73,6 +74,7 @@
         "Ines: A long email thread from last week went in circles and I stopped following it. It is mostly background for whoever reads this later.",
         "Dev: Someone asked for a recap of the previous meeting and it took longer than expected. It is the kind of thing that happens every project.",
         "Dev: Ines now wants class packs of ten instead of a subscription, because tourists use the studio too. She confirmed the change in the shared chat.",
+        "Ines: Confirmed, ten-class packs instead. Tourists use the studio and will not subscribe.",
         "Ines: Half the team was out sick this week, so replies were slower than usual. Someone should tidy that up eventually.",
         "Dev: Done: Class schedule screen."
       ],
@@ -227,6 +229,7 @@
     }
   ],
   "review": {
-    "v2_note": "Hand written by Jordi. v2 only added plan and done lines (information parity) and neutral chatter. No story line or answer key changed."
+    "v2_note": "Hand written by Jordi. v2 only added plan and done lines (information parity) and neutral chatter. No story line or answer key changed.",
+    "v3_note": "v3: every confirmation is now said directly by the decider with the word \"Confirmed\". See scenarios/CHANGES-v3.md."
   }
 }
