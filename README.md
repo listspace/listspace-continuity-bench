@@ -113,4 +113,4 @@ The design doc says temperature 0. The current Claude models reject temperature 
 
 ## Licence
 
-MIT. Method and results are meant to be checked by someone who does not work at Listspace.
+MIT (see `LICENSE`). Method and results are meant to be checked by someone who does not work at Listspace. `longmemeval/reference/evaluate_qa.official.py` is from the LongMemEval repository (https://github.com/xiaowu0162/LongMemEval), MIT, by its authors, kept unchanged for reference.
