@@ -12,7 +12,7 @@ It was built by Listspace, which makes a shared project board for people and the
 
 ## Who wrote the scenarios
 
-Three scenarios (s001 to s003) were written by hand. The other seven (s004 to s010) were drafted with an AI and were not read in full by a person; they carry `review.reviewed_by_jordi: false`. Every answer key in all ten is checked by code against the events of its scenario (`node bench.mjs validate`), so a key cannot disagree with what happened, but nobody has judged by hand whether those seven chats read like real projects.
+Three scenarios (s001 to s003) were written by hand. The other seven (s004 to s010) were drafted with an AI. A person reviewed the list of changes to them, not every chat line (`scenarios/REVIEW.md`), and they carry `review.reviewed_by_jordi: false`. Every answer key in all ten is checked by code against the events of its scenario (`node bench.mjs validate`), so a key cannot disagree with what happened, but nobody has judged by hand whether those seven chats read like real projects.
 
 ## Two parts
 

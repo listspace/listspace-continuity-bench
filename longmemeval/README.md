@@ -1,6 +1,6 @@
 # LongMemEval-S mini run (Tier B)
 
-Five knowledge-update questions from LongMemEval-S, to measure real token use and cost before phase 1. Status: run on 26 Nov 2026, results in `runs/mini-2026-11-27` and in the main README. Five questions are a sample, not a score. Plan: Listspace Ops item 939d08b5.
+Five knowledge-update questions from LongMemEval-S, to measure real token use and cost before phase 1. Status: run on 26 Nov 2026, results in `runs/mini-2026-11-27` and in the main README. Five questions are a sample, not a score.
 
 ## Conditions
 
@@ -35,7 +35,9 @@ The official LongMemEval judge: `gpt-4o-2024-08-06` through chat completions, te
 
 For a second opinion with the unmodified official script: `hypotheses.<model>.<condition>.jsonl` in each run folder is in its input format, so `python longmemeval/reference/evaluate_qa.official.py gpt-4o <hypotheses file> longmemeval/data/longmemeval_s_cleaned.json` works.
 
-## Staging account, steps for Jordi
+## Staging account
+
+The board condition runs against Listspace's staging server, which is ours. To rerun it, ask us for a staging account, or point the API base at your own Listspace account (the harness refuses anything but staging, so that needs a one-line change in `src/api.mjs`). The steps we followed:
 
 Do not paste the token into a chat or a file. Nothing here creates the account.
 
