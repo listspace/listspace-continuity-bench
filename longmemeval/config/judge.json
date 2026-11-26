@@ -1,0 +1,13 @@
+{
+  "note": "The official LongMemEval judge, from src/evaluation/evaluate_qa.py in xiaowu0162/LongMemEval: gpt-4o-2024-08-06 through chat completions, temperature 0, max_tokens 10, a reply containing 'yes' counts as correct. The price is PROVISIONAL (list price as remembered, not verified against the provider page): check source_url on run day. The judge spend is small, about 5 calls per model and condition.",
+  "official_model": "gpt-4o-2024-08-06",
+  "price": {
+    "input_per_mtok": 2.5,
+    "output_per_mtok": 10,
+    "cache_read_per_mtok": 1.25,
+    "cache_write_per_mtok": null,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "verified_on": null,
+    "provisional": true
+  }
+}

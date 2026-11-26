@@ -4,6 +4,6 @@
   "private": true,
   "type": "module",
   "description": "Does your AI work from the current plan? A reproducible benchmark of stale-belief rate across memory conditions.",
-  "scripts": { "validate": "node bench.mjs validate", "plan": "node bench.mjs plan", "test": "node --test test/" },
+  "scripts": { "validate": "node bench.mjs validate", "plan": "node bench.mjs plan", "test": "node --test test/ longmemeval/test/" },
   "license": "MIT"
 }

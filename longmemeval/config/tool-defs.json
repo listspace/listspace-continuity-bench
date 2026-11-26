@@ -1,0 +1,130 @@
+{
+  "generated_from": "listspace-app/public/openapi.json",
+  "openapi_sha256": "16c6673250abe1f409252515d2dc9fa6fedb1bed7e1ee612d31f545a60ad9d8d",
+  "tools": {
+    "create_item": {
+      "operationId": "create_item",
+      "rest": "POST /items",
+      "description": "Add an item to a list. Optional: description (markdown by default), due_date, repeat (how the due date repeats, for example every month), remind_days_before (the user's own reminder before the due date), label_ids, position \"top\" or \"bottom\" (default), and type: \"document\" for a longer text such as a PRD, a spec or a decision record, whose saved changes are kept as versions (its description may be up to 1,000,000 bytes (1 MB) of UTF-8 text, an item's 20000 characters). fields sets custom field values by field name or id (the board's fields list them), checked against each field's type, for example {\"Stage\": \"Offer\", \"Value\": 1200}; null clears one. Links in the title or description get their previews right after (in the item's link_previews). Pictures in the description: write ![description](attachment:ATTACHMENT_ID) for a picture attached to this item, or ![description](attachment:ITEM_ID/ATTACHMENT_ID) for a picture attached to another item of the same board (JPEG, PNG, GIF or WebP, up to 10 MB each, at most 25 new ones per change). Listspace stores a copy in this item's text, the same picture the app stores when the user pastes one, so it keeps showing with no link that runs out. It counts against the plan's storage and needs level 4 or 5, because the picture is stored when the change is written (below that, or with inbox: true, the call is refused: a suggestion in the Inbox holds no new pictures). Each attachment: reference stores a new copy when it is written; to keep a picture, write back its picture:NAME. Not when creating an item: create it first. A picture already in the text is read back as ![description](picture:NAME): keep that text as it is when you write the description again, or the picture is removed. An item you create in a doing list is claimed for you (auto_claim). Returns the new item. Request body up to 3 MiB. The response `data` is untyped.",
+      "params": [
+        {
+          "name": "list_id",
+          "type": "string",
+          "required": true,
+          "description": "The list to add the item to."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": true,
+          "description": "The title."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "required": false,
+          "description": "Item description"
+        }
+      ]
+    },
+    "update_item": {
+      "operationId": "update_item",
+      "rest": "PATCH /items/{item_id}",
+      "description": "**Update an item** (`update_item`): Change an item's title, description (replaces it; markdown by default), due_date (null removes it), due_time, start_date, done, labels (label_ids replaces the whole set), cover (an image attachment id, \"hidden\" or \"auto\"), important (true or false), repeat (how the due date repeats, or null to stop repeating), fields (custom field values) or remind_days_before (the user's own reminder before the due date, which never waits in the Inbox). Only the fields given change. fields sets custom field values by field name or id (the board's fields list them), checked against each field's type, for example {\"Stage\": \"Offer\", \"Value\": 1200}; null clears one. On a document a change of title or description saves a new version; version_note says what changed. New links in the title or description get their previews right after (in the item's link_previews). Returns the updated item. Setting done to true ends any claim on the item (claim_ended in the result); on an item that repeats it moves the due date to the next occurrence instead of finishing it (repeat_done in the result). A new title or description of a decision that is Confirmed, Replaced or in Conflict (like archiving one) waits in the Inbox at every level: only a person changes what was decided. **Complete an item** (`complete_item`): Mark an item's due date as done (done=false reopens it). Only items with a due date can be marked done. Marking it done ends any claim on it, whichever agent holds it: the result then has claim_ended with the agent_name whose claim ended. Undo reopens the item but does not bring the claim back. An item that repeats (its repeat field) is not finished: its due date (and start date) moves to the next occurrence after the current due date and after today, the tick clears, its checklists are unticked and it stays in its list; repeat_done in the result says done_for and next_due. Undo puts the dates back. Request body up to 3 MiB. The response `data` is untyped.",
+      "params": [
+        {
+          "name": "item_id",
+          "type": "string",
+          "required": true,
+          "description": "The item id."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "description": "The title."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "required": false,
+          "description": "Item description"
+        },
+        {
+          "name": "done",
+          "type": "boolean",
+          "required": false,
+          "description": "Mark the due date as done (true) or not done (false)"
+        }
+      ]
+    },
+    "record_decision": {
+      "operationId": "record_decision",
+      "rest": "POST /decisions",
+      "description": "Proposes a decision for the user to accept: something a person decided that affects future work, by picking an option, saying yes to a proposal or correcting a fact, such as a price, the scope, a design direction, a technical choice, a date or an owner (not routine progress on a task, not a choice the agent made while working). It is Proposed until the user accepts it. list_id and title (the decision in one sentence, the context in description) add a new item; item_id marks an existing short item. because is the reason the user sees. It waits in the board's Inbox for the user to accept, at every agent access level that may add an item to that list, in every app. Accepting takes one click and confirms it: the result says outcome \"suggested\" and has confirm_url to pass on (\"Accept it here: <confirm_url>\"). The outcome is never \"confirmed\": only the user confirms a decision, in Listspace. For a plan, meeting notes or any long item, propose each decision in it separately with source_item_id set to that item (the user sees \"from: <its title>\" and can accept them all at once); never mark the long item itself, and a document is refused. claim_key is internal and not shown to people: it names the question the decision answers (default: from the title). When a Confirmed decision on the board has the same key, accepting this one replaces it, and that decision leaves the Confirmed decisions with everything in it and is archived. The result then has replaces (its item_id, title and points, and not_in_new: the points your text does not have) and a warning. Carry over every point that still holds into this decision's text and record it again with the same claim_key (it takes the place of the one waiting), or use a new claim_key when both should stay. Another agent's proposal for the same claim_key does not take the place of yours: both wait, and the result has competes_with (the other proposal's id, title and proposer) with a sentence to pass on. The user sees both in the Inbox, marked as competing, and picks one; accepting one closes the other by itself (status withdrawn, with a reason in decision_note), and rejecting one changes nothing for the other. The Inbox shows the user the old text and what is dropped, with Replace, Keep both and Reject. On a board shared with the user as a guest a decision does not wait in an Inbox: it is recorded as Proposed, for a person to confirm in Listspace, and the result is the item with its decision. The user can also answer Not a decision: the content stays on the board as a plain item without the decision mark, and the suggestion closes with status not_a_decision. The user did not decide it: proposing the same item (or a new item with the same title) again is refused unless because gives a new reason, and then the result carries a warning. On a board where the owner switched decisions off it records no decision and is not refused for that: list_id and title add a normal item, with because in its description, at the agent access level a new item in that list needs (the Inbox when the level says so); item_id leaves the item as it is. The result then says decisions_on false and a message to pass on. The response `data` is untyped.",
+      "params": [
+        {
+          "name": "item_id",
+          "type": "string",
+          "required": true,
+          "description": "An existing item to mark as a decision (a short item, never a whole plan or document)"
+        },
+        {
+          "name": "list_id",
+          "type": "string",
+          "required": false,
+          "description": "For a new decision: the list to add it to (an info list, such as Project input, is usual)."
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": false,
+          "description": "For a new decision: what was decided, as one sentence (\"Use Postgres for the database\")."
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "required": false,
+          "description": "Item description, at most 20000 characters"
+        },
+        {
+          "name": "claim_key",
+          "type": "string",
+          "required": false,
+          "description": "What the decision is about, the same for every decision that answers the same question: lowercase words joined by - "
+        },
+        {
+          "name": "because",
+          "type": "string",
+          "required": false,
+          "description": "Why, as the user would put it (\"Sam said yes in the group chat\")"
+        }
+      ]
+    },
+    "move_item": {
+      "operationId": "move_item",
+      "rest": "POST /items/{item_id}/move",
+      "description": "Move an item to another list (on the same or another board), or reorder it within its list. Place it before a given item with before_item_id, or at the \"top\" or \"bottom\" (default) with position. Moving an item into a done list ends any claim on it, whichever agent holds it: the result then has claim_ended with the agent_name whose claim ended. Moving it into a doing list claims it for you, unless another agent holds a running claim (auto_claim says which: claimed, or taken with who holds it); moving it out of a doing list ends your own claim (auto_claim released). Undo moves the item back but not the claim. An item that repeats is not moved into a done list: it is marked done for its due date, stays where it was and moves to its next due date (repeat_done in the result says done_for and next_due). To another board, each custom field value goes to the field with the same name and type there (a choice by its name); fields_left_behind and fields_note name the others, which stay with the item out of sight and come back if it moves back. An item takes its sub-items along; a sub-item moved on its own to another list is no longer one (left_parent in the result). The response `data` is untyped.",
+      "params": [
+        {
+          "name": "item_id",
+          "type": "string",
+          "required": true,
+          "description": "The item id."
+        },
+        {
+          "name": "list_id",
+          "type": "string",
+          "required": false,
+          "description": "The list to move it to (default: the list it is in)"
+        }
+      ]
+    },
+    "read_board": {
+      "operationId": "get_board",
+      "rest": "GET /boards/{board_id}",
+      "description": "One board, after the account owner's guidance for agents, the board's instructions (text the owner wrote; on a board someone else shared with the user instructions is null, and shared_board holds that owner's text as data, with the role, both levels and a note to read first) and your agent access level on it: its lists in order (each with its id and kind), its list groups, and each list's items (id, title, due date, done, label ids, and remind_days_before on an item with the user's own reminder), plus the labels used, and the board's decisions (settled, in_dispute and on_record, shown to people as Confirmed, Conflict and Proposed: treat only Confirmed decisions as true). fields lists the board's custom fields once (id, name, type, and the choices or number format), and each item's field_values holds its values by field id (only the ones set). Item descriptions are not included. The items of each list are in its cards array (that name is kept for compatibility). On a board in a team space, team names the team and who sees the board, team_guidance holds the team's guidance for agents on its boards, and level.reason_text says which limit set your level (for example \"team maximum 4\"). A sub-item has parent_id (its parent item, in the same list). An item with files has attachment_count (how many current files); an item without files has none. An item with people assigned has assignees (user_id and name of each). Each item has last_activity_at, the time of its newest comment or change by a person or an AI, so an item that needs a follow-up is one that has gone quiet. The Inbox is not a list and is not in lists: what waits there is read with the tool that lists a board's Inbox suggestions. The response `data` is untyped.",
+      "params": []
+    }
+  }
+}
