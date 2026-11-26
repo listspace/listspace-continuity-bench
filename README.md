@@ -2,9 +2,34 @@
 
 Does your AI work from the current plan?
 
-Memory benchmarks mostly ask whether an AI can recall an old fact. This one asks a different question. After a project has changed its mind several times, does a fresh AI session answer from the current confirmed decision, or from one that was replaced or never confirmed?
+## What this is for
 
-Status: protocol v3, frozen for a Tier A rerun. The v1 pilot (tag `pilot-v1`, `protocol.lock.v1.json`) found two flaws in the question set and the notes keeper, v2 fixed them (`scenarios/CHANGES-v2.md`, `protocol.lock.v2.json`), and the v2 run showed that confirmations written as wishes or relays cost the notes arms answers, so v3 rewrites them (`scenarios/CHANGES-v3.md`). Nothing here is a published result.
+Projects change their mind. A launch date moves, a hosting choice is replaced, someone acts on a proposal nobody confirmed. A week later you open a fresh AI session and ask what was decided. This repository measures whether that session answers from the current, confirmed decision, or from one that was replaced or never confirmed, depending on where the project's memory lives.
+
+Most memory benchmarks ask whether an AI can recall an old fact. This one asks whether it knows which fact is still true and who confirmed it.
+
+It was built by Listspace, which makes a shared project board for people and their AIs. That is a conflict of interest, so everything is here to check: the scenarios, the answer keys, the prompts, the frozen protocol of every run, the raw answers and every miss. MIT licence.
+
+## Two parts
+
+1. **Our own scenarios** (the root of this repo). Ten synthetic agency projects of 3, 10 and 30 sessions, written for this test, with the traps real projects have. Four memory set-ups: the full chat (A), notes kept by an AI (B and B2), and the Listspace board (C). Multiple choice, scored by lookup, no AI judge.
+2. **LongMemEval** (`longmemeval/`). Questions about facts that change over time from a public dataset we did not write (Wu et al., ICLR 2025), with histories of about 115,000 tokens. Here the AI keeps a real Listspace board itself through Listspace's tools, session by session, and answers from the board. Scored with the dataset's official judge.
+
+## Results so far
+
+Three runs of part 1, two models (Claude Sonnet 5.5, gpt-6.2-sol), three repetitions each.
+
+- `runs/pilot-2026-11-26`: found two flaws in our own question set. Not a result. See `FINDINGS.md` there.
+- `runs/v2-2026-11-26`: found a wording flaw in our chats (confirmations written as wishes). Not a result.
+- `runs/v3-2026-11-26`: the run we stand behind. Every set-up was between 96.7% and 100% right on the status questions, and no answer took a replaced or unconfirmed decision as current. What separated the set-ups was size: by 30 sessions the full chat was about 18 times the text of the board, for the same answers.
+
+What v3 does not show: the board in part 1 was filled from the true sequence of events, so it is the best case. Part 2 is where an AI keeps the board itself.
+
+Part 2 results: not run yet.
+
+## Protocol history
+
+The v1 pilot (tag `pilot-v1`, `protocol.lock.v1.json`) found two flaws in the question set and the notes keeper, v2 fixed them (`scenarios/CHANGES-v2.md`, `protocol.lock.v2.json`), and the v2 run showed that confirmations written as wishes or relays cost the notes arms answers, so v3 rewrites them (`scenarios/CHANGES-v3.md`, `protocol.lock.json`). Every lock was committed before its first answer, and earlier runs stay published.
 
 ## What is measured
 
@@ -16,7 +41,7 @@ A scenario is a short project history: sessions in which decisions are proposed,
 | B. Notes | A markdown notes file that an AI kept, session by session |
 | C. Board | The Listspace board view: decisions marked Confirmed, Replaced or Proposed (with history), tasks in plan order |
 | B2. Notes, structured keeper | The same notes idea with a stronger, structured keeper prompt. A sensitivity arm so nobody can say B was handicapped |
-| D. Continuity SDK (optional) | The governed claim store from `continuity-sdk`, authority states PD, SU, RNA, CAC |
+| D. Continuity SDK (optional, not run) | The governed claim store from `continuity-sdk`, authority states PD, SU, RNA, CAC |
 
 All conditions get the same system prompt, including one sentence saying a decision counts only once a person confirmed it. The test is memory structure, not instruction.
 
