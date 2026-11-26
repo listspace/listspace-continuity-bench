@@ -93,7 +93,7 @@ export function estimateRun({ entries, protocol, defs, models, conditions, price
  * abort, a provider error or a Listspace API error: the run stops and the rows so far stand. A staging
  * guard error stops the run as well. `makeApi()` builds the staging client (the guard runs inside it).
  */
-export async function executeRun({ entries, protocol, defs, models, conditions, prices, providers, meter, makeApi, judge, judgeModel, sink, onBoard, runId }) {
+export async function executeRun({ entries, protocol, defs, models, conditions, prices, providers, meter, makeApi, judge, judgeModel, sink, onBoard, runId, skip }) {
   let status = 'completed';
   let error = null;
   const boards = [];
@@ -101,7 +101,7 @@ export async function executeRun({ entries, protocol, defs, models, conditions, 
   const system = keeperSystem(protocol, defs);
   const judgeIsOfficial = judgeModel === OFFICIAL_JUDGE_MODEL;
   try {
-    const api = conditions.includes('board') ? makeApi() : null;
+    const api = conditions.includes('board') ? makeApi() : null; // skip(model, question, condition) true means the unit is done (resume)
     for (const model of models) {
       const price = prices.models[model];
       const cfg = protocol.models[model];
@@ -128,13 +128,13 @@ export async function executeRun({ entries, protocol, defs, models, conditions, 
 
       for (const e of entries) {
         const qbase = { model, question: e.question_id, type: e.question_type };
-        if (conditions.includes('full')) {
+        if (conditions.includes('full') && !skip?.(model, e.question_id, 'full')) {
           const res = await ask({ system: protocol.prompts.full_system, user: fullHistoryUser(e) }, protocol.caps.max_output_tokens.answer_full);
           const h = extractHypothesis(res);
           emit({ ...qbase, kind: 'answer', condition: 'full', hypothesis: h.hypothesis, empty: h.empty, truncated: h.truncated, stop_reason: res.stopReason, usage: res.usage, cost_usd: res.cost });
           await judgeAnswer(e, h.hypothesis, { ...qbase, condition: 'full' });
         }
-        if (conditions.includes('board')) {
+        if (conditions.includes('board') && !skip?.(model, e.question_id, 'board')) {
           const sessions = orderedSessions(e).map((s) => ({ ...s, text: sessionText(s) }));
           const boardId = await createBoard(api, { title: `lme ${runId} ${model} ${e.question_id}`.slice(0, 200), description: 'Throwaway board for a LongMemEval benchmark run. Safe to archive.' });
           boards.push(boardId);

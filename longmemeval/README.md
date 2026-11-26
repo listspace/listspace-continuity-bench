@@ -73,6 +73,20 @@ $env:LISTSPACE_STAGING_TOKEN=[Environment]::GetEnvironmentVariable('LISTSPACE_ST
 
 Add `--dry-run` to list the boards first. Run it after an aborted run as well: `boards.jsonl` is written as each board is created.
 
+## Resume after an error
+
+If a run stops on a provider error (an HTTP 400 usage limit, a 503, a budget abort), continue it in the same folder:
+
+```powershell
+node longmemeval/run.mjs run --resume longmemeval/runs/mini-2026-11-27 --budget 25 --dry-run   # units still to run and their estimated cost, no keys needed
+node longmemeval/run.mjs run --resume longmemeval/runs/mini-2026-11-27 --budget 25             # keys loaded as above
+```
+
+- It refuses unless the dataset sha256, the selected questions, the protocol, the models, the conditions, the judge model and the API base match the first attempt (it prints each difference).
+- A unit (model, question, condition) is done only if it has a judge row. Done units are skipped. Every other unit starts from scratch. A board unit that was mid-keeping gets a NEW board; the old one is added to `boards.jsonl` again with `abandoned: true`, so `cleanup.mjs` still archives it.
+- `results.jsonl` is only appended to. New rows carry `attempt`. The earlier rows of redone units stay but are listed under `resumes[].units_redone` in `run-config.json` and left out of `summary.json`, the hypotheses files and the printed summary (`rows_excluded_as_abandoned`). Their cost still counts as spent.
+- `--budget` is the total for the whole run: what is already spent is subtracted first. The previous `summary.json` is kept as `summary.attempt-N.json`, and the resume (time, previous status and error, skipped and redone units, abandoned boards, outcome) is recorded in `run-config.json`.
+
 ## Where results land
 
 `longmemeval/runs/mini-2026-11-27/` (gitignored):

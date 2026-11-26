@@ -14,11 +14,12 @@ const run = flag('run');
 if (!run) { console.error('usage: node longmemeval/cleanup.mjs --run <run folder> [--dry-run]'); process.exit(1); }
 const file = join(resolve(run), 'boards.jsonl');
 if (!existsSync(file)) { console.error(`no boards.jsonl in ${run}: nothing to clean`); process.exit(1); }
-const boards = readFileSync(file, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l));
+// boards.jsonl is append-only: a resume adds a second line (abandoned: true) for a board, so archive each id once.
+const boards = [...new Map(readFileSync(file, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l)).map((b) => [b.board_id, b])).values()];
 let ok = 0, failed = 0;
 const api = dry ? null : createApi(); // builds only against the staging API; refuses anything else
 for (const b of boards) {
-  if (dry) { console.log(`would archive ${b.board_id} (${b.model}, ${b.question})`); continue; }
+  if (dry) { console.log(`would archive ${b.board_id} (${b.model}, ${b.question})${b.abandoned ? ' [abandoned]' : ''}`); continue; }
   try { await archiveBoard(api, b.board_id); ok++; console.log(`archived ${b.board_id}`); } catch (e) {
     failed++; console.error(`failed ${b.board_id}: ${e instanceof ApiError ? e.message : 'error'}`);
   }
