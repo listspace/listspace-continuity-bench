@@ -105,7 +105,7 @@ The design doc says temperature 0. The current Claude models reject temperature 
 
 ## Method rules
 
-Reused from the baseline protocol of `continuity-sdk`, an earlier Yellow House Digital project that is not public.
+Reused from the baseline protocol of `continuity-sdk`, an earlier Yellow House Digital project that is not public. The thinking behind it, and behind this benchmark, starts in the article [Beyond Chat Memory](https://yellowhousedigital.com/writing/beyond-chat-memory) and the paper it links to.
 
 - Freeze first. Scenarios, keys, prompts and the analysis plan are committed before the first answer.
 - The weaker condition is not weakened further. Chat and notes get the same model, the same care and the same instruction.
