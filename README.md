@@ -53,7 +53,7 @@ A scenario is a short project history: sessions in which decisions are proposed,
 | B. Notes | A markdown notes file that an AI kept, session by session |
 | C. Board | The Listspace board view: decisions marked Confirmed, Replaced or Proposed (with history), tasks in plan order |
 | B2. Notes, structured keeper | The same notes idea with a stronger, structured keeper prompt. A sensitivity arm so nobody can say B was handicapped |
-| D. Continuity SDK (optional, not run) | The governed claim store from `continuity-sdk`, authority states PD, SU, RNA, CAC |
+| D. Continuity SDK (optional, not run) | The governed claim store from `continuity-sdk`, an earlier Yellow House Digital project that is not public. Authority states PD, SU, RNA, CAC |
 
 All conditions get the same system prompt, including one sentence saying a decision counts only once a person confirmed it. The test is memory structure, not instruction.
 
@@ -103,7 +103,9 @@ A real `run` refuses to start unless `--budget`, `--models`, `--runs`, `--temp` 
 
 The design doc says temperature 0. The current Claude models reject temperature (Sonnet 5.5 returns a 400 for any non-default value, Opus 5.5 removed the parameter), so the protocol records sampling as `provider_default` and the runner sends no temperature unless a model sets `send_temperature` and the protocol holds a number. `--temp` must match the protocol value (`default` is accepted). Results hold for provider-default sampling; run-to-run variation is covered by the 3 runs with shuffled option order.
 
-## Method rules, reused from continuity-sdk BASELINE_PROTOCOL
+## Method rules
+
+Reused from the baseline protocol of `continuity-sdk`, an earlier Yellow House Digital project that is not public.
 
 - Freeze first. Scenarios, keys, prompts and the analysis plan are committed before the first answer.
 - The weaker condition is not weakened further. Chat and notes get the same model, the same care and the same instruction.
